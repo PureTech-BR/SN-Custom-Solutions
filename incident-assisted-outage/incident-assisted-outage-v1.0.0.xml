@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2026-10-19 23:59:22">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Registro manual de Outages para Services, Offerings e Service Instances impactados no Incident. Classic e SOW. Manter In Progress ate validacao do usuario.</description>
+<inserted/>
+<name>LAB - Incident Manual Service Outages</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>2c05ab91c344df18e079b13ed4013184</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>e9deefd5c3c4df18e079b13ed40131f7</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_1aa56b55c344df18e079b13ed40131b8</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.IncidentManualOutageAjax&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;Manual Incident Outages - server validated selection, native outage propagation, user initiated.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;IncidentManualOutageAjax&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var IncidentManualOutageAjax = Class.create();
+IncidentManualOutageAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    isPublic:function(){return false;},
+    getModel:function(){return this._call('getModel');},
+    preview:function(){return this._call('preview');},
+    createOutages:function(){return this._call('create');},
+    _call:function(method){
+        try{
+            var service=new IncidentManualOutageService(),id=String(this.getParameter('sysparm_incident')||'');
+            var data=JSON.parse(String(this.getParameter('sysparm_payload')||'{}'));
+            return JSON.stringify({ok:true,data:service[method](id,data)});
+        }catch(e){gs.warn('Incident Manual Outage: '+String(e.message||e));return JSON.stringify({ok:false,error:String(e.message||e)});}
+    },
+    type:'IncidentManualOutageAjax'
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chatgpt.codex&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-19 23:19:15&lt;/sys_created_on&gt;&lt;sys_id&gt;1aa56b55c344df18e079b13ed40131b8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;IncidentManualOutageAjax&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_1aa56b55c344df18e079b13ed40131b8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chatgpt.codex&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-19 23:19:15&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-2049298790</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>25deefd5c3c4df18e079b13ed40131f8</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a156764d060000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table/>
+<target_name>IncidentManualOutageAjax</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_guid>dea56b559244df18d62095dc756688ba</update_guid>
+<update_guid_history>dea56b559244df18d62095dc756688ba:-2049298790</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_0ba5ab55c344df18e079b13ed40131ce</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;manual_incident_service_outage&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+    if (g_form.modified) {
+        g_form.addErrorMessage('Salve as alterações do incidente antes de registrar Outages.');
+        return;
+    }
+    g_modal.showFrame({
+        title:'Registrar Outage — Serviços Impactados',
+        url:'/manual_incident_outage.do?sysparm_stack=no&amp;sysparm_workspace=true&amp;sysparm_incident='+encodeURIComponent(g_form.getUniqueValue()),
+        size:'xl',height:450,autoCloseOn:'URL_CHANGED',
+        callback:function(){if(g_form.refreshRelatedLists)g_form.refreshRelatedLists();}
+    });
+}
+]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;new global.IncidentManualOutageService().canOpen(current)&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_icon/&gt;&lt;form_button_v2&gt;true&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;true&lt;/format_for_configurable_workspace&gt;&lt;hint&gt;Criar Outages manualmente para serviços e offerings impactados.&lt;/hint&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_button_icon/&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Create Outage&lt;/name&gt;&lt;onclick&gt;openManualIncidentOutage()&lt;/onclick&gt;&lt;order&gt;180&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function openManualIncidentOutage() {
+    if (g_form.modified) {
+        g_form.addErrorMessage('Salve as alterações do incidente antes de registrar Outages.');
+        return false;
+    }
+    var modal = new GlideModal('manual_incident_outage', false, 'modal-lg');
+    modal.setTitle('Registrar Outage — Serviços Impactados');
+    modal.setPreference('sysparm_incident', g_form.getUniqueValue());
+    modal.on('bodyrendered', function() {});
+    modal.on('closeconfirm', function() { if (g_form.refreshRelatedLists) g_form.refreshRelatedLists(); });
+    modal.render();
+    return false;
+}
+]]&gt;&lt;/script&gt;&lt;show_form_icon_only&gt;false&lt;/show_form_icon_only&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_list_icon_only&gt;false&lt;/show_list_icon_only&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chatgpt.codex&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-19 23:19:18&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;0ba5ab55c344df18e079b13ed40131ce&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create Outage&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_0ba5ab55c344df18e079b13ed40131ce&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chatgpt.codex&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-19 23:40:29&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;true&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-13752506</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>29de2b5dc3c4df18e079b13ed4013140</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a15689bc440000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table>incident</table>
+<target_name>Create Outage</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>518aef990784df18fe75d8bf91ade7b9</update_guid>
+<update_guid_history>518aef990784df18fe75d8bf91ade7b9:-13752506,53876b9dcd44df1890b9a18562e61c31:564967688,c7466319f544df184fbea8487c9e3be2:580797382,13a5eb557944df18c35b7f9922d6283b:816940547</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_a6a5ab55c344df18e079b13ed4013104</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[(function(){
+    'use strict';
+    var model, selected={}, checkboxes={}, children={}, reviewed='', busy=false, completed=false;
+    var queryIncident=new URLSearchParams(location.search).get('sysparm_incident')||'';
+    var hiddenIncident=document.getElementById('mo-incident').value||'';
+    var incidentId=/^[a-f0-9]{32}$/.test(queryIncident)?queryIncident:hiddenIncident;
+    var requestId='mo_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    function el(id){return document.getElementById(id);}
+    function node(tag,text,cls){var n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;}
+    function show(id,on){el(id).classList.toggle('mo-hidden',!on);}
+    function error(msg){el('mo-error').textContent=msg||'';show('mo-error',!!msg);}
+    function rpc(method,payload,cb){
+        var ga=new GlideAjax('IncidentManualOutageAjax');ga.addParam('sysparm_name',method);ga.addParam('sysparm_incident',incidentId);ga.addParam('sysparm_payload',JSON.stringify(payload||{}));
+        ga.getXMLAnswer(function(answer){try{var r=JSON.parse(answer);if(!r.ok)throw new Error(r.error||'Operação não autorizada.');cb(null,r.data);}catch(e){cb(e);}});
+    }
+    function values(){return {targets:Object.keys(selected).filter(function(id){return selected[id];}).sort(),begin:el('mo-begin').value,end:el('mo-end').value,type:el('mo-type').value};}
+    function fingerprint(){return JSON.stringify(values());}
+    function controls(){var n=values().targets.length;el('mo-review').disabled=busy||completed||!n;el('mo-create').disabled=busy||completed||!n||reviewed!==fingerprint();el('mo-create').textContent='Criar '+n+' Outage'+(n===1?'':'s');el('mo-status').textContent=busy?'Processando...':completed?'Operação concluída.':n+' alvo(s) selecionado(s). Revise antes de criar.';}
+    function changed(){reviewed='';show('mo-preview',false);error('');controls();}
+    function choice(item,kind,container){
+        var wrap=node('div',null,'mo-choice'),input=node('input');input.type='checkbox';input.id='mo-ci-'+item.id;input.setAttribute('data-kind',kind);input.setAttribute('data-ci',item.id);
+        var label=node('label');label.htmlFor=input.id;label.appendChild(node('span',item.name));label.appendChild(node('span',kind==='service'?'SERVICE':kind==='offering'?'OFFERING':item.classLabel||'SERVICE INSTANCE','mo-badge'));
+        wrap.appendChild(input);wrap.appendChild(label);container.appendChild(wrap);checkboxes[item.id]={input:input,wrap:wrap};
+        input.addEventListener('change',function(){
+            selected[item.id]=input.checked;
+            if(kind==='service') (children[item.id]||[]).forEach(function(id){var c=checkboxes[id];selected[id]=false;c.input.checked=false;c.input.disabled=input.checked;c.input.setAttribute('aria-disabled',String(input.checked));c.wrap.classList.toggle('mo-locked',input.checked);c.wrap.title=input.checked?'Coberta pelo Service selecionado. Desmarque o pai para selecionar a Offering.':'';});
+            changed();
+        });
+    }
+    function draw(m){
+        model=m;el('mo-heading').textContent=m.incident.number+' — '+m.incident.description+' | '+m.impactedCount+' serviço(s)/CI(s) impactado(s).';
+        el('mo-begin').value=m.begin.replace(' ','T');el('mo-timezone').textContent='Fuso da sessão ServiceNow: '+m.timezone+'.';
+        if(!m.groups.length)el('mo-groups').appendChild(node('p','Não há Services ou Offerings nesta lista.','mo-muted'));
+        m.groups.forEach(function(g){
+            var card=node('div',null,'mo-card');
+            if(g.parent){
+                var head=node('div',null,'mo-group-head');choice(g.parent,'service',head);card.appendChild(head);
+                card.appendChild(node('div','Selecionar o Service registra somente um Outage no pai. A plataforma propaga o impacto às Offerings.','mo-muted'));
+                children[g.parent.id]=g.offerings.map(function(o){return o.id;});
+            }else card.appendChild(node('div','Offerings sem parent — selecione individualmente','mo-group-head'));
+            var offers=node('div',null,'mo-offerings');g.offerings.forEach(function(o){choice(o,'offering',offers);});card.appendChild(offers);el('mo-groups').appendChild(card);
+        });
+        if(!m.instances.length)el('mo-instances').appendChild(node('p','Não há Service Instances / Application Services impactados.','mo-muted'));
+        m.instances.forEach(function(i){choice(i,'instance',el('mo-instances'));});
+        if(m.others.length){show('mo-others',true);m.others.forEach(function(i){el('mo-other-list').appendChild(node('p',i.name+' — '+i.classLabel));});}
+        show('mo-content',true);controls();
+    }
+    function link(table,id,text){var a=node('a',text);a.href='/'+table+'.do?sys_id='+encodeURIComponent(id);a.target='_blank';a.rel='noopener';return a;}
+    function preview(p){
+        var box=el('mo-preview');box.textContent='';box.appendChild(node('h3','Serão criados '+p.targets.length+' Outage(s)'));
+        var list=node('ul');p.targets.forEach(function(t){list.appendChild(node('li',t.name));});box.appendChild(list);
+        box.appendChild(node('p','Tipo: '+(p.type==='degradation'?'Degradation':'Outage')+' | Início: '+p.begin+' | Fim: '+p.end));
+        if(p.conflicts.length){
+            var warning=node('div',null,'mo-warning');warning.appendChild(node('strong','Atenção: há Outages com períodos sobrepostos. A criação continua permitida.'));
+            warning.appendChild(node('p','Inclui o alvo, seu pai e Offerings relacionadas. Confira as Tasks e os Outages abaixo antes de confirmar.'));
+            var table=node('table',null,'mo-table'),head=node('tr');['Outage','CI / Serviço','Período','Task(s) associada(s)'].forEach(function(s){head.appendChild(node('th',s));});table.appendChild(head);
+            p.conflicts.forEach(function(c){var tr=node('tr'),td=node('td');td.appendChild(link('cmdb_ci_outage',c.id,c.number));tr.appendChild(td);tr.appendChild(node('td',c.ci));tr.appendChild(node('td',c.begin+' → '+(c.end||'Em andamento')));td=node('td');c.tasks.forEach(function(t){td.appendChild(link('task',t.id,t.number));td.appendChild(node('br'));});if(!c.tasks.length)td.textContent='Sem Task informada';tr.appendChild(td);table.appendChild(tr);});warning.appendChild(table);
+            if(p.moreConflicts)warning.appendChild(node('p','Exibidos os 100 primeiros registros. Consulte a lista de Outages para os demais.'));box.appendChild(warning);
+        }else box.appendChild(node('p','Não foram encontrados Outages com horários sobrepostos nos alvos e relações consultados.','mo-muted'));
+        show('mo-preview',true);
+    }
+    el('mo-begin').addEventListener('change',changed);el('mo-end').addEventListener('change',changed);el('mo-type').addEventListener('change',changed);
+    el('mo-review').addEventListener('click',function(){
+        if(busy)return;error('');var stamp=fingerprint();busy=true;controls();
+        rpc('preview',values(),function(e,p){busy=false;if(e)error(e.message);else if(stamp===fingerprint()){preview(p);reviewed=stamp;}controls();});
+    });
+    el('mo-create').addEventListener('click',function(){
+        if(busy||completed||reviewed!==fingerprint())return;
+        var data=values();data.confirmed=true;data.requestId=requestId;busy=true;error('');controls();
+        // Freeze selections while the request is in flight; retry retains the same request id.
+        Array.prototype.forEach.call(document.querySelectorAll('#mo-content input, #mo-content select'),function(i){i.disabled=true;});
+        rpc('createOutages',data,function(e,r){
+            busy=false;
+            if(e){error(e.message+' Feche e reabra a janela para consultar a situação antes de tentar novamente.');completed=true;controls();return;}
+            completed=true;var box=el('mo-result');box.textContent='';box.className='mo-success';
+            box.appendChild(node('h3',r.created.length+' Outage(s) criado(s) por '+r.actor));
+            r.created.forEach(function(o){var p=node('p');p.appendChild(link('cmdb_ci_outage',o.id,o.number));p.appendChild(document.createTextNode(' — '+o.ci));box.appendChild(p);});
+            if(r.errors.length){var warning=node('div',r.errors.join('\n'),'mo-warning');box.appendChild(warning);}
+            show('mo-content',false);show('mo-result',true);controls();
+        });
+    });
+    el('mo-close').addEventListener('click',function(){
+        if(busy)return;
+        if(new URLSearchParams(location.search).get('sysparm_workspace')==='true'){
+            // URL_CHANGED is the documented Workspace modal completion mechanism.
+            location.href='/incident.do?sys_id='+encodeURIComponent(incidentId);
+        }else if(typeof GlideModal!=='undefined' &amp;&amp; GlideModal.get())GlideModal.get().destroy();
+        else window.close();
+    });
+    rpc('getModel',{},function(e,m){if(e){error(e.message);el('mo-heading').textContent='Operação indisponível.';}else draw(m);});
+})();
+]]&gt;&lt;/client_script&gt;&lt;description&gt;Guided manual outages for impacted services. Classic and SOW.&lt;/description&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint/&gt;&lt;html&gt;&amp;lt;?xml version="1.0" encoding="utf-8" ?&amp;gt;
+&amp;lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide"&amp;gt;
+ &amp;lt;g:evaluate var="jvar_incident" jelly="true"&amp;gt;var incidentId = RP.getWindowProperties().get('sysparm_incident') || request.getParameter('sysparm_incident') || ''; /^[a-f0-9]{32}$/.test(String(incidentId)) ? String(incidentId) : '';&amp;lt;/g:evaluate&amp;gt;
+ &amp;lt;style&amp;gt;&amp;lt;![CDATA[
+ #manual_incident_outage .modal-body{max-height:calc(100vh - 130px);overflow-y:auto;padding:0} #manual_incident_outage .modal-dialog{margin:20px auto}
+
+ body{background:#f5f7fa;color:#172b3a;font-family:Arial,sans-serif;margin:0}.mo-wrap{max-width:1120px;margin:auto;padding:20px}.mo-intro{margin-bottom:16px}.mo-intro h2{font-size:22px;margin:0 0 8px}.mo-intro p{color:#526573;margin:4px 0;line-height:1.5}.mo-card{background:white;border:1px solid #d6dfe6;border-radius:8px;padding:16px;margin:12px 0}.mo-dates{display:flex;gap:20px;flex-wrap:wrap}.mo-dates label{display:block;font-weight:bold;margin-bottom:6px}.mo-dates input{border:1px solid #9baebd;border-radius:4px;padding:9px;font:inherit}.mo-muted{color:#526573;font-size:13px;line-height:1.5}.mo-section{font-size:17px;margin:22px 0 8px}.mo-group-head{padding-bottom:10px;border-bottom:1px solid #e5ebf0;margin-bottom:8px;font-weight:bold}.mo-choice{display:flex;align-items:flex-start;gap:10px;padding:9px 4px}.mo-choice input{margin:3px 0 0;width:17px;height:17px}.mo-choice label{margin:0;cursor:pointer;line-height:1.4;flex:1;font-weight:normal}.mo-offerings{padding-left:26px}.mo-locked{opacity:.55;background:#f1f4f6;border-radius:4px}.mo-badge{font-size:11px;font-weight:normal;padding:3px 7px;border-radius:10px;background:#eaf1f7;color:#34536b;margin-left:8px}.mo-warning{background:#fff7df;border:1px solid #d8ae40;border-radius:6px;padding:12px;margin:10px 0;line-height:1.5}.mo-error{background:#ffeded;border:1px solid #d57676;border-radius:6px;padding:12px;white-space:pre-wrap}.mo-success{background:#e7f5ee;border:1px solid #83b89a;border-radius:6px;padding:14px}.mo-actions{position:sticky;bottom:0;background:#f5f7fa;padding:14px 0 4px;display:flex;gap:10px;align-items:center;border-top:1px solid #d6dfe6;margin-top:18px}.mo-btn{border:1px solid #526f83;background:white;border-radius:5px;padding:9px 16px;font:inherit;cursor:pointer}.mo-primary{background:#185b79;color:white;border-color:#185b79}.mo-btn:disabled{opacity:.45;cursor:not-allowed}.mo-summary ul{margin:8px 0;padding-left:24px}.mo-table{width:100%;border-collapse:collapse;font-size:13px}.mo-table td,.mo-table th{padding:8px;text-align:left;border-bottom:1px solid #e4e8ed;vertical-align:top}.mo-status{flex:1;color:#526573;font-size:13px}a{color:#11608c}.mo-hidden{display:none!important}
+ ]]&amp;gt;&amp;lt;/style&amp;gt;
+ &amp;lt;g:ui_form&amp;gt;
+  &amp;lt;div id="mo-root" class="mo-wrap"&amp;gt;
+   &amp;lt;input type="hidden" id="mo-incident" value="${jvar_incident}" /&amp;gt;
+   &amp;lt;div class="mo-intro"&amp;gt;&amp;lt;h2&amp;gt;Registrar Outage nos serviços impactados&amp;lt;/h2&amp;gt;&amp;lt;p id="mo-heading"&amp;gt;Carregando incidente...&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;Todos os Serviços Impactados são mostrados. Selecione os alvos desejados: um Service bloqueia suas Offerings; Service Instances podem ser combinadas com qualquer seleção.&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;
+   &amp;lt;div id="mo-error" class="mo-error mo-hidden" role="alert"&amp;gt;&amp;lt;/div&amp;gt;
+   &amp;lt;div id="mo-content" class="mo-hidden"&amp;gt;
+    &amp;lt;div class="mo-card mo-dates" style="display:block"&amp;gt;
+     &amp;lt;div style="margin-bottom:20px"&amp;gt;&amp;lt;label for="mo-type"&amp;gt;Type *&amp;lt;/label&amp;gt;&amp;lt;select id="mo-type" style="border:1px solid #9baebd;border-radius:4px;padding:9px;font:inherit"&amp;gt;&amp;lt;option value="outage"&amp;gt;Outage&amp;lt;/option&amp;gt;&amp;lt;option value="degradation"&amp;gt;Degradation&amp;lt;/option&amp;gt;&amp;lt;/select&amp;gt;&amp;lt;/div&amp;gt;
+     &amp;lt;div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px"&amp;gt;
+      &amp;lt;div&amp;gt;&amp;lt;label for="mo-begin"&amp;gt;Início *&amp;lt;/label&amp;gt;&amp;lt;input id="mo-begin" style="width:100%;min-width:0;box-sizing:border-box" type="datetime-local" step="1" required="required" /&amp;gt;&amp;lt;div class="mo-muted"&amp;gt;Preenchido com a abertura do incidente; pode ser ajustado.&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+      &amp;lt;div&amp;gt;&amp;lt;label for="mo-end"&amp;gt;Fim&amp;lt;/label&amp;gt;&amp;lt;input id="mo-end" style="width:100%;min-width:0;box-sizing:border-box" type="datetime-local" step="1" /&amp;gt;&amp;lt;div class="mo-muted"&amp;gt;Deixe vazio se a indisponibilidade estiver em andamento.&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+     &amp;lt;/div&amp;gt;
+     &amp;lt;div class="mo-muted" id="mo-timezone" style="margin-top:14px"&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;h3 class="mo-section"&amp;gt;1. Services / Offerings&amp;lt;/h3&amp;gt;&amp;lt;div id="mo-groups"&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;h3 class="mo-section"&amp;gt;2. Service Instances / Application Services&amp;lt;/h3&amp;gt;&amp;lt;div id="mo-instances" class="mo-card"&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div id="mo-others" class="mo-hidden"&amp;gt;&amp;lt;h3 class="mo-section"&amp;gt;Outros CIs impactados — somente consulta&amp;lt;/h3&amp;gt;&amp;lt;div id="mo-other-list" class="mo-card"&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div id="mo-preview" class="mo-card mo-summary mo-hidden" aria-live="polite"&amp;gt;&amp;lt;/div&amp;gt;
+   &amp;lt;/div&amp;gt;
+   &amp;lt;div id="mo-result" class="mo-hidden" role="status"&amp;gt;&amp;lt;/div&amp;gt;
+   &amp;lt;div class="mo-actions"&amp;gt;&amp;lt;span id="mo-status" class="mo-status"&amp;gt;Nenhum Outage será criado sem sua confirmação.&amp;lt;/span&amp;gt;&amp;lt;button id="mo-close" class="mo-btn" type="button"&amp;gt;Fechar&amp;lt;/button&amp;gt;&amp;lt;button id="mo-review" class="mo-btn" type="button" disabled="disabled"&amp;gt;Revisar seleção&amp;lt;/button&amp;gt;&amp;lt;button id="mo-create" class="mo-btn mo-primary" type="button" disabled="disabled"&amp;gt;Criar Outages&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+ &amp;lt;/g:ui_form&amp;gt;
+&amp;lt;/j:jelly&amp;gt;
+&lt;/html&gt;&lt;name&gt;manual_incident_outage&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chatgpt.codex&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-19 23:19:17&lt;/sys_created_on&gt;&lt;sys_id&gt;a6a5ab55c344df18e079b13ed4013104&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;manual_incident_outage&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_a6a5ab55c344df18e079b13ed4013104&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chatgpt.codex&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-19 23:44:12&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<payload_hash>274462697</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>6dde2b5dc3c4df18e079b13ed4013140</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a1568d229f0000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table/>
+<target_name>manual_incident_outage</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_guid>ff5b2b9d7984df18b2caa07c9a6dfea3</update_guid>
+<update_guid_history>ff5b2b9d7984df18b2caa07c9a6dfea3:274462697,418a63999884df187f674310fed329e2:1199874307,50f7a311f484df188fe3a41c7e5f4217:-1647450500,61f6e7d9e644df18f646be07c263bf8c:-1123734665,b6a5ab556444df1840cf40cb3ff72208:1867030330</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_form_action_57a5eb55c344df18e079b13ed4013120</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action"><sys_ux_form_action action="INSERT_OR_UPDATE"><action_type>ui_action</action_type><active>true</active><declarative_action/><description/><name>Create Outage</name><specificity>20</specificity><sys_class_name>sys_ux_form_action</sys_class_name><sys_created_by>chatgpt.codex</sys_created_by><sys_created_on>2026-10-19 23:19:19</sys_created_on><sys_id>57a5eb55c344df18e079b13ed4013120</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Create Outage</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_form_action_57a5eb55c344df18e079b13ed4013120</sys_update_name><sys_updated_by>chatgpt.codex</sys_updated_by><sys_updated_on>2026-10-19 23:41:39</sys_updated_on><table>incident</table><ui_action display_value="Create Outage">0ba5ab55c344df18e079b13ed40131ce</ui_action></sys_ux_form_action><sys_translated_text action="delete_multiple" query="documentkey=57a5eb55c344df18e079b13ed4013120"/></record_update>]]></payload>
+<payload_hash>-1038056900</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>a1de2b5dc3c4df18e079b13ed4013141</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a1568ace6a0000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table>incident</table>
+<target_name>Create Outage</target_name>
+<type>UX Form Actions</type>
+<update_domain>global</update_domain>
+<update_guid>66caa31d0784df1843c841712c993879</update_guid>
+<update_guid_history>66caa31d0784df1843c841712c993879:-1038056900,17a5eb556944df18c4eac480eab93124:465278131</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_b5a52b55c344df18e079b13ed4013193</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.IncidentManualOutageService&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Manual Incident Outages - server validated selection, native outage propagation, user initiated.&lt;/description&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;IncidentManualOutageService&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var IncidentManualOutageService = Class.create();
+IncidentManualOutageService.prototype = {
+    initialize: function() {},
+    _authorized: function() {
+        return gs.hasRole('itil') || gs.hasRole('sn_incident_write') || gs.hasRole('admin');
+    },
+    canOpen: function(incident) {
+        if (!this._authorized() || !incident || incident.isNewRecord() || incident.getValue('state') != '2' || !incident.canRead() || !incident.canWrite()) return false;
+        var out = new GlideRecordSecure('cmdb_ci_outage'); out.initialize();
+        if (!out.canCreate()) return false;
+        var rel = new GlideRecordSecure('task_cmdb_ci_service');
+        rel.addQuery('task', incident.getUniqueValue()); rel.setLimit(1); rel.query();
+        return rel.hasNext();
+    },
+    _incident: function(id) {
+        if (!/^[a-f0-9]{32}$/.test(id || '')) throw new Error('Incidente inválido.');
+        var inc = new GlideRecordSecure('incident');
+        if (!inc.get(id) || !this.canOpen(inc)) throw new Error('O incidente precisa estar salvo, In Progress, possuir serviços impactados e permitir esta operação.');
+        return inc;
+    },
+    _ci: function(id) {
+        var ci = new GlideRecordSecure('cmdb_ci');
+        return ci.get(id) ? ci : null;
+    },
+    _item: function(ci) {
+        return {id: ci.getUniqueValue(), name: ci.getDisplayValue(), className: ci.getValue('sys_class_name'), classLabel: ci.sys_class_name.getDisplayValue()};
+    },
+    _model: function(inc) {
+        var groups = {}, instances = [], others = [], allowed = {}, impacted = {}, self = this;
+        var rel = new GlideRecordSecure('task_cmdb_ci_service'); rel.addQuery('task', inc.getUniqueValue()); rel.query();
+        while (rel.next()) {
+            var id = rel.getValue('cmdb_ci_service');
+            if (!id || impacted[id]) continue;
+            impacted[id] = true;
+            var ci = this._ci(id); if (!ci) continue;
+            var item = this._item(ci);
+            if (ci.instanceOf('service_offering')) {
+                var off = new GlideRecordSecure('service_offering'); if (!off.get(id)) continue;
+                var parent = this._ci(off.getValue('parent'));
+                var key = parent ? parent.getUniqueValue() : 'unparented';
+                if (!groups[key]) groups[key] = {parent: parent ? this._item(parent) : null, offerings: [], direct: false};
+                groups[key].offerings.push(item);
+                allowed[id] = {item: item, parent: parent ? parent.getUniqueValue() : '', kind: 'offering'};
+                if (parent &amp;&amp; parent.instanceOf('cmdb_ci_service')) allowed[parent.getUniqueValue()] = {item: this._item(parent), parent: '', kind: 'service'};
+            } else if (ci.instanceOf('cmdb_ci_service_auto') || ci.getValue('sys_class_name') == 'cmdb_ci_service_instance') {
+                instances.push(item); allowed[id] = {item: item, parent: '', kind: 'instance'};
+            } else if (ci.instanceOf('cmdb_ci_service')) {
+                if (!groups[id]) groups[id] = {parent: item, offerings: [], direct: true};
+                else groups[id].direct = true;
+                allowed[id] = {item: item, parent: '', kind: 'service'};
+            } else others.push(item);
+        }
+        var list = [];
+        for (var g in groups) { groups[g].offerings.sort(function(a,b){return a.name.localeCompare(b.name);}); list.push(groups[g]); }
+        list.sort(function(a,b){return (a.parent ? a.parent.name : 'ZZ').localeCompare(b.parent ? b.parent.name : 'ZZ');});
+        instances.sort(function(a,b){return a.name.localeCompare(b.name);});
+        return {groups:list, instances:instances, others:others, allowed:allowed, impactedCount:Object.keys(impacted).length};
+    },
+    getModel: function(id) {
+        var inc = this._incident(id), m = this._model(inc);
+        delete m.allowed;
+        var opened = new GlideDateTime(inc.getValue('opened_at'));
+        m.incident = {id:inc.getUniqueValue(), number:inc.getValue('number'), description:inc.getValue('short_description')};
+        m.begin = opened.getDisplayValueInternal();
+        m.timezone = gs.getSession().getTimeZoneName();
+        return m;
+    },
+    _request: function(id, data) {
+        var inc = this._incident(id), model = this._model(inc);
+        if (!data || (data.type != 'outage' &amp;&amp; data.type != 'degradation')) throw new Error('Selecione Outage ou Degradation.');
+        if (!data || !data.targets || !Array.isArray(data.targets) || !data.targets.length || data.targets.length &gt; 100) throw new Error('Selecione de 1 a 100 alvos.');
+        function date(value, required) {
+            if (!value &amp;&amp; !required) return null;
+            value = (value || '').replace('T',' ');
+            if (value.length == 16) value += ':00';
+            if (!/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(value)) throw new Error('Informe data e hora válidas.');
+            var d = new GlideDateTime(); d.setDisplayValueInternal(value);
+            if (!d.isValid() || d.getDisplayValueInternal() != value) throw new Error('Data/hora inválida no fuso da sessão.');
+            return d;
+        }
+        var begin = date(data.begin, true), end = date(data.end, false);
+        if (end &amp;&amp; end.getNumericValue() &lt; begin.getNumericValue()) throw new Error('O fim não pode ser anterior ao início.');
+        var seen = {}, selected = [];
+        for (var i=0;i&lt;data.targets.length;i++) {
+            var target = String(data.targets[i]);
+            if (!model.allowed[target]) throw new Error('Um alvo deixou de pertencer aos serviços impactados ou aos seus pais. Reabra a janela.');
+            if (!seen[target]) { seen[target]=true; selected.push(model.allowed[target]); }
+        }
+        for (var j=0;j&lt;selected.length;j++) if (selected[j].parent &amp;&amp; seen[selected[j].parent]) throw new Error('Não é permitido selecionar um serviço pai e suas offerings na mesma operação.');
+        return {incident:inc, selected:selected, begin:begin, end:end, outageType:data.type};
+    },
+    _conflicts: function(r) {
+        var ids = [], scope = {};
+        for (var i=0;i&lt;r.selected.length;i++) {
+            var s=r.selected[i]; ids.push(s.item.id); scope[s.item.id]=s.item.name;
+            if (s.parent) {ids.push(s.parent); var p=this._ci(s.parent);if(p)scope[s.parent]=p.getDisplayValue();}
+            if (s.kind=='service') {
+                var o=new GlideRecordSecure('service_offering');o.addQuery('parent',s.item.id);o.query();
+                while(o.next()){ids.push(o.getUniqueValue());scope[o.getUniqueValue()]=o.getDisplayValue();}
+            }
+        }
+        var matches={}, outages=new GlideRecordSecure('cmdb_ci_outage');
+        var overlap=new GlideRecordSecure('cmdb_outage_ci_mtom');overlap.addQuery('ci_item','IN',ids.join(','));overlap.query();
+        var related=[];while(overlap.next())related.push(overlap.getValue('outage'));
+        var q=outages.addQuery('cmdb_ci','IN',ids.join(','));if(related.length)q.addOrCondition('sys_id','IN',related.join(','));
+        if(r.end)outages.addQuery('begin','&lt;=',r.end.getValue());
+        var endq=outages.addNullQuery('end');endq.addOrCondition('end','&gt;=',r.begin.getValue());
+        outages.orderByDesc('begin');outages.setLimit(101);outages.query();
+        var list=[];
+        while(outages.next()) {
+            var tasks=[], seen={};
+            var direct=outages.getValue('task_number');
+            if(direct){var t=new GlideRecordSecure('task');if(t.get(direct)){tasks.push({id:direct,number:t.getValue('number')});seen[direct]=true;}}
+            var mt=new GlideRecordSecure('task_outage');mt.addQuery('outage',outages.getUniqueValue());mt.query();
+            while(mt.next()){var tid=mt.getValue('task');if(!seen[tid]){var task=new GlideRecordSecure('task');if(task.get(tid)){tasks.push({id:tid,number:task.getValue('number')});seen[tid]=true;}}}
+            list.push({id:outages.getUniqueValue(),number:outages.getValue('number'),ci:outages.cmdb_ci.getDisplayValue(),begin:outages.begin.getDisplayValue(),end:outages.end.getDisplayValue(),tasks:tasks});
+        }
+        return list;
+    },
+    preview: function(id,data) {
+        var r=this._request(id,data), conflicts=this._conflicts(r), targets=[];
+        for(var i=0;i&lt;r.selected.length;i++) targets.push(r.selected[i].item);
+        return {targets:targets,type:r.outageType,conflicts:conflicts.slice(0,100),moreConflicts:conflicts.length&gt;100,begin:r.begin.getDisplayValue(),end:r.end?r.end.getDisplayValue():'Em andamento'};
+    },
+    create: function(id,data) {
+        var r=this._request(id,data);
+        if(!data.confirmed)throw new Error('Revise e confirme a seleção.');
+        // Only replay protection for the exact same browser submission; separate manual outages remain allowed.
+        var requestId=String(data.requestId||'');
+        if(!/^[a-zA-Z0-9_-]{12,80}$/.test(requestId))throw new Error('Identificador da solicitação inválido.');
+        var key='manual_outage_'+id+'_'+requestId,session=gs.getSession();
+        var previous=session.getClientData(key);
+        if(previous &amp;&amp; previous!='processing')return JSON.parse(previous);
+        if(previous=='processing')throw new Error('Esta solicitação já está em processamento.');
+        session.putClientData(key,'processing');
+        var result={created:[],errors:[],actor:gs.getUserName()};
+        try {
+            // Recheck overlaps on submission for freshness, without suppressing authorized duplicates.
+            this._conflicts(r);
+            for(var i=0;i&lt;r.selected.length;i++) {
+                var item=r.selected[i].item,out=new GlideRecordSecure('cmdb_ci_outage');out.initialize();
+                if(!out.canCreate())throw new Error('Sem permissão para criar Outage.');
+                out.setValue('cmdb_ci',item.id);out.setValue('type',r.outageType);out.setValue('begin',r.begin.getValue());
+                if(r.end)out.setValue('end',r.end.getValue());
+                out.setValue('task_number',id);
+                out.setValue('short_description',r.incident.getValue('number')+' - '+item.name);
+                out.setValue('message','[OUTAGE - Manual] - Criação Assistida');
+                var oid=out.insert();
+                if(!oid){result.errors.push('Não foi possível criar Outage para '+item.name);continue;}
+                // Native Task-Outage BR normally creates this; only fill the standard M2M if absent.
+                var link=new GlideRecordSecure('task_outage');link.addQuery('task',id);link.addQuery('outage',oid);link.query();
+                if(!link.hasNext()){link.initialize();if(link.canCreate()){link.setValue('task',id);link.setValue('outage',oid);if(!link.insert())result.errors.push('Revisar vínculo da Task no Outage '+out.getValue('number'));}else result.errors.push('Sem permissão para vincular a Task ao Outage '+out.getValue('number'));}
+                result.created.push({id:String(oid),number:out.getValue('number'),ci:item.name});
+            }
+            if(result.created.length){
+                var note='Outages registrados manualmente por '+gs.getUserDisplayName()+':\n';
+                for(var j=0;j&lt;result.created.length;j++)note+=result.created[j].number+' - '+result.created[j].ci+'\n';
+                note+='Início: '+r.begin.getDisplayValue()+'; fim: '+(r.end?r.end.getDisplayValue():'em andamento')+'.';
+                if(r.incident.work_notes.canWrite()){r.incident.work_notes=note;r.incident.update();}
+            }
+            session.putClientData(key,JSON.stringify(result));return result;
+        }catch(e){if(result.created.length){result.errors.push(String(e.message||e));session.putClientData(key,JSON.stringify(result));return result;}session.putClientData(key,'');throw e;}
+    },
+    type:'IncidentManualOutageService'
+};
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chatgpt.codex&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-19 23:19:13&lt;/sys_created_on&gt;&lt;sys_id&gt;b5a52b55c344df18e079b13ed4013193&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;IncidentManualOutageService&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_b5a52b55c344df18e079b13ed4013193&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chatgpt.codex&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-19 23:40:27&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-398052327</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>e1de2b5dc3c4df18e079b13ed4013140</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a15689b4440000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table/>
+<target_name>IncidentManualOutageService</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_guid>f08aaf995184df186c94c3b8455edee7</update_guid>
+<update_guid_history>f08aaf995184df186c94c3b8455edee7:-398052327,75f6e7d94244df18ec039b57d86c79bc:1272812146,8aa52b554544df18fc55cfc9419599b1:825521435</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ux_form_action_layout_item_d7a5eb55c344df18e079b13ed4013126</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item"><sys_ux_form_action_layout_item action="INSERT_OR_UPDATE"><action display_value="Create Outage">57a5eb55c344df18e079b13ed4013120</action><active>true</active><animate_icon>false</animate_icon><color>secondary</color><description/><icon/><item_type>action</item_type><label>Registrar Outage</label><layout_group/><name>Create Outage</name><order>180</order><overflow>false</overflow><sys_class_name>sys_ux_form_action_layout_item</sys_class_name><sys_created_by>chatgpt.codex</sys_created_by><sys_created_on>2026-10-19 23:19:19</sys_created_on><sys_id>d7a5eb55c344df18e079b13ed4013126</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Registrar Outage</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ux_form_action_layout_item_d7a5eb55c344df18e079b13ed4013126</sys_update_name><sys_updated_by>chatgpt.codex</sys_updated_by><sys_updated_on>2026-10-19 23:41:40</sys_updated_on><table>incident</table></sys_ux_form_action_layout_item></record_update>]]></payload>
+<payload_hash>-165299924</payload_hash>
+<remote_update_set display_value="LAB - Incident Manual Service Outages">e9deefd5c3c4df18e079b13ed40131f7</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-19 23:59:21</sys_created_on>
+<sys_id>e5de2b5dc3c4df18e079b13ed4013141</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a1568ad0f20000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-19 23:59:21</sys_updated_on>
+<table>incident</table>
+<target_name>Registrar Outage</target_name>
+<type>UX Form Actions Layout Item</type>
+<update_domain>global</update_domain>
+<update_guid>e2caa31d1284df18c2cef5767d0f57b5</update_guid>
+<update_guid_history>e2caa31d1284df18c2cef5767d0f57b5:-165299924,dba5eb554b44df181cbb82df9384822a:-1706258530</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
