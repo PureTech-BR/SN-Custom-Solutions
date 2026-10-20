@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2026-10-20 21:57:38">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description>Correcao do Fix Script: validar o par service_commitment + service_offering em service_offering_commitment, preservando somente as disponibilidades de pares vigentes.</description>
+<inserted/>
+<name>LAB - Availability cleanup exact pair v1.1</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>e0db5435c3409310e079b13ed4013181</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-20 21:57:37</sys_created_on>
+<sys_id>989c58f5c3409310e079b13ed401313f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-20 21:57:37</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_fix_1b153fd5c348df18e079b13ed401310f</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_fix"&gt;&lt;sys_script_fix action="INSERT_OR_UPDATE"&gt;&lt;before&gt;false&lt;/before&gt;&lt;description&gt;v1.1: percorre service_availability agrupada por service_commitment E service_offering e exclui somente quando esse par nao existe em service_offering_commitment. Outros vinculos do mesmo compromisso nao impedem a limpeza. Preserva cadastros e referencias a compromissos inexistentes. DRY_RUN=true simula; false exclui. Revalida o par antes de cada exclusao. Log inclui compromisso, oferta e quantidade. Correcao nao executada na implantacao.&lt;/description&gt;&lt;name&gt;LAB - Cleanup orphan Service Availabilit&lt;/name&gt;&lt;record_for_rollback&gt;true&lt;/record_for_rollback&gt;&lt;script&gt;&lt;![CDATA[/*
+ * Global Fix Script - limpeza manual de disponibilidades sem offering relationship.
+ * Valida o par Service Commitment + Service Offering de cada disponibilidade.
+ * Preserva os cadastros e as disponibilidades dos pares ainda relacionados.
+ * DRY_RUN=true apenas simula; false remove. Executar com Record for rollback marcado.
+ */
+(function () {
+    var DRY_RUN = false;
+    var SOURCE = 'CleanupOrphanServiceAvailability';
+    var removedTotal = 0, candidateTotal = 0, skipped = 0, failures = 0;
+
+    function log(message) { gs.info(message, SOURCE); }
+    function hasRelationship(id, offeringId) {
+        var relationship = new GlideRecord('service_offering_commitment');
+        relationship.addQuery('service_commitment', id);
+        relationship.addQuery('service_offering', offeringId);
+        relationship.setLimit(1);
+        relationship.query();
+        return relationship.hasNext();
+    }
+
+    var availability = new GlideRecord('service_availability');
+    var relationships = new GlideRecord('service_offering_commitment');
+    if (!availability.isValid() || !availability.isValidField('service_commitment') ||
+            !availability.isValidField('service_offering') || !relationships.isValid() ||
+            !relationships.isValidField('service_commitment') || !relationships.isValidField('service_offering')) {
+        gs.error('Schema invalido; nenhuma exclusao realizada.', SOURCE);
+        return;
+    }
+
+    // A existencia de vinculo com OUTRA oferta nao preserva este par.
+    var groups = new GlideAggregate('service_availability');
+    groups.addNotNullQuery('service_commitment');
+    groups.addNotNullQuery('service_offering');
+    groups.addAggregate('COUNT');
+    groups.groupBy('service_commitment');
+    groups.groupBy('service_offering');
+    groups.query();
+    log('Inicio | Modo: ' + (DRY_RUN ? 'SIMULACAO' : 'EXCLUSAO'));
+
+    while (groups.next()) {
+        var commitmentId = groups.getValue('service_commitment');
+        var offeringId = groups.getValue('service_offering');
+        if (hasRelationship(commitmentId, offeringId)) { skipped++; continue; }
+
+        var commitment = new GlideRecord('service_commitment');
+        if (!commitment.get(commitmentId)) {
+            gs.warn('Service Commitment ausente: ' + commitmentId +
+                '; ignorado para revisao manual.', SOURCE);
+            continue;
+        }
+
+        var removed = 0, candidates = 0, errors = 0;
+        var offering = new GlideRecord('service_offering');
+        var offeringName = offering.get(offeringId) ? offering.getDisplayValue() : '[Oferta inexistente]';
+        var records = new GlideRecord('service_availability');
+        records.addQuery('service_commitment', commitmentId);
+        records.addQuery('service_offering', offeringId);
+        records.query();
+        while (records.next()) {
+            // Revalida antes de cada exclusao para interromper se um vinculo surgir.
+            if (hasRelationship(commitmentId, offeringId)) {
+                gs.warn('Relacionamento identificado durante a execucao; interrompida a limpeza de ' +
+                    commitmentId + ' / ' + offeringId, SOURCE);
+                break;
+            }
+            candidates++;
+            if (DRY_RUN) { continue; }
+            var availabilityId = records.getUniqueValue();
+            try {
+                if (records.deleteRecord()) { removed++; }
+                else {
+                    errors++;
+                    gs.error('Falha ao remover Service Availability: ' + availabilityId, SOURCE);
+                }
+            } catch (e) {
+                errors++;
+                gs.error('Falha ao remover Service Availability: ' + availabilityId + ' | ' + e, SOURCE);
+            }
+        }
+        candidateTotal += candidates;
+        removedTotal += removed;
+        failures += errors;
+        log('Service Commitment: ' + commitment.getDisplayValue() + ' - ' + commitmentId +
+            '; Service Offering: ' + offeringName + ' - ' + offeringId +
+            '; Offering Relationship: ' + (hasRelationship(commitmentId, offeringId) ? 'Identificado durante a execucao' : 'Não Identificado') +
+            '; Service Availability: ' + removed + ' Removidos' +
+            (DRY_RUN ? '; Simulacao: ' + candidates + ' candidatos' : '') +
+            '; Falhas: ' + errors);
+    }
+    log('Fim | Candidatos: ' + candidateTotal + '; Removidos: ' + removedTotal +
+        '; Pares preservados com relacionamento: ' + skipped + '; Falhas: ' + failures);
+})();
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_fix&lt;/sys_class_name&gt;&lt;sys_created_by&gt;chatgpt.codex&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-20 00:26:46&lt;/sys_created_on&gt;&lt;sys_id&gt;1b153fd5c348df18e079b13ed401310f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;LAB - Cleanup orphan Service Availabilit&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_fix_1b153fd5c348df18e079b13ed401310f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;chatgpt.codex&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-20 21:54:22&lt;/sys_updated_on&gt;&lt;unloadable&gt;false&lt;/unloadable&gt;&lt;/sys_script_fix&gt;&lt;/record_update&gt;</payload>
+<payload_hash>181756277</payload_hash>
+<remote_update_set display_value="LAB - Availability cleanup exact pair v1.1">989c58f5c3409310e079b13ed401313f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>diego.peukert</sys_created_by>
+<sys_created_on>2026-10-20 21:57:37</sys_created_on>
+<sys_id>d09c58f5c3409310e079b13ed4013140</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1a15b4ef19b0000001</sys_recorded_at>
+<sys_updated_by>diego.peukert</sys_updated_by>
+<sys_updated_on>2026-10-20 21:57:37</sys_updated_on>
+<table/>
+<target_name>LAB - Cleanup orphan Service Availabilit</target_name>
+<type>Fix Script</type>
+<update_domain>global</update_domain>
+<update_guid>7cdb543512409310e376bde86222f399</update_guid>
+<update_guid_history>7cdb543512409310e376bde86222f399:181756277,df153fd57d48df18b7856b6e78736292:-572610892</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
