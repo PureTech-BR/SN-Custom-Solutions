@@ -1,0 +1,18 @@
+{
+  "name": "incident-assisted-intake",
+  "version": "1.1.0",
+  "releaseDate": "2026-10-27",
+  "updateSet": "LAB - Reportar Incidente Assistido - Variable Editor",
+  "updateSetSysId": "103a3800c318d790e079b13ed401313b",
+  "state": "complete",
+  "componentCount": 56,
+  "xml": "incident-assisted-intake-v1.1.0.xml",
+  "sha256": "038691a19433aa5956032aa2680ec582cbbc5de1d12ea2cdf180bb71dda46f63",
+  "requiresPreviousUpdateSet": false,
+  "supersedes": "1.0.0",
+  "validation": {
+    "configurationFieldsCompared": 2240,
+    "differences": 0,
+    "cleanTargetCommitPerformed": false
+  }
+}

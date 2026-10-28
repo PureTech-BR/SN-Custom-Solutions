@@ -1,0 +1,338 @@
+[
+  {
+    "name": "catalog_script_client_0775e0bdc3c09310e079b13ed4013187",
+    "table": "catalog_script_client",
+    "sys_id": "0775e0bdc3c09310e079b13ed4013187",
+    "target": "LAB Intake - offering_unknown"
+  },
+  {
+    "name": "catalog_script_client_5c8564bdc3c09310e079b13ed4013145",
+    "table": "catalog_script_client",
+    "sys_id": "5c8564bdc3c09310e079b13ed4013145",
+    "target": "LAB Intake - started_unknown"
+  },
+  {
+    "name": "catalog_script_client_7e75e0bdc3c09310e079b13ed4013132",
+    "table": "catalog_script_client",
+    "sys_id": "7e75e0bdc3c09310e079b13ed4013132",
+    "target": "LAB Intake - report_offering"
+  },
+  {
+    "name": "catalog_script_client_ca75a0bdc3c09310e079b13ed4013121",
+    "table": "catalog_script_client",
+    "sys_id": "ca75a0bdc3c09310e079b13ed4013121",
+    "target": "LAB Intake - Initialize"
+  },
+  {
+    "name": "catalog_script_client_cc8524bdc3c09310e079b13ed40131fd",
+    "table": "catalog_script_client",
+    "sys_id": "cc8524bdc3c09310e079b13ed40131fd",
+    "target": "LAB Intake - report_continuity"
+  },
+  {
+    "name": "catalog_script_client_db75e0bdc3c09310e079b13ed40131c2",
+    "table": "catalog_script_client",
+    "sys_id": "db75e0bdc3c09310e079b13ed40131c2",
+    "target": "LAB Intake - report_symptom"
+  },
+  {
+    "name": "catalog_script_client_de75a0bdc3c09310e079b13ed4013186",
+    "table": "catalog_script_client",
+    "sys_id": "de75a0bdc3c09310e079b13ed4013186",
+    "target": "LAB Intake - report_service"
+  },
+  {
+    "name": "catalog_script_client_eb75e0bdc3c09310e079b13ed40131f1",
+    "table": "catalog_script_client",
+    "sys_id": "eb75e0bdc3c09310e079b13ed40131f1",
+    "target": "LAB Intake - report_extent"
+  },
+  {
+    "name": "catalog_script_client_f37524bdc3c09310e079b13ed4013184",
+    "table": "catalog_script_client",
+    "sys_id": "f37524bdc3c09310e079b13ed4013184",
+    "target": "LAB Intake - report_scope"
+  },
+  {
+    "name": "item_option_new_0c55e07dc3c09310e079b13ed401315c",
+    "table": "item_option_new",
+    "sys_id": "0c55e07dc3c09310e079b13ed401315c",
+    "target": "Não sei identificar a oferta"
+  },
+  {
+    "name": "item_option_new_1f65ac7dc3c09310e079b13ed401310e",
+    "table": "item_option_new",
+    "sys_id": "1f65ac7dc3c09310e079b13ed401310e",
+    "target": "Você consegue continuar a atividade?"
+  },
+  {
+    "name": "item_option_new_494d6031c3849310e079b13ed4013137",
+    "table": "item_option_new",
+    "sys_id": "494d6031c3849310e079b13ed4013137",
+    "target": "Ocorrências em curso"
+  },
+  {
+    "name": "item_option_new_554d6031c3849310e079b13ed401316c",
+    "table": "item_option_new",
+    "sys_id": "554d6031c3849310e079b13ed401316c",
+    "target": "Ocorrências em curso"
+  },
+  {
+    "name": "item_option_new_5d7520bdc3c09310e079b13ed4013165",
+    "table": "item_option_new",
+    "sys_id": "5d7520bdc3c09310e079b13ed4013165",
+    "target": "Não sei informar quando começou"
+  },
+  {
+    "name": "item_option_new_5e55a47dc3c09310e079b13ed40131bf",
+    "table": "item_option_new",
+    "sys_id": "5e55a47dc3c09310e079b13ed40131bf",
+    "target": "Qual a extensão da indisponibilidade?"
+  },
+  {
+    "name": "item_option_new_657520bdc3c09310e079b13ed40131fe",
+    "table": "item_option_new",
+    "sys_id": "657520bdc3c09310e079b13ed40131fe",
+    "target": "Quando o problema começou?"
+  },
+  {
+    "name": "item_option_new_6855e07dc3c09310e079b13ed40131eb",
+    "table": "item_option_new",
+    "sys_id": "6855e07dc3c09310e079b13ed40131eb",
+    "target": "O que está acontecendo?"
+  },
+  {
+    "name": "item_option_new_744d2031c3849310e079b13ed40131e7",
+    "table": "item_option_new",
+    "sys_id": "744d2031c3849310e079b13ed40131e7",
+    "target": "Dados públicos do aviso de outage"
+  },
+  {
+    "name": "item_option_new_7b55287dc3c09310e079b13ed40131a4",
+    "table": "item_option_new",
+    "sys_id": "7b55287dc3c09310e079b13ed40131a4",
+    "target": "Em qual ação ocorre a lentidão?"
+  },
+  {
+    "name": "item_option_new_8065607dc3c09310e079b13ed40131c9",
+    "table": "item_option_new",
+    "sys_id": "8065607dc3c09310e079b13ed40131c9",
+    "target": "Com que frequência o problema acontece?"
+  },
+  {
+    "name": "item_option_new_9c55e07dc3c09310e079b13ed401319d",
+    "table": "item_option_new",
+    "sys_id": "9c55e07dc3c09310e079b13ed401319d",
+    "target": "Qual oferta apresenta problema?"
+  },
+  {
+    "name": "item_option_new_a475ec7dc3c09310e079b13ed40131bd",
+    "table": "item_option_new",
+    "sys_id": "a475ec7dc3c09310e079b13ed40131bd",
+    "target": "Qual alternativa está utilizando? (opcional)"
+  },
+  {
+    "name": "item_option_new_a745a07dc3c09310e079b13ed40131d4",
+    "table": "item_option_new",
+    "sys_id": "a745a07dc3c09310e079b13ed40131d4",
+    "target": "Qual serviço apresenta problema?"
+  },
+  {
+    "name": "item_option_new_ab55287dc3c09310e079b13ed401317b",
+    "table": "item_option_new",
+    "sys_id": "ab55287dc3c09310e079b13ed401317b",
+    "target": "Qual funcionalidade está afetada e o que ainda funciona?"
+  },
+  {
+    "name": "item_option_new_bc7520bdc3c09310e079b13ed4013124",
+    "table": "item_option_new",
+    "sys_id": "bc7520bdc3c09310e079b13ed4013124",
+    "target": "Como consegue continuar a atividade com o serviço totalmente indisponível?"
+  },
+  {
+    "name": "item_option_new_d165e87dc3c09310e079b13ed4013189",
+    "table": "item_option_new",
+    "sys_id": "d165e87dc3c09310e079b13ed4013189",
+    "target": "Qual mensagem de erro aparece?"
+  },
+  {
+    "name": "item_option_new_e965e87dc3c09310e079b13ed40131a5",
+    "table": "item_option_new",
+    "sys_id": "e965e87dc3c09310e079b13ed40131a5",
+    "target": "Quem está sendo afetado?"
+  },
+  {
+    "name": "item_option_new_f17560bdc3c09310e079b13ed40131af",
+    "table": "item_option_new",
+    "sys_id": "f17560bdc3c09310e079b13ed40131af",
+    "target": "Descreva brevemente o problema"
+  },
+  {
+    "name": "m2m_connected_content_51d86c3dc3049310e079b13ed4013105",
+    "table": "m2m_connected_content",
+    "sys_id": "51d86c3dc3049310e079b13ed4013105",
+    "target": "Catalog Item: Reportar Incidente"
+  },
+  {
+    "name": "question_choice_2955647dc3c09310e079b13ed4013115",
+    "table": "question_choice",
+    "sys_id": "2955647dc3c09310e079b13ed4013115",
+    "target": "Erro ao executar uma ação"
+  },
+  {
+    "name": "question_choice_3865687dc3c09310e079b13ed40131f2",
+    "table": "question_choice",
+    "sys_id": "3865687dc3c09310e079b13ed40131f2",
+    "target": "Intermitente"
+  },
+  {
+    "name": "question_choice_3a656c7dc3c09310e079b13ed4013198",
+    "table": "question_choice",
+    "sys_id": "3a656c7dc3c09310e079b13ed4013198",
+    "target": "Várias equipes / todos os usuários"
+  },
+  {
+    "name": "question_choice_5a656c7dc3c09310e079b13ed4013112",
+    "table": "question_choice",
+    "sys_id": "5a656c7dc3c09310e079b13ed4013112",
+    "target": "Toda a minha equipe"
+  },
+  {
+    "name": "question_choice_5b55287dc3c09310e079b13ed4013127",
+    "table": "question_choice",
+    "sys_id": "5b55287dc3c09310e079b13ed4013127",
+    "target": "Não sei informar"
+  },
+  {
+    "name": "question_choice_6255e47dc3c09310e079b13ed4013103",
+    "table": "question_choice",
+    "sys_id": "6255e47dc3c09310e079b13ed4013103",
+    "target": "Total"
+  },
+  {
+    "name": "question_choice_6765ac7dc3c09310e079b13ed4013151",
+    "table": "question_choice",
+    "sys_id": "6765ac7dc3c09310e079b13ed4013151",
+    "target": "Não consigo continuar e não existe alternativa"
+  },
+  {
+    "name": "question_choice_7d652c7dc3c09310e079b13ed401317b",
+    "table": "question_choice",
+    "sys_id": "7d652c7dc3c09310e079b13ed401317b",
+    "target": "Apenas eu"
+  },
+  {
+    "name": "question_choice_8255a47dc3c09310e079b13ed4013121",
+    "table": "question_choice",
+    "sys_id": "8255a47dc3c09310e079b13ed4013121",
+    "target": "Outro"
+  },
+  {
+    "name": "question_choice_8565e87dc3c09310e079b13ed4013103",
+    "table": "question_choice",
+    "sys_id": "8565e87dc3c09310e079b13ed4013103",
+    "target": "Não sei informar"
+  },
+  {
+    "name": "question_choice_8755e47dc3c09310e079b13ed40131ec",
+    "table": "question_choice",
+    "sys_id": "8755e47dc3c09310e079b13ed40131ec",
+    "target": "Parcial"
+  },
+  {
+    "name": "question_choice_87656c7dc3c09310e079b13ed40131ae",
+    "table": "question_choice",
+    "sys_id": "87656c7dc3c09310e079b13ed40131ae",
+    "target": "Não sei informar"
+  },
+  {
+    "name": "question_choice_8c75e43dc3c09310e079b13ed4013146",
+    "table": "question_choice",
+    "sys_id": "8c75e43dc3c09310e079b13ed4013146",
+    "target": "Consigo continuar, sem bloqueio da atividade"
+  },
+  {
+    "name": "question_choice_9875ec7dc3c09310e079b13ed401318e",
+    "table": "question_choice",
+    "sys_id": "9875ec7dc3c09310e079b13ed401318e",
+    "target": "Não sei avaliar"
+  },
+  {
+    "name": "question_choice_9955247dc3c09310e079b13ed40131ff",
+    "table": "question_choice",
+    "sys_id": "9955247dc3c09310e079b13ed40131ff",
+    "target": "Lentidão"
+  },
+  {
+    "name": "question_choice_ca652c7dc3c09310e079b13ed4013191",
+    "table": "question_choice",
+    "sys_id": "ca652c7dc3c09310e079b13ed4013191",
+    "target": "Algumas pessoas"
+  },
+  {
+    "name": "question_choice_e065687dc3c09310e079b13ed40131d0",
+    "table": "question_choice",
+    "sys_id": "e065687dc3c09310e079b13ed40131d0",
+    "target": "Sempre"
+  },
+  {
+    "name": "question_choice_f055247dc3c09310e079b13ed40131c2",
+    "table": "question_choice",
+    "sys_id": "f055247dc3c09310e079b13ed40131c2",
+    "target": "Não consigo acessar"
+  },
+  {
+    "name": "question_choice_f365687dc3c09310e079b13ed4013129",
+    "table": "question_choice",
+    "sys_id": "f365687dc3c09310e079b13ed4013129",
+    "target": "Consigo continuar com uma alternativa ou dificuldade significativa"
+  },
+  {
+    "name": "question_choice_f555647dc3c09310e079b13ed4013182",
+    "table": "question_choice",
+    "sys_id": "f555647dc3c09310e079b13ed4013182",
+    "target": "Funcionalidade indisponível"
+  },
+  {
+    "name": "sc_cat_item_catalog_5f45a07dc3c09310e079b13ed401313d",
+    "table": "sc_cat_item_catalog",
+    "sys_id": "5f45a07dc3c09310e079b13ed401313d",
+    "target": "Service Catalog.Reportar Incidente"
+  },
+  {
+    "name": "sc_cat_item_category_5745a07dc3c09310e079b13ed4013147",
+    "table": "sc_cat_item_category",
+    "sys_id": "5745a07dc3c09310e079b13ed4013147",
+    "target": "Can We Help You?.Reportar Incidente"
+  },
+  {
+    "name": "sc_cat_item_producer_0745a07dc3c09310e079b13ed4013110",
+    "table": "sc_cat_item_producer",
+    "sys_id": "0745a07dc3c09310e079b13ed4013110",
+    "target": "Reportar Incidente"
+  },
+  {
+    "name": "sp_widget_d04dacfdc3449310e079b13ed401318d",
+    "table": "sp_widget",
+    "sys_id": "d04dacfdc3449310e079b13ed401318d",
+    "target": "LAB Intake - Outage Notice"
+  },
+  {
+    "name": "sys_script_client_a43a3800c318d790e079b13ed4013174",
+    "table": "sys_script_client",
+    "sys_id": "a43a3800c318d790e079b13ed4013174",
+    "target": "LAB Intake - Incident variables read onl"
+  },
+  {
+    "name": "sys_script_include_0d25e43dc3c09310e079b13ed401313d",
+    "table": "sys_script_include",
+    "sys_id": "0d25e43dc3c09310e079b13ed401313d",
+    "target": "LabIncidentIntakeAjax"
+  },
+  {
+    "name": "sys_script_include_1c25a43dc3c09310e079b13ed401318a",
+    "table": "sys_script_include",
+    "sys_id": "1c25a43dc3c09310e079b13ed401318a",
+    "target": "LabIncidentIntakeService"
+  }
+]
