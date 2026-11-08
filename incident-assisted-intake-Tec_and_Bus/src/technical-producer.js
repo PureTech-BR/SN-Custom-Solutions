@@ -1,0 +1,1 @@
+try {new global.LabTechnicalIncidentService().apply(producer,current);} catch(e){gs.addErrorMessage(String(e.message||e));current.setAbortAction(true);gs.warn('Incidente técnico: '+String(e.message||e));}

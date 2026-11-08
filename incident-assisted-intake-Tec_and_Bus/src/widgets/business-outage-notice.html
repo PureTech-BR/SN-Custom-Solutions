@@ -1,0 +1,19 @@
+<section class="intake-outage-notice" ng-if="c.notice && c.notice.count" role="status" aria-live="polite">
+  <p class="intake-outage-heading">{{c.notice.message}}</p>
+  <div class="intake-outage-group" ng-repeat="group in c.notice.groups track by group.key">
+    <h4 class="intake-outage-group-title">{{group.title}}</h4>
+    <p ng-if="!group.count" class="intake-outage-empty">{{group.emptyMessage}}</p>
+    <ul class="intake-outage-list" ng-if="group.count" aria-label="Incidentes e outages associados">
+    <li ng-repeat="row in group.items track by $index">
+      <strong>{{row.incident}}</strong> — <strong>{{row.outage}}</strong> — {{row.ci}}
+      <span class="intake-outage-detail">{{row.typeLabel}} · {{row.origin}} · Início: {{row.begin}}</span>
+      <span ng-if="row.offering" class="intake-outage-detail">Oferta relacionada: {{row.offering}} (relação direta)</span>
+    </li>
+    </ul>
+  </div>
+  <p class="intake-outage-check">Aplicações listadas possuem relação direta com a oferta selecionada. O impacto no serviço será avaliado pela equipe de atendimento.</p>
+  <p class="intake-outage-footer">Você pode continuar e abrir seu incidente, se desejar.
+    <a href="?id=services_status" target="_blank" rel="noopener">Acompanhar status dos serviços</a>
+  </p>
+  <p class="intake-outage-check">Verificado em: {{c.notice.checkedAt}}.</p>
+</section>

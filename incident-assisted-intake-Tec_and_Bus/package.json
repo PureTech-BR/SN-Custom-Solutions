@@ -1,0 +1,24 @@
+{
+  "name": "incident-assisted-intake-tec-and-bus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Record Producers de incidentes técnico e negócio com Variable Sets compartilhados",
+  "sourceInstance": "dev437951",
+  "updateSet": {
+    "sys_id": "121bdcb7c3185f94e079b13ed4013183",
+    "name": "LAB - Incident Assisted Intake - Técnico e Negócio v1",
+    "state": "complete"
+  },
+  "producers": {
+    "technical": "66309e07c3189f54e079b13ed401314a",
+    "business": "6a6b9c7bc3185f94e079b13ed4013183",
+    "legacyUnmodified": "0745a07dc3c09310e079b13ed4013110"
+  },
+  "componentCount": 155,
+  "variableSets": 7,
+  "sharedVariableSets": 2,
+  "sourceBaseVersion": "incident-assisted-intake v1.1.0",
+  "scripts": {
+    "test": "node tests/validate.cjs && node tests/validate-outage-groups.cjs && node tests/validate-variable-editor.cjs && node tests/validate-syntax.cjs && python3 tests/validate-package.py"
+  }
+}

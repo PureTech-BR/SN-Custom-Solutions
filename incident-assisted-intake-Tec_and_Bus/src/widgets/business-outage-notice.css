@@ -1,0 +1,20 @@
+.intake-outage-notice {
+  padding: 16px 18px;
+  margin: 8px 0 18px;
+  background: #fff8e1;
+  color: #332b00;
+  border: 1px solid #e5cf86;
+  border-left: 4px solid #b88700;
+  border-radius: 5px;
+  overflow-wrap: anywhere;
+}
+.intake-outage-heading { margin: 0 0 12px; font-weight: 600; line-height: 1.5; }
+.intake-outage-list { list-style: none; margin: 0 0 14px 20px; padding: 0; }
+.intake-outage-list li { margin: 0; padding: 7px 0; line-height: 1.5; }
+.intake-outage-detail { display: block; margin-top: 2px; font-size: .9em; color: #645621; }
+.intake-outage-footer { margin: 0 0 6px; line-height: 1.5; }
+.intake-outage-footer a { display: inline-block; margin-left: 4px; text-decoration: underline; }
+.intake-outage-check { margin: 0; font-size: .85em; color: #645621; }
+.intake-outage-group { margin: 14px 0 16px; }
+.intake-outage-group-title { font-size: 1em; font-weight: 600; margin: 0 0 6px; }
+.intake-outage-empty { margin: 0 0 8px 20px; line-height: 1.5; }

@@ -1,0 +1,1265 @@
+{
+  "update_set": "121bdcb7c3185f94e079b13ed4013183",
+  "count": 155,
+  "counts_by_table": {
+    "catalog_script_client": 27,
+    "io_set_item": 9,
+    "item_option_new": 37,
+    "item_option_new_set": 7,
+    "m2m_connected_content": 2,
+    "question_choice": 32,
+    "sc_cat_item_catalog": 2,
+    "sc_cat_item_category": 2,
+    "sc_cat_item_producer": 2,
+    "sp_widget": 2,
+    "sys_db_object": 1,
+    "sys_dictionary": 9,
+    "sys_documentation": 9,
+    "sys_script_client": 2,
+    "sys_script_include": 4,
+    "sys_security_acl": 4,
+    "sys_security_acl_role": 4
+  },
+  "components": [
+    {
+      "update_name": "catalog_script_client_01409647c3189f54e079b13ed401315f",
+      "table": "catalog_script_client",
+      "sys_id": "01409647c3189f54e079b13ed401315f",
+      "target_name": "LAB Técnico - Outages - technical_multip",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "8f9e23d22f05b6cb53d2c6e51bc762532a8a848b1bffce5ad014b598b87c5fa8"
+    },
+    {
+      "update_name": "catalog_script_client_05409647c3189f54e079b13ed4013126",
+      "table": "catalog_script_client",
+      "sys_id": "05409647c3189f54e079b13ed4013126",
+      "target_name": "LAB Técnico - Serviços - iniciar",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "ebd7800c139791aad1160fdac7aa01b0babe49b826d42d351729ce5e6766ed64"
+    },
+    {
+      "update_name": "catalog_script_client_287b18bbc3185f94e079b13ed4013138",
+      "table": "catalog_script_client",
+      "sys_id": "287b18bbc3185f94e079b13ed4013138",
+      "target_name": "LAB Negócio - offering_unknown",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "40e10eb1fcef04bb178ba7b99f7f34e3a0ece0b3ac2ad7b7028a4939689aa477"
+    },
+    {
+      "update_name": "catalog_script_client_2f081acfc3d89f54e079b13ed40131bd",
+      "table": "catalog_script_client",
+      "sys_id": "2f081acfc3d89f54e079b13ed40131bd",
+      "target_name": "LAB Técnico - Filtrar vínculos 0",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "e1f32abb5f1b268f29c62e7a7ed933fb8ecc949d069dbd514097ec68b050dbf7"
+    },
+    {
+      "update_name": "catalog_script_client_2fc3a287c310df54e079b13ed401316e",
+      "table": "catalog_script_client",
+      "sys_id": "2fc3a287c310df54e079b13ed401316e",
+      "target_name": "LAB Técnico - Auto outage extensão",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "a47c31d99724cf7bc316ac4113b879dc86c0666cb48f90fe1a17da56a910a928"
+    },
+    {
+      "update_name": "catalog_script_client_34405647c3189f54e079b13ed4013149",
+      "table": "catalog_script_client",
+      "sys_id": "34405647c3189f54e079b13ed4013149",
+      "target_name": "LAB Compartilhado - Caracterização - ini",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "e0ccb5300ae01c3b341ee22d56411305851d94ea82267e03ec57cc2fc7535941"
+    },
+    {
+      "update_name": "catalog_script_client_45409647c3189f54e079b13ed4013133",
+      "table": "catalog_script_client",
+      "sys_id": "45409647c3189f54e079b13ed4013133",
+      "target_name": "LAB Técnico - Serviços - dependência da ",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "6727aec784d126a30c2ba0a10dd0e7ee2af350de8da79c1327da0ac08bbb0c50"
+    },
+    {
+      "update_name": "catalog_script_client_687bd4bbc3185f94e079b13ed40131f5",
+      "table": "catalog_script_client",
+      "sys_id": "687bd4bbc3185f94e079b13ed40131f5",
+      "target_name": "LAB Negócio - report_service",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "a587e9488a5c115739c2d49679ffc5aa50d82add473fee1e4d28a5b19909f0ab"
+    },
+    {
+      "update_name": "catalog_script_client_6bc3a287c310df54e079b13ed4013144",
+      "table": "catalog_script_client",
+      "sys_id": "6bc3a287c310df54e079b13ed4013144",
+      "target_name": "LAB Técnico - Auto outage iniciar",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "6cc1ff43bbf66cf161e011d139d002e9e76517669fd62e7a5be945ed99609fa8"
+    },
+    {
+      "update_name": "catalog_script_client_6c7b18bbc3185f94e079b13ed4013110",
+      "table": "catalog_script_client",
+      "sys_id": "6c7b18bbc3185f94e079b13ed4013110",
+      "target_name": "LAB Negócio - report_offering",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "2bd34bd470acb96924af349342537a79d6fb4fc588724901fb3d443d2f4abf23"
+    },
+    {
+      "update_name": "catalog_script_client_70405647c3189f54e079b13ed40131cb",
+      "table": "catalog_script_client",
+      "sys_id": "70405647c3189f54e079b13ed40131cb",
+      "target_name": "LAB Compartilhado - Caracterização - rep",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "cd847cc7a9cb7dd568c3f6e7968fa4f37498758790851269ecfc73746360bbf4"
+    },
+    {
+      "update_name": "catalog_script_client_73c3a287c310df54e079b13ed40131cb",
+      "table": "catalog_script_client",
+      "sys_id": "73c3a287c310df54e079b13ed40131cb",
+      "target_name": "LAB Técnico - Auto outage validar envio",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "64cce5b2fc9372dd0131c0b41ec0c0fb984d62aaf1af36a6cbbd90bc6d5c06a5"
+    },
+    {
+      "update_name": "catalog_script_client_78405647c3189f54e079b13ed401317f",
+      "table": "catalog_script_client",
+      "sys_id": "78405647c3189f54e079b13ed401317f",
+      "target_name": "LAB Compartilhado - Caracterização - rep",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "3dae0d65c451a6aa4acec40401bd72284d713a9b33e9930cf76addc30ad2c762"
+    },
+    {
+      "update_name": "catalog_script_client_78405647c3189f54e079b13ed40131fe",
+      "table": "catalog_script_client",
+      "sys_id": "78405647c3189f54e079b13ed40131fe",
+      "target_name": "LAB Técnico - Aplicações - iniciar",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "23cce2599e2d8014f1cc5d27b8ff9257911b081f6e139c73ca77eac12f70a552"
+    },
+    {
+      "update_name": "catalog_script_client_7c405647c3189f54e079b13ed4013165",
+      "table": "catalog_script_client",
+      "sys_id": "7c405647c3189f54e079b13ed4013165",
+      "target_name": "LAB Compartilhado - Caracterização - rep",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "9321176c72f5d2b6d1cbe8370f64620be0ff2a75f82a949003b85ec96129bf3b"
+    },
+    {
+      "update_name": "catalog_script_client_89409647c3189f54e079b13ed401310b",
+      "table": "catalog_script_client",
+      "sys_id": "89409647c3189f54e079b13ed401310b",
+      "target_name": "LAB Técnico - Aplicações - technical_app",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "70ac9d3b67430843c3fecf15b695f5de1455c2f8f832d7a3600eb1f93515424d"
+    },
+    {
+      "update_name": "catalog_script_client_89409647c3189f54e079b13ed4013140",
+      "table": "catalog_script_client",
+      "sys_id": "89409647c3189f54e079b13ed4013140",
+      "target_name": "LAB Técnico - Outages - iniciar",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "9592e819868fa550625a6eef6443fc2f0db3482cfb55403634d70e0413ef4395"
+    },
+    {
+      "update_name": "catalog_script_client_9d409647c3189f54e079b13ed40131ae",
+      "table": "catalog_script_client",
+      "sys_id": "9d409647c3189f54e079b13ed40131ae",
+      "target_name": "LAB Técnico - Outages - report_service",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "96899dd020a74d51c2cb74dc8c0a4ec4497c5a27ee8a068c5a9323a98e8d4cc7"
+    },
+    {
+      "update_name": "catalog_script_client_b4405647c3189f54e079b13ed4013158",
+      "table": "catalog_script_client",
+      "sys_id": "b4405647c3189f54e079b13ed4013158",
+      "target_name": "LAB Compartilhado - Caracterização - rep",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "912dbc0dc42f571c377ff1cf1c8f1c0e3f6b8c427058470a44933f1be1e11d19"
+    },
+    {
+      "update_name": "catalog_script_client_b4405647c3189f54e079b13ed40131d8",
+      "table": "catalog_script_client",
+      "sys_id": "b4405647c3189f54e079b13ed40131d8",
+      "target_name": "LAB Compartilhado - Caracterização - sta",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "ad44d89404ed6fb279f2648a26182e37409caff6e6b666e26f8734e69997fd93"
+    },
+    {
+      "update_name": "catalog_script_client_cd409647c3189f54e079b13ed4013118",
+      "table": "catalog_script_client",
+      "sys_id": "cd409647c3189f54e079b13ed4013118",
+      "target_name": "LAB Técnico - Aplicações - technical_mul",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "da93d2f2f14358e59c8f276054ba84bfdb9b0ca9e395413d29a2694de72d62e1"
+    },
+    {
+      "update_name": "catalog_script_client_cd409647c3189f54e079b13ed401314f",
+      "table": "catalog_script_client",
+      "sys_id": "cd409647c3189f54e079b13ed401314f",
+      "target_name": "LAB Técnico - Outages - technical_applic",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "f5dcb061c5858b51fd941974d239a70060ca33896eff01fc8ce89429d9e2dd70"
+    },
+    {
+      "update_name": "catalog_script_client_cd409647c3189f54e079b13ed4013186",
+      "table": "catalog_script_client",
+      "sys_id": "cd409647c3189f54e079b13ed4013186",
+      "target_name": "LAB Técnico - Outages - technical_additi",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "559b05faeb8cb28e30f1174b4d259554e2c41a4eecd61dc87d5f1cebf5bbbb08"
+    },
+    {
+      "update_name": "catalog_script_client_dd409647c3189f54e079b13ed40131bd",
+      "table": "catalog_script_client",
+      "sys_id": "dd409647c3189f54e079b13ed40131bd",
+      "target_name": "LAB Técnico - Outages - report_offering",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "c3c5d58efc15551a044c8c58a27bd9bc6c530b58ea13e322cb09bf9b0f4b20fc"
+    },
+    {
+      "update_name": "catalog_script_client_e47bd4bbc3185f94e079b13ed40131b4",
+      "table": "catalog_script_client",
+      "sys_id": "e47bd4bbc3185f94e079b13ed40131b4",
+      "target_name": "LAB Negócio - Initialize",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "6f428ec935c7683a1b27a4d590b961f70afc4d9e048024d6cc05ead7739d1eb6"
+    },
+    {
+      "update_name": "catalog_script_client_ebc3a287c310df54e079b13ed4013196",
+      "table": "catalog_script_client",
+      "sys_id": "ebc3a287c310df54e079b13ed4013196",
+      "target_name": "LAB Técnico - Auto outage aplicação",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "29b7b8609eec62a4201f7e3868ddb48171e98a53f590db405d15c4d14c746ced"
+    },
+    {
+      "update_name": "catalog_script_client_ef081acfc3d89f54e079b13ed40131ce",
+      "table": "catalog_script_client",
+      "sys_id": "ef081acfc3d89f54e079b13ed40131ce",
+      "target_name": "LAB Técnico - Filtrar vínculos 1",
+      "type": "Catalog Client Scripts",
+      "payload_sha256": "80f512c06dbf1df5ec922ef3c22d21945ac4bb3b4788a9b582692122e288b66d"
+    },
+    {
+      "update_name": "io_set_item_276b54bbc3185f94e079b13ed4013161",
+      "table": "io_set_item",
+      "sys_id": "276b54bbc3185f94e079b13ed4013161",
+      "target_name": "Serviços de negócio e ofertas.Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "6c63104e7a516a5506e7c3bb285f2ecb1345f07de95a8ae3989035102a0c5613"
+    },
+    {
+      "update_name": "io_set_item_36309e07c3189f54e079b13ed40131f7",
+      "table": "io_set_item",
+      "sys_id": "36309e07c3189f54e079b13ed40131f7",
+      "target_name": "Serviço e oferta (opcional).Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "58af8bbc0a01c4843b70fc17168f521e3fe82e24f29d23730790d568d980761f"
+    },
+    {
+      "update_name": "io_set_item_376b54bbc3185f94e079b13ed40131b8",
+      "table": "io_set_item",
+      "sys_id": "376b54bbc3185f94e079b13ed40131b8",
+      "target_name": "Detalhamento e continuidade do incidente.Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "b3e812027af6b97e1d3ce7db9234ef42bf0ea4929ac158692421a09396ec77aa"
+    },
+    {
+      "update_name": "io_set_item_6e309e07c3189f54e079b13ed4013177",
+      "table": "io_set_item",
+      "sys_id": "6e309e07c3189f54e079b13ed4013177",
+      "target_name": "Aplicações/Sistemas afetados.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "aa8dfa3e65273d00cbd31599b2bd3176e88dcbe69104239f85f2ccd9dc8c4bd2"
+    },
+    {
+      "update_name": "io_set_item_af6b54bbc3185f94e079b13ed401313d",
+      "table": "io_set_item",
+      "sys_id": "af6b54bbc3185f94e079b13ed401313d",
+      "target_name": "Detalhamento e continuidade do incidente.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "271a13128f92459b327b1e1682e8bffa324e2a05d527fd36b1f47d33a1ac8764"
+    },
+    {
+      "update_name": "io_set_item_b76b54bbc3185f94e079b13ed4013180",
+      "table": "io_set_item",
+      "sys_id": "b76b54bbc3185f94e079b13ed4013180",
+      "target_name": "Caracterização do incidente.Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "acc8fe4b0059cb52ba927e559b6e9f9ef65ffe6b3c07bd8cebd2e29acb02b098"
+    },
+    {
+      "update_name": "io_set_item_be30de07c3189f54e079b13ed4013126",
+      "table": "io_set_item",
+      "sys_id": "be30de07c3189f54e079b13ed4013126",
+      "target_name": "Caracterização do incidente.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "c2949094b49f99da1ff94cc1ef33defe2705ec85f2253953b5456c4d8b49ac1c"
+    },
+    {
+      "update_name": "io_set_item_eb6b14bbc3185f94e079b13ed40131f4",
+      "table": "io_set_item",
+      "sys_id": "eb6b14bbc3185f94e079b13ed40131f4",
+      "target_name": "Outage automático do SI principal.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "913c9355a1acb0b2e810c745b9a164d16af292a13eda6f08bf3c5f49a47f17d7"
+    },
+    {
+      "update_name": "io_set_item_f630de07c3189f54e079b13ed401310f",
+      "table": "io_set_item",
+      "sys_id": "f630de07c3189f54e079b13ed401310f",
+      "target_name": "Contexto da identificação técnica.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Variable Set",
+      "payload_sha256": "4155252bf266780b8d2d610ac70b04e4e5d807e2186ef7fd643eddf4466059f5"
+    },
+    {
+      "update_name": "item_option_new_07c32287c310df54e079b13ed40131b5",
+      "table": "item_option_new",
+      "sys_id": "07c32287c310df54e079b13ed40131b5",
+      "target_name": "Ao enviar este formulário, um OUTAGE será criado automaticamente e vinculado ao Service Instance (Ap",
+      "type": "Variable",
+      "payload_sha256": "79664302282054e1697ada5a115c64ad9e18bcfe15df6fa945a4b3440d8ddde6"
+    },
+    {
+      "update_name": "item_option_new_0840d247c3189f54e079b13ed401311d",
+      "table": "item_option_new",
+      "sys_id": "0840d247c3189f54e079b13ed401311d",
+      "target_name": "Qual mensagem de erro aparece?",
+      "type": "Variable",
+      "payload_sha256": "27621b49860e6d733433705f4cad5db42019480244dd9d94c660889da4add42f"
+    },
+    {
+      "update_name": "item_option_new_087b94bbc3185f94e079b13ed4013197",
+      "table": "item_option_new",
+      "sys_id": "087b94bbc3185f94e079b13ed4013197",
+      "target_name": "Não sei identificar a oferta",
+      "type": "Variable",
+      "payload_sha256": "3feea24bee36c0c787b23ad6532c2870c2d22416fc6f398bb8ed9f27b9d0903e"
+    },
+    {
+      "update_name": "item_option_new_33309247c3189f54e079b13ed4013124",
+      "table": "item_option_new",
+      "sys_id": "33309247c3189f54e079b13ed4013124",
+      "target_name": "Qual funcionalidade está afetada e o que ainda funciona?",
+      "type": "Variable",
+      "payload_sha256": "bad7c635e662e8f7a60eaa0b22ac9fed5fafbeb300d0284b72ff4bc847a03e3b"
+    },
+    {
+      "update_name": "item_option_new_3f309247c3189f54e079b13ed401313a",
+      "table": "item_option_new",
+      "sys_id": "3f309247c3189f54e079b13ed401313a",
+      "target_name": "Em qual ação ocorre a lentidão?",
+      "type": "Variable",
+      "payload_sha256": "d8ca2cdb0c0283e76e9fc93aa644ed6bf34d249e080a714cc8bd893235918fd6"
+    },
+    {
+      "update_name": "item_option_new_407bd4bbc3185f94e079b13ed4013129",
+      "table": "item_option_new",
+      "sys_id": "407bd4bbc3185f94e079b13ed4013129",
+      "target_name": "Qual oferta apresenta problema?",
+      "type": "Variable",
+      "payload_sha256": "0041ee19fbc3ca7c6de3cad61cb4cbc25748e1308743620ebac73ac15bea63da"
+    },
+    {
+      "update_name": "item_option_new_447bd4bbc3185f94e079b13ed4013105",
+      "table": "item_option_new",
+      "sys_id": "447bd4bbc3185f94e079b13ed4013105",
+      "target_name": "Dados públicos do aviso de outage",
+      "type": "Variable",
+      "payload_sha256": "541c43ad6e8690545183b3213a05067f950088ac618378755c3bca2124a7d7b2"
+    },
+    {
+      "update_name": "item_option_new_4b30de07c3189f54e079b13ed4013197",
+      "table": "item_option_new",
+      "sys_id": "4b30de07c3189f54e079b13ed4013197",
+      "target_name": "Múltiplos Service Instances sendo afetados?",
+      "type": "Variable",
+      "payload_sha256": "8f3e56ce8b0701de1af60460d965c572f7bb5675a8fea99aac65fb08f4f31c2b"
+    },
+    {
+      "update_name": "item_option_new_5f301247c3189f54e079b13ed401318f",
+      "table": "item_option_new",
+      "sys_id": "5f301247c3189f54e079b13ed401318f",
+      "target_name": "Qual serviço apresenta problema?",
+      "type": "Variable",
+      "payload_sha256": "d0d3e8b9bf3afe1315eff7ca3ae153c817f21906e2f775ed7e7ba870058dd429"
+    },
+    {
+      "update_name": "item_option_new_64401647c3189f54e079b13ed40131b0",
+      "table": "item_option_new",
+      "sys_id": "64401647c3189f54e079b13ed40131b0",
+      "target_name": "Quando o problema começou?",
+      "type": "Variable",
+      "payload_sha256": "3e0cb1387fc6742292133f75507708881cdabda2c6e946b9576fec224dd6c798"
+    },
+    {
+      "update_name": "item_option_new_6fc36287c310df54e079b13ed40131f9",
+      "table": "item_option_new",
+      "sys_id": "6fc36287c310df54e079b13ed40131f9",
+      "target_name": "Estado da verificação de outage",
+      "type": "Variable",
+      "payload_sha256": "bd84923e03b37a5c3773b8d534358c219acbc47132367dca28045065d8f56a8e"
+    },
+    {
+      "update_name": "item_option_new_7630de07c3189f54e079b13ed4013139",
+      "table": "item_option_new",
+      "sys_id": "7630de07c3189f54e079b13ed4013139",
+      "target_name": "Service Instance (Aplicação) principal afetada",
+      "type": "Variable",
+      "payload_sha256": "100f93092f071b39b340e22ff736a0fd8bb75ca7a75539903beda7672ba93150"
+    },
+    {
+      "update_name": "item_option_new_7ee6dacbc3189f54e079b13ed40131c7",
+      "table": "item_option_new",
+      "sys_id": "7ee6dacbc3189f54e079b13ed40131c7",
+      "target_name": "URL",
+      "type": "Variable",
+      "payload_sha256": "89fe1a1f7fd7718048bfb6533aca9a88b248560fa0ddca3f4c19362de4378e64"
+    },
+    {
+      "update_name": "item_option_new_7f305247c3189f54e079b13ed4013196",
+      "table": "item_option_new",
+      "sys_id": "7f305247c3189f54e079b13ed4013196",
+      "target_name": "Qual a extensão da indisponibilidade?",
+      "type": "Variable",
+      "payload_sha256": "320f2bb7b527af4945be4e5a32317b0eed2fcd392d9fbeb52bcbc16e0c7dc901"
+    },
+    {
+      "update_name": "item_option_new_8040d247c3189f54e079b13ed4013135",
+      "table": "item_option_new",
+      "sys_id": "8040d247c3189f54e079b13ed4013135",
+      "target_name": "Quem está sendo afetado?",
+      "type": "Variable",
+      "payload_sha256": "4c4ea13a62d539d3c756bd8adb5d7459e73c1299eea705fb53f05243e08541e0"
+    },
+    {
+      "update_name": "item_option_new_847b94bbc3185f94e079b13ed40131bd",
+      "table": "item_option_new",
+      "sys_id": "847b94bbc3185f94e079b13ed40131bd",
+      "target_name": "Ocorrências em curso",
+      "type": "Variable",
+      "payload_sha256": "f77cbfb9db0c1b5f9927037510b86ad6beb4c0efbe488033ab712abaa4e1cb9b"
+    },
+    {
+      "update_name": "item_option_new_8c40d247c3189f54e079b13ed40131a2",
+      "table": "item_option_new",
+      "sys_id": "8c40d247c3189f54e079b13ed40131a2",
+      "target_name": "É possível continuar a atividade afetada?",
+      "type": "Variable",
+      "payload_sha256": "a77e828c51da5dbd3f8c6b3f2b79eccbdc68ec79c1ea982a5beeb76971c62124"
+    },
+    {
+      "update_name": "item_option_new_8f30de07c3189f54e079b13ed4013183",
+      "table": "item_option_new",
+      "sys_id": "8f30de07c3189f54e079b13ed4013183",
+      "target_name": "Descrição da aplicação",
+      "type": "Variable",
+      "payload_sha256": "3de88b5bc531a2c9e6e9f3fa03c598564bf48449bf9500e630fa4a7a0cb5b4d6"
+    },
+    {
+      "update_name": "item_option_new_9b301247c3189f54e079b13ed4013121",
+      "table": "item_option_new",
+      "sys_id": "9b301247c3189f54e079b13ed4013121",
+      "target_name": "Identificação",
+      "type": "Variable",
+      "payload_sha256": "9384f8123c5d837767a0b5ebf2d18e11dc684cb276c44b6cbf7d48cb5c259dc7"
+    },
+    {
+      "update_name": "item_option_new_9bc36287c310df54e079b13ed401310e",
+      "table": "item_option_new",
+      "sys_id": "9bc36287c310df54e079b13ed401310e",
+      "target_name": "Tipo de OUTAGE",
+      "type": "Variable",
+      "payload_sha256": "d631ec821d900ab794e83b6ac5cc392db214301dbad4f5bfcba5b7c476138bde"
+    },
+    {
+      "update_name": "item_option_new_9bc36287c310df54e079b13ed4013172",
+      "table": "item_option_new",
+      "sys_id": "9bc36287c310df54e079b13ed4013172",
+      "target_name": "Início da indisponibilidade",
+      "type": "Variable",
+      "payload_sha256": "ea90a10a2e1529a983813c6a75eba2d151b3d822dadbdb61d754038295e325ec"
+    },
+    {
+      "update_name": "item_option_new_9c401647c3189f54e079b13ed4013159",
+      "table": "item_option_new",
+      "sys_id": "9c401647c3189f54e079b13ed4013159",
+      "target_name": "Qual alternativa está utilizando? (opcional)",
+      "type": "Variable",
+      "payload_sha256": "29fef284c90e764e179271a673b9e6238b95153f8ae4e46e8f1f2579f37b6029"
+    },
+    {
+      "update_name": "item_option_new_b7309247c3189f54e079b13ed4013151",
+      "table": "item_option_new",
+      "sys_id": "b7309247c3189f54e079b13ed4013151",
+      "target_name": "Com que frequência o problema acontece?",
+      "type": "Variable",
+      "payload_sha256": "72e4517eb156e1d6055c4c349a6c8bdcebaddee811fab5280171b6a84053df9a"
+    },
+    {
+      "update_name": "item_option_new_b9a116cbc3189f54e079b13ed4013126",
+      "table": "item_option_new",
+      "sys_id": "b9a116cbc3189f54e079b13ed4013126",
+      "target_name": "Preenchimento não obrigatório, informar apenas se souber.",
+      "type": "Variable",
+      "payload_sha256": "dee1c8d229fe15c43abffdb5038f089b5e585b6ff775bc406be601cd85e3849b"
+    },
+    {
+      "update_name": "item_option_new_c47b94bbc3185f94e079b13ed40131e1",
+      "table": "item_option_new",
+      "sys_id": "c47b94bbc3185f94e079b13ed40131e1",
+      "target_name": "Ocorrências em curso",
+      "type": "Variable",
+      "payload_sha256": "b96221b3c2a724643edffea0759b88b7e54d94b02b5f8284895b23cf5a167745"
+    },
+    {
+      "update_name": "item_option_new_cc7bd4bbc3185f94e079b13ed401314c",
+      "table": "item_option_new",
+      "sys_id": "cc7bd4bbc3185f94e079b13ed401314c",
+      "target_name": "Qual serviço apresenta problema?",
+      "type": "Variable",
+      "payload_sha256": "430e76a1c14f33e7e70fd8e134f05dbee5a47378c26bb894a858f6b514b2b09a"
+    },
+    {
+      "update_name": "item_option_new_cf30de07c3189f54e079b13ed40131c6",
+      "table": "item_option_new",
+      "sys_id": "cf30de07c3189f54e079b13ed40131c6",
+      "target_name": "Demais Service Instances afetados",
+      "type": "Variable",
+      "payload_sha256": "054fe49465833bb741d976549c1c720e0464fab5d4578896a8fdbcf0a8202094"
+    },
+    {
+      "update_name": "item_option_new_d3c36287c310df54e079b13ed40131d5",
+      "table": "item_option_new",
+      "sys_id": "d3c36287c310df54e079b13ed40131d5",
+      "target_name": "Solicitação de outage automático",
+      "type": "Variable",
+      "payload_sha256": "f96dc1a14d010543520d94602355fbfe6b39304e15a24c22165323431e124005"
+    },
+    {
+      "update_name": "item_option_new_d4401647c3189f54e079b13ed4013197",
+      "table": "item_option_new",
+      "sys_id": "d4401647c3189f54e079b13ed4013197",
+      "target_name": "Não sei informar quando começou",
+      "type": "Variable",
+      "payload_sha256": "29a3209db9bc7f6176f562f7efb2db36f8b3d2d3af6e64705b17e5ad7dc0e95f"
+    },
+    {
+      "update_name": "item_option_new_d730de07c3189f54e079b13ed40131db",
+      "table": "item_option_new",
+      "sys_id": "d730de07c3189f54e079b13ed40131db",
+      "target_name": "Canal",
+      "type": "Variable",
+      "payload_sha256": "cf931fdc222b21d49c5f0535d6e61900d3a0989a89aac81adad5d57857f26220"
+    },
+    {
+      "update_name": "item_option_new_dbc36287c310df54e079b13ed4013197",
+      "table": "item_option_new",
+      "sys_id": "dbc36287c310df54e079b13ed4013197",
+      "target_name": "Altere para o horário em que foi identificado/reportado a indisponibilidade na aplicação.",
+      "type": "Variable",
+      "payload_sha256": "3f173f478eadd2051e45f5f5e1265af54c1bac8c2eddb8f0a5da6cd9364e4936"
+    },
+    {
+      "update_name": "item_option_new_dc401647c3189f54e079b13ed401317e",
+      "table": "item_option_new",
+      "sys_id": "dc401647c3189f54e079b13ed401317e",
+      "target_name": "Como consegue continuar a atividade com o serviço totalmente indisponível?",
+      "type": "Variable",
+      "payload_sha256": "5bb59ccb9b05aceeb697523913f2ad0c6e7466fc1ffc96d5099255b73564c075"
+    },
+    {
+      "update_name": "item_option_new_e0401647c3189f54e079b13ed40131c9",
+      "table": "item_option_new",
+      "sys_id": "e0401647c3189f54e079b13ed40131c9",
+      "target_name": "Descreva brevemente o problema",
+      "type": "Variable",
+      "payload_sha256": "459b17c24d3e012463b02b8bffebd3d667c7cebd35351d0ab30cb6ffb52fd67a"
+    },
+    {
+      "update_name": "item_option_new_e7301247c3189f54e079b13ed40131e0",
+      "table": "item_option_new",
+      "sys_id": "e7301247c3189f54e079b13ed40131e0",
+      "target_name": "O que está acontecendo?",
+      "type": "Variable",
+      "payload_sha256": "d62cc18c3383902227a01d042c41f74f0720d45dc168b704831798c574d91515"
+    },
+    {
+      "update_name": "item_option_new_ec401647c3189f54e079b13ed40131fa",
+      "table": "item_option_new",
+      "sys_id": "ec401647c3189f54e079b13ed40131fa",
+      "target_name": "Dados públicos do aviso de outage",
+      "type": "Variable",
+      "payload_sha256": "aa6b4e64182da569896064b5ccff4c062d6c14199705472c904a950e9d03b889"
+    },
+    {
+      "update_name": "item_option_new_ef301247c3189f54e079b13ed40131a7",
+      "table": "item_option_new",
+      "sys_id": "ef301247c3189f54e079b13ed40131a7",
+      "target_name": "Ocorrências em curso",
+      "type": "Variable",
+      "payload_sha256": "40ccf9838720229c4aeabf834798ac46eb059cc33c1b125accfaaa9ae4848b9f"
+    },
+    {
+      "update_name": "item_option_new_ef301247c3189f54e079b13ed40131ca",
+      "table": "item_option_new",
+      "sys_id": "ef301247c3189f54e079b13ed40131ca",
+      "target_name": "Qual oferta apresenta problema?",
+      "type": "Variable",
+      "payload_sha256": "58c57100169c76ee7fbf6fbe1c03ee6d300ffa5700901440a3861e6b9febcf5f"
+    },
+    {
+      "update_name": "item_option_new_set_326b10bbc3185f94e079b13ed40131ae",
+      "table": "item_option_new_set",
+      "sys_id": "326b10bbc3185f94e079b13ed40131ae",
+      "target_name": "Detalhamento e continuidade do incidente",
+      "type": "Variable Set",
+      "payload_sha256": "628525453b775445afbdecae0009fcfed30e3a66b1a9655c30425899a1e7541c"
+    },
+    {
+      "update_name": "item_option_new_set_3e30de07c3189f54e079b13ed4013121",
+      "table": "item_option_new_set",
+      "sys_id": "3e30de07c3189f54e079b13ed4013121",
+      "target_name": "Caracterização do incidente",
+      "type": "Variable Set",
+      "payload_sha256": "e5d78266e115e38db7ec732e0ea1090a81c1fead11efe5abe5e9ef7b3bcd7f98"
+    },
+    {
+      "update_name": "item_option_new_set_7630de07c3189f54e079b13ed401310a",
+      "table": "item_option_new_set",
+      "sys_id": "7630de07c3189f54e079b13ed401310a",
+      "target_name": "Contexto da identificação técnica",
+      "type": "Variable Set",
+      "payload_sha256": "d46b9fea4ac90c751a375f192323a126beb2d1341b12ffd153dae9ed18aa5ac3"
+    },
+    {
+      "update_name": "item_option_new_set_766b10bbc3185f94e079b13ed40131b4",
+      "table": "item_option_new_set",
+      "sys_id": "766b10bbc3185f94e079b13ed40131b4",
+      "target_name": "Outage automático do SI principal",
+      "type": "Variable Set",
+      "payload_sha256": "d7db967d9f57d6e010d50749b62c089b7a1736f41a217dc0ae65b7c39b7675e8"
+    },
+    {
+      "update_name": "item_option_new_set_a2309e07c3189f54e079b13ed4013170",
+      "table": "item_option_new_set",
+      "sys_id": "a2309e07c3189f54e079b13ed4013170",
+      "target_name": "Aplicações/Sistemas afetados",
+      "type": "Variable Set",
+      "payload_sha256": "f941b64181668306cffc36b148afab3748c1aaf881801790a299f41429de4818"
+    },
+    {
+      "update_name": "item_option_new_set_b66b10bbc3185f94e079b13ed40131c6",
+      "table": "item_option_new_set",
+      "sys_id": "b66b10bbc3185f94e079b13ed40131c6",
+      "target_name": "Serviços de negócio e ofertas",
+      "type": "Variable Set",
+      "payload_sha256": "7e57cca94956c8daf3d587c62d7d5fb9c37bc95e73db6c6ea23fc61c303af41f"
+    },
+    {
+      "update_name": "item_option_new_set_fa309e07c3189f54e079b13ed40131e5",
+      "table": "item_option_new_set",
+      "sys_id": "fa309e07c3189f54e079b13ed40131e5",
+      "target_name": "Serviço e oferta (opcional)",
+      "type": "Variable Set",
+      "payload_sha256": "ae7cafdbfea910a5979eca4fd7a13a2ae1bb13f29e1b2755e049b8c8bc0a8439"
+    },
+    {
+      "update_name": "m2m_connected_content_a87b18bbc3185f94e079b13ed401315d",
+      "table": "m2m_connected_content",
+      "sys_id": "a87b18bbc3185f94e079b13ed401315d",
+      "target_name": "Catalog Item: Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Connected Content",
+      "payload_sha256": "925f029c7a3f8309758f16944bda3537990693bcdb9d553879c0087ed22515df"
+    },
+    {
+      "update_name": "m2m_connected_content_e07b18bbc3185f94e079b13ed401315a",
+      "table": "m2m_connected_content",
+      "sys_id": "e07b18bbc3185f94e079b13ed401315a",
+      "target_name": "Catalog Item: Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Connected Content",
+      "payload_sha256": "d20d87f626a1777ec2a4d1e752d358a1c414b434fa797c2714bd021e12ce2efc"
+    },
+    {
+      "update_name": "question_choice_1330de07c3189f54e079b13ed40131ef",
+      "table": "question_choice",
+      "sys_id": "1330de07c3189f54e079b13ed40131ef",
+      "target_name": "Website",
+      "type": "Question Choice",
+      "payload_sha256": "aefa7e077e4a784136148d29355585993086e22e4c9aec99444ccc08e62c1861"
+    },
+    {
+      "update_name": "question_choice_14401647c3189f54e079b13ed401313e",
+      "table": "question_choice",
+      "sys_id": "14401647c3189f54e079b13ed401313e",
+      "target_name": "Consigo continuar com uma alternativa ou dificuldade significativa",
+      "type": "Question Choice",
+      "payload_sha256": "c20598e3433b88c4d0f50bd800875696549193e1958404e3d9de1ec7985c6528"
+    },
+    {
+      "update_name": "question_choice_17301247c3189f54e079b13ed4013169",
+      "table": "question_choice",
+      "sys_id": "17301247c3189f54e079b13ed4013169",
+      "target_name": "Gestão da Rotina - Técnica",
+      "type": "Question Choice",
+      "payload_sha256": "87d4d46f86835ab049480e097e6a4aad44c74a2e86bdac1cbad749cd3b25c495"
+    },
+    {
+      "update_name": "question_choice_37309247c3189f54e079b13ed4013106",
+      "table": "question_choice",
+      "sys_id": "37309247c3189f54e079b13ed4013106",
+      "target_name": "Total",
+      "type": "Question Choice",
+      "payload_sha256": "3bd7d3439eca7818b68f9078f11fa1a96bfc59800521e12daf9f8883af95b4e2"
+    },
+    {
+      "update_name": "question_choice_4840d247c3189f54e079b13ed401315b",
+      "table": "question_choice",
+      "sys_id": "4840d247c3189f54e079b13ed401315b",
+      "target_name": "Toda a minha equipe",
+      "type": "Question Choice",
+      "payload_sha256": "df22c5643838424fe9279cc26ba5ef3d87d463894cb82727f0a0297613325378"
+    },
+    {
+      "update_name": "question_choice_53c36287c310df54e079b13ed401313f",
+      "table": "question_choice",
+      "sys_id": "53c36287c310df54e079b13ed401313f",
+      "target_name": "OUTAGE",
+      "type": "Question Choice",
+      "payload_sha256": "09e297a120e5c300e8def12ae4d2268e262cd371830a27703f13540afc449c6e"
+    },
+    {
+      "update_name": "question_choice_57301247c3189f54e079b13ed4013150",
+      "table": "question_choice",
+      "sys_id": "57301247c3189f54e079b13ed4013150",
+      "target_name": "Usuário Interno - Negócio",
+      "type": "Question Choice",
+      "payload_sha256": "007e7aee6380ac8076aadf70d792884a43e6acf75885782753b158aa53fc79f5"
+    },
+    {
+      "update_name": "question_choice_5c401647c3189f54e079b13ed4013116",
+      "table": "question_choice",
+      "sys_id": "5c401647c3189f54e079b13ed4013116",
+      "target_name": "Não sei avaliar",
+      "type": "Question Choice",
+      "payload_sha256": "53ab18f1e7c1dc906c0f57d99e97aa710c55ac3beeb7c848cbc5c89b3f39eb9a"
+    },
+    {
+      "update_name": "question_choice_5c40d247c3189f54e079b13ed40131fb",
+      "table": "question_choice",
+      "sys_id": "5c40d247c3189f54e079b13ed40131fb",
+      "target_name": "Consigo continuar, sem bloqueio da atividade",
+      "type": "Question Choice",
+      "payload_sha256": "1e3a96cf95d2e04ebe1166079ff431c847fc6633a54b7afdd4aaa6b249b27d0e"
+    },
+    {
+      "update_name": "question_choice_63305247c3189f54e079b13ed4013179",
+      "table": "question_choice",
+      "sys_id": "63305247c3189f54e079b13ed4013179",
+      "target_name": "Não consigo acessar",
+      "type": "Question Choice",
+      "payload_sha256": "058b67e593616f646df616a836dc1b69d9a0704a949044cd02740ec980f50116"
+    },
+    {
+      "update_name": "question_choice_67305247c3189f54e079b13ed401312c",
+      "table": "question_choice",
+      "sys_id": "67305247c3189f54e079b13ed401312c",
+      "target_name": "Lentidão",
+      "type": "Question Choice",
+      "payload_sha256": "e1e8adcda36bcbcde98a16933e7873e93416f19b8dcc2774d0c12d8dd7a6db1f"
+    },
+    {
+      "update_name": "question_choice_7f309247c3189f54e079b13ed4013114",
+      "table": "question_choice",
+      "sys_id": "7f309247c3189f54e079b13ed4013114",
+      "target_name": "Parcial",
+      "type": "Question Choice",
+      "payload_sha256": "4eaacb23d29175cbaff64978c9e8a98d48ca672dafd484f765dfd2a0c47294b1"
+    },
+    {
+      "update_name": "question_choice_80409247c3189f54e079b13ed40131b5",
+      "table": "question_choice",
+      "sys_id": "80409247c3189f54e079b13ed40131b5",
+      "target_name": "Não sei informar",
+      "type": "Question Choice",
+      "payload_sha256": "c1d894d2d2981c9cf7ee322f35c336a05f6c0cc5a9f2005894cd7ecc0f9abf52"
+    },
+    {
+      "update_name": "question_choice_8040d247c3189f54e079b13ed401314c",
+      "table": "question_choice",
+      "sys_id": "8040d247c3189f54e079b13ed401314c",
+      "target_name": "Várias equipes / todos os usuários",
+      "type": "Question Choice",
+      "payload_sha256": "db06172b15314740ee9bac9cd170b346718c39914d98ccd6c53875ac39128f44"
+    },
+    {
+      "update_name": "question_choice_8040d247c3189f54e079b13ed401316a",
+      "table": "question_choice",
+      "sys_id": "8040d247c3189f54e079b13ed401316a",
+      "target_name": "Apenas eu",
+      "type": "Question Choice",
+      "payload_sha256": "79354ce9071ef91ec31b3f3fce2321bab15e31df8c27ef01119f1c95e10dc4c0"
+    },
+    {
+      "update_name": "question_choice_93301247c3189f54e079b13ed4013115",
+      "table": "question_choice",
+      "sys_id": "93301247c3189f54e079b13ed4013115",
+      "target_name": "Auto-Atendimento Totem",
+      "type": "Question Choice",
+      "payload_sha256": "d484721853d3c93df1726741a391359d1c8a622a797be8cac874c6f977071b26"
+    },
+    {
+      "update_name": "question_choice_9330de07c3189f54e079b13ed40131fc",
+      "table": "question_choice",
+      "sys_id": "9330de07c3189f54e079b13ed40131fc",
+      "target_name": "Mobile",
+      "type": "Question Choice",
+      "payload_sha256": "6edca925180cbe29a464df8ff6e8153f808e380e9dc063c9ec61b4fd2c05b98e"
+    },
+    {
+      "update_name": "question_choice_93c36287c310df54e079b13ed401314d",
+      "table": "question_choice",
+      "sys_id": "93c36287c310df54e079b13ed401314d",
+      "target_name": "Degradation",
+      "type": "Question Choice",
+      "payload_sha256": "e10bc0e7fe573af5faeef3c74c78c1c056c5885f6679d0f210e98bdcafc8c67e"
+    },
+    {
+      "update_name": "question_choice_9b301247c3189f54e079b13ed4013108",
+      "table": "question_choice",
+      "sys_id": "9b301247c3189f54e079b13ed4013108",
+      "target_name": "Desktop App",
+      "type": "Question Choice",
+      "payload_sha256": "87256924b466ebd78a34cf6fa9bdb63e4e7f2091401cee37affff20c969809bf"
+    },
+    {
+      "update_name": "question_choice_ab305247c3189f54e079b13ed4013187",
+      "table": "question_choice",
+      "sys_id": "ab305247c3189f54e079b13ed4013187",
+      "target_name": "Funcionalidade indisponível",
+      "type": "Question Choice",
+      "payload_sha256": "32c398d9c9d9f66496933f6db9da752781647e040c4d70365aa8465fe6f7efb0"
+    },
+    {
+      "update_name": "question_choice_af305247c3189f54e079b13ed4013104",
+      "table": "question_choice",
+      "sys_id": "af305247c3189f54e079b13ed4013104",
+      "target_name": "Outro",
+      "type": "Question Choice",
+      "payload_sha256": "9fbe0388a3fb178274f3f902c27d3600754220a086acb0aaf415e5f76aa8a77d"
+    },
+    {
+      "update_name": "question_choice_b7309247c3189f54e079b13ed4013180",
+      "table": "question_choice",
+      "sys_id": "b7309247c3189f54e079b13ed4013180",
+      "target_name": "Intermitente",
+      "type": "Question Choice",
+      "payload_sha256": "5745bb02db4a5e025028e5d29ac193b3e28b10b6170adee4ea81fb719c59ea10"
+    },
+    {
+      "update_name": "question_choice_c730de07c3189f54e079b13ed40131ab",
+      "table": "question_choice",
+      "sys_id": "c730de07c3189f54e079b13ed40131ab",
+      "target_name": "Não",
+      "type": "Question Choice",
+      "payload_sha256": "7419b751ba3eb473bc4c1793d289f36974295e79b7b576d0c3f97b665908d599"
+    },
+    {
+      "update_name": "question_choice_c730de07c3189f54e079b13ed40131ba",
+      "table": "question_choice",
+      "sys_id": "c730de07c3189f54e079b13ed40131ba",
+      "target_name": "Sim",
+      "type": "Question Choice",
+      "payload_sha256": "0bca38ddac1dedca5c0a684d4cb6a22b262e88862198f06ab12201f3f319180b"
+    },
+    {
+      "update_name": "question_choice_c8409247c3189f54e079b13ed40131c3",
+      "table": "question_choice",
+      "sys_id": "c8409247c3189f54e079b13ed40131c3",
+      "target_name": "Sempre",
+      "type": "Question Choice",
+      "payload_sha256": "6ac83899bead171b0af87236ad3d03ed8a2145780e1f5d6a019a49d5315f773c"
+    },
+    {
+      "update_name": "question_choice_c840d247c3189f54e079b13ed4013178",
+      "table": "question_choice",
+      "sys_id": "c840d247c3189f54e079b13ed4013178",
+      "target_name": "Não sei informar",
+      "type": "Question Choice",
+      "payload_sha256": "83ba8dbde82c7b6e84db6172f5da6b40a5ed1b9084f7a8faf3b87b2a72b00222"
+    },
+    {
+      "update_name": "question_choice_c840d247c3189f54e079b13ed4013193",
+      "table": "question_choice",
+      "sys_id": "c840d247c3189f54e079b13ed4013193",
+      "target_name": "Algumas pessoas",
+      "type": "Question Choice",
+      "payload_sha256": "49371298fb2b7c87fc25ddfef3a6f735e7749369a8f1b2a0875fe8e1391ee38b"
+    },
+    {
+      "update_name": "question_choice_d3301247c3189f54e079b13ed4013143",
+      "table": "question_choice",
+      "sys_id": "d3301247c3189f54e079b13ed4013143",
+      "target_name": "Monitoração - Não integrada",
+      "type": "Question Choice",
+      "payload_sha256": "eabe89ba268f82d1f4b5b59eea6eb115f0cdf0ab51c1af72075000e72ed29971"
+    },
+    {
+      "update_name": "question_choice_d3301247c3189f54e079b13ed4013182",
+      "table": "question_choice",
+      "sys_id": "d3301247c3189f54e079b13ed4013182",
+      "target_name": "Fluxos Automatizados - Não Integrado",
+      "type": "Question Choice",
+      "payload_sha256": "13fd58dd6fc559bc8817ee46dfb2a74e0cd0849d0ae452c20b6ebc4866a25ab3"
+    },
+    {
+      "update_name": "question_choice_dc40d247c3189f54e079b13ed40131df",
+      "table": "question_choice",
+      "sys_id": "dc40d247c3189f54e079b13ed40131df",
+      "target_name": "Não consigo continuar e não existe alternativa",
+      "type": "Question Choice",
+      "payload_sha256": "abffeea634335ebe225c305de72db0f2d8428af78eca7bc87d2805e8b24200d4"
+    },
+    {
+      "update_name": "question_choice_e3301247c3189f54e079b13ed40131f5",
+      "table": "question_choice",
+      "sys_id": "e3301247c3189f54e079b13ed40131f5",
+      "target_name": "Erro ao executar uma ação",
+      "type": "Question Choice",
+      "payload_sha256": "2a8d09299f7cb7d183bf1cdc2f6e114dbdaae65d19e849059c2b3298947f266e"
+    },
+    {
+      "update_name": "question_choice_f3305247c3189f54e079b13ed40131ac",
+      "table": "question_choice",
+      "sys_id": "f3305247c3189f54e079b13ed40131ac",
+      "target_name": "Não sei informar",
+      "type": "Question Choice",
+      "payload_sha256": "9eccc1399ee55feb66973efe7e8ffa20e32b5f0cd02a4b960025cb3dd82d9849"
+    },
+    {
+      "update_name": "sc_cat_item_catalog_ae6b10bbc3185f94e079b13ed4013164",
+      "table": "sc_cat_item_catalog",
+      "sys_id": "ae6b10bbc3185f94e079b13ed4013164",
+      "target_name": "Service Catalog.Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Catalog Items Catalog",
+      "payload_sha256": "23ddad0841646c8a59870756a660f9fe9276300353fb0a9a5dd35eeaf4b18d39"
+    },
+    {
+      "update_name": "sc_cat_item_catalog_ee309e07c3189f54e079b13ed4013156",
+      "table": "sc_cat_item_catalog",
+      "sys_id": "ee309e07c3189f54e079b13ed4013156",
+      "target_name": "Service Catalog.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Items Catalog",
+      "payload_sha256": "e2d9cdd4f11a615b7425f8d2e0fe39ddcc2fc8fc8dd49f299731d78ea119bac9"
+    },
+    {
+      "update_name": "sc_cat_item_category_2a6b10bbc3185f94e079b13ed4013193",
+      "table": "sc_cat_item_category",
+      "sys_id": "2a6b10bbc3185f94e079b13ed4013193",
+      "target_name": "Can We Help You?.Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Catalog Item Category",
+      "payload_sha256": "5cc06672504c8c7b761fda6eeda9f8ed820da00d79cafb85b3cc5a49f9bd9f94"
+    },
+    {
+      "update_name": "sc_cat_item_category_e6309e07c3189f54e079b13ed4013160",
+      "table": "sc_cat_item_category",
+      "sys_id": "e6309e07c3189f54e079b13ed4013160",
+      "target_name": "Can We Help You?.Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Catalog Item Category",
+      "payload_sha256": "0be74669d58bf2a1c1fe6cc0fff2f22615a28ac1d60db87cd2f557fe7e1cfd0c"
+    },
+    {
+      "update_name": "sc_cat_item_producer_66309e07c3189f54e079b13ed401314a",
+      "table": "sc_cat_item_producer",
+      "sys_id": "66309e07c3189f54e079b13ed401314a",
+      "target_name": "Criar Incidente - Indisponibilidade de Aplicação/Sistema",
+      "type": "Record Producer",
+      "payload_sha256": "fcdd0d77f0f6f0c31e5ff5c2801032bd1811abc75ae0cedfef313ec03fae1742"
+    },
+    {
+      "update_name": "sc_cat_item_producer_6a6b9c7bc3185f94e079b13ed4013183",
+      "table": "sc_cat_item_producer",
+      "sys_id": "6a6b9c7bc3185f94e079b13ed4013183",
+      "target_name": "Criar Incidente - Serviços Instáveis ou Indisponíveis",
+      "type": "Record Producer",
+      "payload_sha256": "247c45021eaca79552de22dd28651ab68789edff9800394c6ecf06dacd346421"
+    },
+    {
+      "update_name": "sp_widget_28405647c3189f54e079b13ed4013110",
+      "table": "sp_widget",
+      "sys_id": "28405647c3189f54e079b13ed4013110",
+      "target_name": "LAB Incidente Técnico - Outage Notice",
+      "type": "Widget",
+      "payload_sha256": "015527236090eb82f160f5f5cd830b932bcd140e000d54d812e2790c71b4fc23"
+    },
+    {
+      "update_name": "sp_widget_d04dacfdc3449310e079b13ed401318d",
+      "table": "sp_widget",
+      "sys_id": "d04dacfdc3449310e079b13ed401318d",
+      "target_name": "LAB Intake - Outage Notice",
+      "type": "Widget",
+      "payload_sha256": "b6fd311c0ebab8c092ffc1622de108158e0ae02f506181540f78cfab5d5c69ed"
+    },
+    {
+      "update_name": "sys_db_object_edc366cbc3dc9f54e079b13ed40131bc",
+      "table": "sys_db_object",
+      "sys_id": "edc366cbc3dc9f54e079b13ed40131bc",
+      "target_name": "LAB - Controle de criação de outage por SI",
+      "type": "Table",
+      "payload_sha256": "7e5e37a92a3c37ac5cee51c3f4c071173d9721e410e65050442a03ab67d06993"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_null",
+      "table": "sys_dictionary",
+      "sys_id": "42c3ea47c310df54e079b13ed40131ba",
+      "target_name": "LAB - Controle de criação de outage por SI",
+      "type": "Dictionary",
+      "payload_sha256": "ec841c834c4c085b067eeb4f7fb60106e54c20507c4c9e73d61d376702f10630"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_created_by",
+      "table": "sys_dictionary",
+      "sys_id": "2ac32e47c310df54e079b13ed40131f7",
+      "target_name": "LAB - Controle de criação de outage por SI.Created by",
+      "type": "Dictionary",
+      "payload_sha256": "d174f4089cf82747dd9456f04582ace434d650558901b89f93a82d24985f1080"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_created_on",
+      "table": "sys_dictionary",
+      "sys_id": "a2c32e47c310df54e079b13ed40131fb",
+      "target_name": "LAB - Controle de criação de outage por SI.Created",
+      "type": "Dictionary",
+      "payload_sha256": "919efc3f7062ee8f8c2c0a32e77a16674af1d05249ac72ef530db5f94b070fc3"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_id",
+      "table": "sys_dictionary",
+      "sys_id": "dec32e47c310df54e079b13ed401313d",
+      "target_name": "LAB - Controle de criação de outage por SI.Sys ID",
+      "type": "Dictionary",
+      "payload_sha256": "311e83554a23f99190bd3cc01ef8c20efdd1c9dbd75aae25b3b3fedfdf1e6e93"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_mod_count",
+      "table": "sys_dictionary",
+      "sys_id": "2ec32e47c310df54e079b13ed40131fe",
+      "target_name": "LAB - Controle de criação de outage por SI.Updates",
+      "type": "Dictionary",
+      "payload_sha256": "a47494baacbdb9bd678b1d1c51fee84c01dd9a8d5ed09d36abdc9256ec6058be"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_updated_by",
+      "table": "sys_dictionary",
+      "sys_id": "a2c32e47c310df54e079b13ed4013142",
+      "target_name": "LAB - Controle de criação de outage por SI.Updated by",
+      "type": "Dictionary",
+      "payload_sha256": "72da709f2567e1eb5dbc1b89a2c571281feeb21f77be7c57bfe7a301c4090e36"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_sys_updated_on",
+      "table": "sys_dictionary",
+      "sys_id": "2ec32e47c310df54e079b13ed4013145",
+      "target_name": "LAB - Controle de criação de outage por SI.Updated",
+      "type": "Dictionary",
+      "payload_sha256": "52496e8c70bd9d51b151e2b18b163a5875d25a377d7b7b76e280476413c6ab29"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_u_incident",
+      "table": "sys_dictionary",
+      "sys_id": "a6c36e47c310df54e079b13ed40131b8",
+      "target_name": "LAB - Controle de criação de outage por SI.Incident",
+      "type": "Dictionary",
+      "payload_sha256": "21a7f931d67e18f03c131b06520697fae8aee4631312e8c6be22404eca116060"
+    },
+    {
+      "update_name": "sys_dictionary_u_lab_si_outage_guard_u_outage",
+      "table": "sys_dictionary",
+      "sys_id": "32c3ee47c310df54e079b13ed40131f8",
+      "target_name": "LAB - Controle de criação de outage por SI.Outage",
+      "type": "Dictionary",
+      "payload_sha256": "11e9c978e019771a2805bf52350d60ba41b92a24ffc8d61c963165867dd58e31"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_created_by_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Created by",
+      "type": "Field Label",
+      "payload_sha256": "cea9fb6d290794852bfe4ba68ebe4dc439151034e262eeb6db69751f4bade908"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_created_on_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Created",
+      "type": "Field Label",
+      "payload_sha256": "840cf751bb9a96a160b81926fc4bb6f084247c12a834111a2b7f6cc00abfaff1"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_id_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Sys ID",
+      "type": "Field Label",
+      "payload_sha256": "7103218d713921a25ddc172cc6e20d27c49368707e4c994b77b51621c8e38c5e"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_mod_count_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Updates",
+      "type": "Field Label",
+      "payload_sha256": "6cc85b1d2cf75ca9f6ff4e142913c1cbeec194dd53f0c1e1bba71d360bbb5c2d"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_updated_by_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Updated by",
+      "type": "Field Label",
+      "payload_sha256": "fa2d03c9ac865e458476bbef0e4df03f9f3350e755fa50a514b14daca4c3b8a3"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_sys_updated_on_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Updated",
+      "type": "Field Label",
+      "payload_sha256": "26d86a457cad9d5970bb42467d4f0a3b1faccf395936e04c44db880a8922a7b2"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_u_incident_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Incident",
+      "type": "Field Label",
+      "payload_sha256": "8822481ebdad86e9fe1977e48c379a01954456fe9c7f88546d1c62858762813d"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard_u_outage_en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI.Outage",
+      "type": "Field Label",
+      "payload_sha256": "c62738143427185bbd72a77842d36178fb9ed15811d338fe7245cbf65def8c10"
+    },
+    {
+      "update_name": "sys_documentation_u_lab_si_outage_guard__en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI",
+      "type": "Field Label",
+      "payload_sha256": "1937b0c28369612e36178ed144a7dd6a9419ef7bbe0553963fa9836f2359a590"
+    },
+    {
+      "update_name": "sys_script_client_0aa116cbc3189f54e079b13ed401313b",
+      "table": "sys_script_client",
+      "sys_id": "0aa116cbc3189f54e079b13ed401313b",
+      "target_name": "LAB Técnico - Variable Editor somente le",
+      "type": "Client Script",
+      "payload_sha256": "7a3850a0413e7a75f6c7d9739e8f03d477ad3d2700541ae598536cc4ee61ecfd"
+    },
+    {
+      "update_name": "sys_script_client_a87b18bbc3185f94e079b13ed4013153",
+      "table": "sys_script_client",
+      "sys_id": "a87b18bbc3185f94e079b13ed4013153",
+      "target_name": "LAB Negócio - Variable Editor somente le",
+      "type": "Client Script",
+      "payload_sha256": "c191d276da97ac40a6bda381fd23118b7134199691a4ace65c13ef1cc51cfca0"
+    },
+    {
+      "update_name": "sys_script_include_087bd4bbc3185f94e079b13ed4013195",
+      "table": "sys_script_include",
+      "sys_id": "087bd4bbc3185f94e079b13ed4013195",
+      "target_name": "LabBusinessIncidentAjax",
+      "type": "Script Include",
+      "payload_sha256": "fb9248c19d0d32878d2508fc0b2bc32e3b65f3dc8ea74134fde779372b78d7ab"
+    },
+    {
+      "update_name": "sys_script_include_1c25a43dc3c09310e079b13ed401318a",
+      "table": "sys_script_include",
+      "sys_id": "1c25a43dc3c09310e079b13ed401318a",
+      "target_name": "LabIncidentIntakeService",
+      "type": "Script Include",
+      "payload_sha256": "78cff35319960a53ab0466c47a7110c706be10e660a3341e6a734205d4089dc6"
+    },
+    {
+      "update_name": "sys_script_include_86305ac3c3189f54e079b13ed401314c",
+      "table": "sys_script_include",
+      "sys_id": "86305ac3c3189f54e079b13ed401314c",
+      "target_name": "LabTechnicalIncidentService",
+      "type": "Script Include",
+      "payload_sha256": "c11b5c122e1e04f3e9d7655bc144e1e57252de3ef32ca4ec591c23089ce43068"
+    },
+    {
+      "update_name": "sys_script_include_da305ac3c3189f54e079b13ed4013153",
+      "table": "sys_script_include",
+      "sys_id": "da305ac3c3189f54e079b13ed4013153",
+      "target_name": "LabTechnicalIncidentAjax",
+      "type": "Script Include",
+      "payload_sha256": "9974e11ebb95e5dbd43d1338826592ce93eb7866fe734934f49f3f8d961f8963"
+    },
+    {
+      "update_name": "sys_security_acl_3dc366cbc3dc9f54e079b13ed40131c1",
+      "table": "sys_security_acl",
+      "sys_id": "3dc366cbc3dc9f54e079b13ed40131c1",
+      "target_name": "u_lab_si_outage_guard",
+      "type": "Access Control",
+      "payload_sha256": "dedb09316d11e9f8a081dcd5fb792f9ea9e95ee7ef8107c27dd8a12c2e949647"
+    },
+    {
+      "update_name": "sys_security_acl_7dc3ea47c310df54e079b13ed401310c",
+      "table": "sys_security_acl",
+      "sys_id": "7dc3ea47c310df54e079b13ed401310c",
+      "target_name": "u_lab_si_outage_guard",
+      "type": "Access Control",
+      "payload_sha256": "a1cf04436db7f951398a8b845e41fcd624ac16bba960420c22c64f9b0d2daa05"
+    },
+    {
+      "update_name": "sys_security_acl_c2c3ea47c310df54e079b13ed4013199",
+      "table": "sys_security_acl",
+      "sys_id": "c2c3ea47c310df54e079b13ed4013199",
+      "target_name": "u_lab_si_outage_guard",
+      "type": "Access Control",
+      "payload_sha256": "7d7a14d027c1a08f0d9959182556cfaec2568735a090d2786f2334f3d0faff03"
+    },
+    {
+      "update_name": "sys_security_acl_c6c3ea47c310df54e079b13ed401315f",
+      "table": "sys_security_acl",
+      "sys_id": "c6c3ea47c310df54e079b13ed401315f",
+      "target_name": "u_lab_si_outage_guard",
+      "type": "Access Control",
+      "payload_sha256": "dea7d312b142abec92591a31ab6dcbfd5ffd285162425ee3228057d37744a6a2"
+    },
+    {
+      "update_name": "sys_security_acl_role_39c3aa47c310df54e079b13ed40131ca",
+      "table": "sys_security_acl_role",
+      "sys_id": "39c3aa47c310df54e079b13ed40131ca",
+      "target_name": "u_lab_si_outage_guard.admin",
+      "type": "Access Roles",
+      "payload_sha256": "d1a0d1d87e374a59b5ab2c1a05733d4c8bde1bc46394dca7d295dc86e14482ea"
+    },
+    {
+      "update_name": "sys_security_acl_role_4ac3ea47c310df54e079b13ed4013180",
+      "table": "sys_security_acl_role",
+      "sys_id": "4ac3ea47c310df54e079b13ed4013180",
+      "target_name": "u_lab_si_outage_guard.admin",
+      "type": "Access Roles",
+      "payload_sha256": "20ca8e13f70c5fc1e15d20e07f69e8b2edc2ae44dbf9cae968b466ccef567a41"
+    },
+    {
+      "update_name": "sys_security_acl_role_c6c3ea47c310df54e079b13ed40131a1",
+      "table": "sys_security_acl_role",
+      "sys_id": "c6c3ea47c310df54e079b13ed40131a1",
+      "target_name": "u_lab_si_outage_guard.admin",
+      "type": "Access Roles",
+      "payload_sha256": "90a9a6bc0c19d5f14673946234fecf98885050a41cb0c1986bffad01aca883b6"
+    },
+    {
+      "update_name": "sys_security_acl_role_fdc3ea47c310df54e079b13ed401312d",
+      "table": "sys_security_acl_role",
+      "sys_id": "fdc3ea47c310df54e079b13ed401312d",
+      "target_name": "u_lab_si_outage_guard.admin",
+      "type": "Access Roles",
+      "payload_sha256": "31c48bf29897d4abf3f89fec7fd03149d655eb699583e4271631b34a628958e2"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+function onSubmit(){var extent=g_form.getValue('report_extent');if(extent!=='total'&&extent!=='partial')return true;var state=g_form.getValue('technical_outage_state');if(state==='eligible'||state==='existing')return true;g_form.addErrorMessage('Aguarde a verificação de outage da aplicação. Se a consulta falhar, recarregue o formulário.');return false;}
