@@ -14,7 +14,7 @@ Origem consultada: `incident-assisted-intake` v1.1.0, 56 componentes, no mesmo r
 | Catálogo, categoria e tópico | Vínculos próprios para cada novo producer; registros de taxonomia externos não transportados |
 | Regras de classificação e correlação | Reutilizadas pelo núcleo; extensão técnica por herança |
 
-Dos 56 nomes canônicos do XML anterior, dois são incluídos diretamente (núcleo e widget); os demais têm equivalentes próprios ou compartilhados na nova distribuição. Isso evita transportar novamente o producer legado e suas perguntas locais. `components.json` lista o conjunto efetivo de 155 atualizações, que inclui também todo o fluxo técnico e a estrutura do controle de concorrência.
+Dos 56 nomes canônicos do XML anterior, dois são incluídos diretamente (núcleo e widget); os demais têm equivalentes próprios ou compartilhados na nova distribuição. Isso evita transportar novamente o producer legado e suas perguntas locais. `components.json` lista o conjunto efetivo de 157 atualizações, que inclui também todo o fluxo técnico e a estrutura do controle de concorrência.
 
 ## Refatoração do item técnico
 

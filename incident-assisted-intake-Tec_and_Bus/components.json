@@ -1,6 +1,6 @@
 {
   "update_set": "121bdcb7c3185f94e079b13ed4013183",
-  "count": 155,
+  "count": 157,
   "counts_by_table": {
     "catalog_script_client": 27,
     "io_set_item": 9,
@@ -11,6 +11,7 @@
     "sc_cat_item_catalog": 2,
     "sc_cat_item_category": 2,
     "sc_cat_item_producer": 2,
+    "sc_cat_item_user_criteria_mtom": 1,
     "sp_widget": 2,
     "sys_db_object": 1,
     "sys_dictionary": 9,
@@ -18,7 +19,8 @@
     "sys_script_client": 2,
     "sys_script_include": 4,
     "sys_security_acl": 4,
-    "sys_security_acl_role": 4
+    "sys_security_acl_role": 4,
+    "user_criteria": 1
   },
   "components": [
     {
@@ -982,6 +984,14 @@
       "payload_sha256": "247c45021eaca79552de22dd28651ab68789edff9800394c6ecf06dacd346421"
     },
     {
+      "update_name": "sc_cat_item_user_criteria_mtom_41c6e837c31c5f94e079b13ed40131b2",
+      "table": "sc_cat_item_user_criteria_mtom",
+      "sys_id": "41c6e837c31c5f94e079b13ed40131b2",
+      "target_name": "Criar Incidente - Indisponibilidade de Aplicação/Sistema.Users with 'itil' role",
+      "type": "Catalog Item Available for",
+      "payload_sha256": "2315025f527152950552cbf44e2cc3e3b2d1ea120da678ad5013bf726717a403"
+    },
+    {
       "update_name": "sp_widget_28405647c3189f54e079b13ed4013110",
       "table": "sp_widget",
       "sys_id": "28405647c3189f54e079b13ed4013110",
@@ -1078,6 +1088,14 @@
       "payload_sha256": "11e9c978e019771a2805bf52350d60ba41b92a24ffc8d61c963165867dd58e31"
     },
     {
+      "update_name": "sys_documentation_u_lab_si_outage_guard__en",
+      "table": "sys_documentation",
+      "sys_id": null,
+      "target_name": "LAB - Controle de criação de outage por SI",
+      "type": "Field Label",
+      "payload_sha256": "1937b0c28369612e36178ed144a7dd6a9419ef7bbe0553963fa9836f2359a590"
+    },
+    {
       "update_name": "sys_documentation_u_lab_si_outage_guard_sys_created_by_en",
       "table": "sys_documentation",
       "sys_id": null,
@@ -1140,14 +1158,6 @@
       "target_name": "LAB - Controle de criação de outage por SI.Outage",
       "type": "Field Label",
       "payload_sha256": "c62738143427185bbd72a77842d36178fb9ed15811d338fe7245cbf65def8c10"
-    },
-    {
-      "update_name": "sys_documentation_u_lab_si_outage_guard__en",
-      "table": "sys_documentation",
-      "sys_id": null,
-      "target_name": "LAB - Controle de criação de outage por SI",
-      "type": "Field Label",
-      "payload_sha256": "1937b0c28369612e36178ed144a7dd6a9419ef7bbe0553963fa9836f2359a590"
     },
     {
       "update_name": "sys_script_client_0aa116cbc3189f54e079b13ed401313b",
@@ -1260,6 +1270,14 @@
       "target_name": "u_lab_si_outage_guard.admin",
       "type": "Access Roles",
       "payload_sha256": "31c48bf29897d4abf3f89fec7fd03149d655eb699583e4271631b34a628958e2"
+    },
+    {
+      "update_name": "user_criteria_78060fac871023000e3dd61e36cb0b14",
+      "table": "user_criteria",
+      "sys_id": "78060fac871023000e3dd61e36cb0b14",
+      "target_name": "Users with 'itil' role",
+      "type": "User Criteria",
+      "payload_sha256": "249ff1a14b420e2b0dfca4147d703a5912761b6407f1ff3f4a54142ad2d7fdc6"
     }
   ]
 }

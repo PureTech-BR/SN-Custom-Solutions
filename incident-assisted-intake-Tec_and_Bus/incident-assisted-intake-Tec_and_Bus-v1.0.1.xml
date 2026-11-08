@@ -8,7 +8,7 @@
     <collisions />
     <commit_date />
     <deleted />
-    <description>Pacote completo v1.0.0: dois Record Producers, Variable Sets compartilhados, consultas de outage, automação técnica e dependências. Não inclui dados de negócio nem o producer legado.</description>
+    <description>Pacote completo v1.0.1: dois Record Producers, Variable Sets compartilhados, consultas de outage, automação técnica, dependências e acesso técnico restrito por User Criteria ITIL. Testado com usuário comum e ITIL sem admin. Não inclui dados de negócio nem o producer legado.</description>
     <inserted />
     <name>LAB - Incident Assisted Intake - Técnico e Negócio v1</name>
     <origin_sys_id />
@@ -6055,6 +6055,60 @@ LabTechnicalIncidentAjax.prototype=Object.extendsObject(AbstractAjaxProcessor,{
     <remote_update_set>fd1f551831cb46cfb5c1e8914f20225e</remote_update_set>
     <update_domain>global</update_domain>
     <payload_hash>880462461</payload_hash>
+    <category>customer</category>
+  </sys_update_xml>
+  <sys_update_xml action="INSERT_OR_UPDATE">
+    <target_name>Criar Incidente - Indisponibilidade de Aplicação/Sistema.Users with 'itil' role</target_name>
+    <sys_updated_on>2026-11-08 14:05:44</sys_updated_on>
+    <type>Catalog Item Available for</type>
+    <update_set />
+    <sys_id>ddc6e837c31c5f94e079b13ed40131b9</sys_id>
+    <view />
+    <update_guid_history>95c6e8375f1c5f946cb1d2bd0c5ff3e6:168141993,d5c6e837871c5f942e3fbcf5de2416b9:168141993</update_guid_history>
+    <sys_updated_by>diego.peukert</sys_updated_by>
+    <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sc_cat_item_user_criteria_mtom"&gt;&lt;sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE"&gt;&lt;sc_cat_item display_value="Criar Incidente - Indisponibilidade de Aplicação/Sistema"&gt;66309e07c3189f54e079b13ed401314a&lt;/sc_cat_item&gt;&lt;sys_class_name&gt;sc_cat_item_user_criteria_mtom&lt;/sys_class_name&gt;&lt;sys_created_by&gt;diego.peukert&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-11-08 14:05:44&lt;/sys_created_on&gt;&lt;sys_id&gt;41c6e837c31c5f94e079b13ed40131b2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Criar Incidente - Indisponibilidade de Aplicação/Sistema.Users with 'itil' role&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sc_cat_item_user_criteria_mtom_41c6e837c31c5f94e079b13ed40131b2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;diego.peukert&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-11-08 14:05:44&lt;/sys_updated_on&gt;&lt;user_criteria display_value="Users with 'itil' role"&gt;78060fac871023000e3dd61e36cb0b14&lt;/user_criteria&gt;&lt;/sc_cat_item_user_criteria_mtom&gt;&lt;/record_update&gt;</payload>
+    <sys_created_on>2026-11-08 14:05:44</sys_created_on>
+    <action>INSERT_OR_UPDATE</action>
+    <table />
+    <sys_created_by>diego.peukert</sys_created_by>
+    <comments />
+    <sys_mod_count>1</sys_mod_count>
+    <replace_on_upgrade>0</replace_on_upgrade>
+    <sys_tags />
+    <sys_recorded_at>1a1bb7abaa40000001</sys_recorded_at>
+    <update_guid>95c6e8375f1c5f946cb1d2bd0c5ff3e6</update_guid>
+    <application>global</application>
+    <name>sc_cat_item_user_criteria_mtom_41c6e837c31c5f94e079b13ed40131b2</name>
+    <remote_update_set>fd1f551831cb46cfb5c1e8914f20225e</remote_update_set>
+    <update_domain>global</update_domain>
+    <payload_hash>168141993</payload_hash>
+    <category>customer</category>
+  </sys_update_xml>
+  <sys_update_xml action="INSERT_OR_UPDATE">
+    <target_name>Users with 'itil' role</target_name>
+    <sys_updated_on>2026-11-08 14:05:44</sys_updated_on>
+    <type>User Criteria</type>
+    <update_set />
+    <sys_id>95c6e837c31c5f94e079b13ed40131e3</sys_id>
+    <view />
+    <update_guid_history>9dc6e8372e1c5f94e6ca9d58d3c5c1e2:-1601780511</update_guid_history>
+    <sys_updated_by>diego.peukert</sys_updated_by>
+    <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="user_criteria"&gt;&lt;user_criteria action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;company/&gt;&lt;department/&gt;&lt;group/&gt;&lt;location/&gt;&lt;match_all&gt;false&lt;/match_all&gt;&lt;name&gt;Users with 'itil' role&lt;/name&gt;&lt;role name="itil"&gt;282bf1fac6112285017366cb5f867469&lt;/role&gt;&lt;script/&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;user_criteria&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-08-30 08:34:14&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path/&gt;&lt;sys_id&gt;78060fac871023000e3dd61e36cb0b14&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Users with 'itil' role&lt;/sys_name&gt;&lt;sys_package display_value="Problem Management Best Practice - Madrid - Knowledge Integration" source="com.snc.best_practice.problem.madrid.knowledge"&gt;77f1e2f108e803100a22e9371c04a44a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;user_criteria_78060fac871023000e3dd61e36cb0b14&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-08-30 08:34:14&lt;/sys_updated_on&gt;&lt;user/&gt;&lt;/user_criteria&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=78060fac871023000e3dd61e36cb0b14"/&gt;&lt;/record_update&gt;</payload>
+    <sys_created_on>2026-11-08 14:05:44</sys_created_on>
+    <action>INSERT_OR_UPDATE</action>
+    <table />
+    <sys_created_by>diego.peukert</sys_created_by>
+    <comments />
+    <sys_mod_count>0</sys_mod_count>
+    <replace_on_upgrade>0</replace_on_upgrade>
+    <sys_tags />
+    <sys_recorded_at>1a1bb7aba890000001</sys_recorded_at>
+    <update_guid>9dc6e8372e1c5f94e6ca9d58d3c5c1e2</update_guid>
+    <application>global</application>
+    <name>user_criteria_78060fac871023000e3dd61e36cb0b14</name>
+    <remote_update_set>fd1f551831cb46cfb5c1e8914f20225e</remote_update_set>
+    <update_domain>global</update_domain>
+    <payload_hash>-1601780511</payload_hash>
     <category>customer</category>
   </sys_update_xml>
 </unload>

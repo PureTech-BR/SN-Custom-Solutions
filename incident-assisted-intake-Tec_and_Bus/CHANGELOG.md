@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.1 — 2026-11-08
+
+- Testes reais adicionais com Joe Employee sem papéis e User ITIL sem admin: INC0010069 e INC0010070.
+- Corrigida a visibilidade do item técnico no Employee Center com User Criteria nativo por ITIL em Available for; bloqueio por link direto confirmado com usuário comum.
+- Critério e vínculo incluídos no Update Set completo, agora com 157 atualizações. A checagem ITIL no servidor foi mantida.
+- Documentação e teste de integridade ampliados; dados adicionais de homologação encerrados e impersonação finalizada.
+
 ## 1.0.0 — 2026-11-08
 
 - Novo Record Producer **Criar Incidente - Serviços Instáveis ou Indisponíveis**, duplicado do primeiro item, preservando o legado.

@@ -1,22 +1,24 @@
 # Incident Assisted Intake — Técnico e Negócio
 
-Versão **1.0.0**, validada em **08/11/2026**, na instância `dev437951`.
+Versão **1.0.1**, validada em **08/11/2026**, na instância `dev437951`.
 
 Dois Record Producers abrem incidentes com perguntas adequadas ao público e reutilizam os mesmos blocos de caracterização, detalhamento e classificação. A visão técnica permite selecionar aplicações e criar um Outage após a criação do incidente. A visão de negócio mantém a experiência de seleção de serviço e oferta do primeiro item.
 
 | Item | Público e ponto de entrada | sys_id |
 |---|---|---|
 | Criar Incidente - Serviços Instáveis ou Indisponíveis | Usuário autenticado; serviço e oferta | `6a6b9c7bc3185f94e079b13ed4013183` |
-| Criar Incidente - Indisponibilidade de Aplicação/Sistema | Analistas com `itil`; Service Instance principal | `66309e07c3189f54e079b13ed401314a` |
+| Criar Incidente - Indisponibilidade de Aplicação/Sistema | Analistas com `itil`; critério Available for nativo; Service Instance principal | `66309e07c3189f54e079b13ed401314a` |
+
+O item técnico usa **Available for → Users with 'itil' role** (User Criteria nativo). Sem ITIL, o portal bloqueia também o acesso pelo link direto. O campo legado Roles isoladamente não garantiu esse bloqueio no Employee Center; a checagem ITIL no Script Include permanece como segunda camada. O critério e seu vínculo foram incluídos no XML.
 
 O primeiro item, `0745a07dc3c09310e079b13ed4013110`, permanece intacto. Não é transportado nem desativado por este pacote. A pasta anterior `incident-assisted-intake` também é preservada.
 
 ## Instalação
 
-Update Set de origem: **LAB - Incident Assisted Intake - Técnico e Negócio v1**, `121bdcb7c3185f94e079b13ed4013183`, estado **Complete**, com **155 Customer Updates**.
+Update Set de origem: **LAB - Incident Assisted Intake - Técnico e Negócio v1**, `121bdcb7c3185f94e079b13ed4013183`, estado **Complete**, com **157 Customer Updates**.
 
 1. Verifique o SHA-256 do XML em `SHA256SUMS`.
-2. Em uma instância de homologação, acesse **Retrieved Update Sets → Import Update Set from XML** e importe `incident-assisted-intake-Tec_and_Bus-v1.0.0.xml`.
+2. Em uma instância de homologação, acesse **Retrieved Update Sets → Import Update Set from XML** e importe `incident-assisted-intake-Tec_and_Bus-v1.0.1.xml`.
 3. Execute **Preview Update Set**. Resolva colisões, referências ausentes e alterações locais antes de **Commit Update Set**. O pacote é completo para as duas implementações; não exige importar previamente o Update Set antigo.
 4. Confira catálogo, categoria, tópico do Employee Center e permissões no destino. As associações são transportadas com os IDs da origem; os respectivos catálogos, categorias e tópicos não são criados pelo pacote.
 5. Confirme que os dois itens aparecem no portal, que os widgets renderizam e que os grupos de suporte seguem as regras nativas/configuradas do destino. O código não fixa grupo responsável nem altera a matriz de prioridade.
@@ -24,7 +26,7 @@ Update Set de origem: **LAB - Incident Assisted Intake - Técnico e Negócio v1*
 
 Pré-requisitos: tabelas de Incident, Service Catalog/Record Producer, CMDB Services, Outages e Service Portal/Employee Center; escopo Global; papéis nativos `admin`/`itil`. Não são incluídos usuários, grupos, serviços, ofertas, SIs, relacionamentos de negócio, incidentes, Outages ou linhas de controle de execução.
 
-O XML usa o envelope de Retrieved Update Set do pacote anterior e os **payloads nativos de `sys_update_xml`**, preservados integralmente. `components.json` registra os 155 nomes canônicos e o hash de cada payload.
+O XML usa o envelope de Retrieved Update Set do pacote anterior e os **payloads nativos de `sys_update_xml`**, preservados integralmente. `components.json` registra os 157 nomes canônicos e o hash de cada payload.
 
 ## Variable Sets e reutilização
 
@@ -133,7 +135,7 @@ Descrição: relato informado, seleções e detalhes condicionais, classificaç�
 ## Conteúdo e manutenção
 
 - `src/`: fontes extraídas dos payloads nativos, inclusive produtores, Script Includes, scripts de catálogo, editores de variáveis e widgets.
-- `components.json`: inventário das 155 atualizações e hashes dos payloads.
+- `components.json`: inventário das 157 atualizações e hashes dos payloads.
 - `variables.json`: variáveis, sets, vínculos e escolhas.
 - `MIGRATION.md`: equivalências com o primeiro pacote e preservação do legado.
 - `VALIDATION.md` e `tests/`: evidências e testes reproduzíveis.

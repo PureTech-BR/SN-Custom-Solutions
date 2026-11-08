@@ -2,8 +2,8 @@ import pathlib,json,xml.etree.ElementTree as E,hashlib,collections
 root=pathlib.Path(__file__).resolve().parents[1]
 p=json.loads((root/'package.json').read_text());m=json.loads((root/'components.json').read_text());v=json.loads((root/'variables.json').read_text())
 x=E.parse(next(root.glob('*.xml'))).getroot();updates=x.findall('sys_update_xml');remote=x.find('sys_remote_update_set');rid=remote.findtext('sys_id')
-assert len(updates)==m['count']==p['componentCount']==155
-assert len({u.findtext('name') for u in updates})==155
+assert len(updates)==m['count']==p['componentCount']==157
+assert len({u.findtext('name') for u in updates})==157
 assert remote.findtext('remote_sys_id')==p['updateSet']['sys_id'] and remote.findtext('state')=='loaded'
 byname={u.findtext('name'):u for u in updates};records=[]
 for c in m['components']:
@@ -24,4 +24,9 @@ bindings=v['bindings'];assert len(bindings)==9
 shared=[sid for sid in sets if len({b['sc_cat_item'] for b in bindings if b['variable_set']==sid})==2];assert len(shared)==2
 assert sum(d['variable_set'] in shared for d in v['variables'])==13
 hint=next(d for d in v['variables'] if d['name']=='technical_outage_hint');assert hint['type']=='32' and 'Altere para o horário' in hint['rich_text']
-print('PASS: 155 native payloads and hashes, two producers, seven sets/two shared, 13 shared variables, bindings, choices, hint and no business/runtime data.')
+print('PASS: 157 native payloads and hashes, two producers, seven sets/two shared, 13 shared variables, bindings, choices, hint and no business/runtime data.')
+
+criteria=[d for t,d in records if t=='user_criteria'];links=[d for t,d in records if t=='sc_cat_item_user_criteria_mtom']
+assert len(criteria)==len(links)==1 and criteria[0]['active']=='true' and criteria[0]['role']=='282bf1fac6112285017366cb5f867469'
+assert links[0]['sc_cat_item']==p['producers']['technical'] and links[0]['user_criteria']==criteria[0]['sys_id']
+print('PASS: technical Available for uses native ITIL criterion; business remains unrestricted by this binding.')

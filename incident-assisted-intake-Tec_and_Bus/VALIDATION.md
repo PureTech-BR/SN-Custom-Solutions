@@ -1,6 +1,20 @@
-# Validação da v1.0.0
+# Validação da v1.0.1
 
-Data: 08/11/2026. Instância: `dev437951`. Execução em sessão administrativa. Update Set concluído com 155 Customer Updates.
+Data: 08/11/2026. Instância: `dev437951`. Rodada inicial administrativa e rodada adicional com impersonação dos dois públicos. Update Set concluído com 157 Customer Updates.
+
+## Rodada adicional de acesso — v1.0.1
+
+Teste pelo Employee Center com impersonação, sem conceder ou alterar papéis dos usuários:
+
+| Perfil | Permissões verificadas | Cenário | Resultado |
+|---|---|---|---|
+| Joe Employee (`employee`) | Sem papéis atribuídos | Formulário de serviços, oferta desconhecida, não acessa, total, apenas eu, bloqueado | `INC0010069`, criado por `employee`, caller Joe Employee, impacto 3, urgência 1, prioridade 3 |
+| Joe Employee | Sem ITIL e sem admin | Link direto do item técnico após correção | Bloqueado: “You are either not authorized or record is not valid.”; formulário e Submit não exibidos |
+| User ITIL (`User_ITIL`) | ITIL presente e admin ausente; possui também outros papéis, incluindo itil_admin | Item técnico, SI Ecommerce 2.0 - Opencard, Website, rotina técnica, não acessa, extensão desconhecida, apenas eu, bloqueado | `INC0010070`, criado por `User_ITIL`, caller User ITIL, SI em cmdb_ci, impacto 3, urgência 1, prioridade 3 |
+
+O primeiro acesso do usuário comum ao link técnico revelou que `roles=itil` no item não bloqueava sua renderização neste Employee Center. A correção usa o User Criteria **nativo** “Users with 'itil' role” (`78060fac871023000e3dd61e36cb0b14`) em **Available for**, vínculo `41c6e837c31c5f94e079b13ed40131b2`. A proteção ITIL existente no servidor foi preservada. Após nova impersonação de Joe, o bloqueio foi confirmado; em seguida, o envio ITIL passou. Esses dois componentes elevam o pacote de 155 para 157 atualizações.
+
+Esta rodada valida acesso e criação de INC. A extensão desconhecida no cenário ITIL evita criar um Outage de teste sobre SI existente; não comprova criação de Outage sob perfil não administrativo. Os cenários de Outage da rodada administrativa abaixo continuam válidos. Os dois incidentes adicionais foram cancelados após conferir os registros e a sessão administrativa original foi restaurada.
 
 ## Envios reais pelo Employee Center
 
@@ -41,14 +55,14 @@ Comando: `npm test`, sem dependências externas.
 | validate-outage-groups.cjs | Relação/direção/tipo; subclasses; deduplicação; exclusão de infraestrutura/indiretos; privacidade; recálculo no envio | Passou |
 | validate-variable-editor.cjs | ACL e guest no endpoint; rótulos históricos; valores preservados; 16 campos somente leitura; condições | Passou |
 | validate-syntax.cjs | Parse dos 41 arquivos JS; papel itil; adicionais distintos; tipo derivado; UTC/início futuro; ocorrência existente | Passou |
-| validate-package.py | 155 payloads e hashes; 2 producers; 7 sets/2 compartilhados; 13 variáveis comuns; escolhas, vínculos e ausência de dados de execução | Passou |
+| validate-package.py | 157 payloads e hashes; 2 producers; 7 sets/2 compartilhados; 13 variáveis comuns; escolhas, vínculos e ausência de dados de execução | Passou |
 
 Os três primeiros testes derivam da suíte do pacote original e foram adaptados aos caminhos e ao novo Ajax de negócio, mantendo seus cenários. O teste de sintaxe trata o controller de widget como expressão de função, conforme o formato nativo do Service Portal.
 
 ## Limites da homologação
 
 - Não houve importação/Preview/Commit em outra instância.
-- Não foi feita nova rodada de submissão real com conta não administrativa. Os testes locais cobrem verificações de papel, guest e ACL, mas não substituem a homologação do público no destino.
+- A rodada de acesso usou impersonação real de usuários sem admin; não houve login independente com credenciais dessas contas nem teste de outros grupos de audiência no destino.
 - Não foi executado teste simultâneo de carga para a reserva por SI. Foram conferidas a chave primária, a rechecagem e a idempotência sequencial.
 - O grupo responsável não é fixado pelo pacote. O encaminhamento de um CI com grupo preenchido deve ser conferido com as regras nativas/configuradas da instância de destino; os CIs isolados de teste não comprovam esse roteamento.
 - Responsividade em dispositivos móveis e acessibilidade completa não foram auditadas.
