@@ -1,0 +1,38 @@
+[
+  {
+    "name": "aoop_service_availability_degradation_max_runtime_seconds",
+    "id": "0885ab19c3e8d358e079b13ed40131ed",
+    "value": "30",
+    "type": "integer",
+    "description": "Soft execution time budget; one individual calculation may exceed it."
+  },
+  {
+    "name": "aoop_service_availability_degradation_batch_size",
+    "id": "7375ab19c3e8d358e079b13ed40131e5",
+    "value": "100",
+    "type": "integer",
+    "description": "Maximum successful/failed calculations per scheduled execution."
+  },
+  {
+    "name": "aoop_service_availability_degradation_cursor",
+    "id": "8085eb19c3e8d358e079b13ed4013134",
+    "value": null,
+    "type": "string",
+    "description": "Internal cursor over degradation outages; no custom queue table."
+  },
+  {
+    "name": "aoop_service_availability_calculate_degradation",
+    "id": "d775ab19c3e8d358e079b13ed4013189",
+    "value": "true",
+    "type": "boolean",
+    "description": "Enable AOOP supplemental degradation calculation and invalidation."
+  },
+  {
+    "name": "aoop_service_availability_degradation_usecommitment",
+    "id": "e775ab19c3e8d358e079b13ed401319e",
+    "value": "false",
+    "type": "boolean",
+    "description": "Use commitment schedule, timezone and maintenance windows. Reprocess affected scope after changing."
+  }
+]
+

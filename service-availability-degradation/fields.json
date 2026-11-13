@@ -1,0 +1,39 @@
+[
+  {
+    "name": "u_total_degradation",
+    "label": "Total degradation",
+    "type": "glide_duration",
+    "max_length": "40",
+    "default_value": null,
+    "read_only_option": "display_read_only",
+    "id": "01838359c3ec9358e079b13ed401317d"
+  },
+  {
+    "name": "u_absolute_degradation",
+    "label": "Total degradation %",
+    "type": "decimal",
+    "max_length": "15",
+    "default_value": null,
+    "read_only_option": "display_read_only",
+    "id": "19f4cb59c3ec9358e079b13ed40131ff"
+  },
+  {
+    "name": "u_degradation_calculated",
+    "label": "Degradation calculated",
+    "type": "boolean",
+    "max_length": "40",
+    "default_value": "false",
+    "read_only_option": null,
+    "id": "72752f59c3a8d358e079b13ed4013167"
+  },
+  {
+    "name": "u_absolute_degradation_count",
+    "label": "Total degradation periods",
+    "type": "integer",
+    "max_length": "3",
+    "default_value": null,
+    "read_only_option": "display_read_only",
+    "id": "e7b5c35dc320d358e079b13ed4013138"
+  }
+]
+

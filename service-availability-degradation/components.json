@@ -1,0 +1,252 @@
+{
+  "version": "1.0.0",
+  "scope": "global",
+  "update_set": {
+    "update_set_id": "ad7c0069c3681758e079b13ed40131e2",
+    "remote_update_set_id": "b57c4821c3a81758e079b13ed40131e3",
+    "components": 29,
+    "state": "complete",
+    "name": "AOOP - Service Availability Degradation v1.0.0"
+  },
+  "exported_at_utc": "2026-11-13 22:41:59",
+  "components": [
+    {
+      "table": "sys_script_include",
+      "id": "9485eb19c3e8d358e079b13ed40131c5",
+      "name": "AOOP_ServiceAvailabilityDegradation",
+      "update_name": "sys_script_include_9485eb19c3e8d358e079b13ed40131c5",
+      "source_path": "src/AOOP_ServiceAvailabilityDegradation.js"
+    },
+    {
+      "table": "sys_script",
+      "id": "28852f19c3e8d358e079b13ed4013131",
+      "name": "AOOP - Degradation - Outage change",
+      "update_name": "sys_script_28852f19c3e8d358e079b13ed4013131",
+      "source_path": "src/business-rules/outage-change.js",
+      "collection": "cmdb_ci_outage",
+      "when": "after",
+      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
+      "insert": "1",
+      "update": "1",
+      "delete": "0"
+    },
+    {
+      "table": "sys_script",
+      "id": "60852f19c3e8d358e079b13ed401313a",
+      "name": "AOOP - Degradation - Outage deletion",
+      "update_name": "sys_script_60852f19c3e8d358e079b13ed401313a",
+      "source_path": "src/business-rules/outage-deletion.js",
+      "collection": "cmdb_ci_outage",
+      "when": "before",
+      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
+      "insert": "0",
+      "update": "0",
+      "delete": "1"
+    },
+    {
+      "table": "sys_script",
+      "id": "645388a5c3a41758e079b13ed40131ee",
+      "name": "AOOP - Degradation - Mode change",
+      "update_name": "sys_script_645388a5c3a41758e079b13ed40131ee",
+      "source_path": "src/business-rules/mode-change.js",
+      "collection": "sys_properties",
+      "when": "after",
+      "condition": "current.name == 'aoop_service_availability_degradation_usecommitment' && current.value.changes()",
+      "insert": "0",
+      "update": "1",
+      "delete": "0"
+    },
+    {
+      "table": "sys_script",
+      "id": "74852f19c3e8d358e079b13ed401314a",
+      "name": "AOOP - Degradation - Affected CI deletio",
+      "update_name": "sys_script_74852f19c3e8d358e079b13ed401314a",
+      "source_path": "src/business-rules/affected-ci-deletio.js",
+      "collection": "cmdb_outage_ci_mtom",
+      "when": "before",
+      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
+      "insert": "0",
+      "update": "0",
+      "delete": "1"
+    },
+    {
+      "table": "sys_script",
+      "id": "bc852f19c3e8d358e079b13ed401315e",
+      "name": "AOOP - Degradation - Availability inputs",
+      "update_name": "sys_script_bc852f19c3e8d358e079b13ed401315e",
+      "source_path": "src/business-rules/availability-inputs.js",
+      "collection": "service_availability",
+      "when": "before",
+      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
+      "insert": "1",
+      "update": "1",
+      "delete": "0"
+    },
+    {
+      "table": "sys_script",
+      "id": "e0852f19c3e8d358e079b13ed4013142",
+      "name": "AOOP - Degradation - Affected CI change",
+      "update_name": "sys_script_e0852f19c3e8d358e079b13ed4013142",
+      "source_path": "src/business-rules/affected-ci-change.js",
+      "collection": "cmdb_outage_ci_mtom",
+      "when": "after",
+      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
+      "insert": "1",
+      "update": "1",
+      "delete": "0"
+    },
+    {
+      "table": "sysevent_register",
+      "id": "945388a5c3a41758e079b13ed4013170",
+      "name": "aoop.degradation.mode_changed",
+      "update_name": "sysevent_register_945388a5c3a41758e079b13ed4013170"
+    },
+    {
+      "table": "sysevent_register",
+      "id": "e485eb19c3e8d358e079b13ed40131cb",
+      "name": "aoop.availability.degradation.invalidate",
+      "update_name": "sysevent_register_e485eb19c3e8d358e079b13ed40131cb"
+    },
+    {
+      "table": "sysevent_script_action",
+      "id": "645388a5c3a41758e079b13ed40131e8",
+      "name": "AOOP - Degradation - Mode invalidation",
+      "update_name": "sysevent_script_action_645388a5c3a41758e079b13ed40131e8",
+      "source_path": "src/script-actions/mode-invalidation.js",
+      "event_name": "aoop.degradation.mode_changed"
+    },
+    {
+      "table": "sysevent_script_action",
+      "id": "a4852f19c3e8d358e079b13ed401312a",
+      "name": "AOOP - Degradation - Invalidate affected",
+      "update_name": "sysevent_script_action_a4852f19c3e8d358e079b13ed401312a",
+      "source_path": "src/script-actions/invalidate-affected.js",
+      "event_name": "aoop.availability.degradation.invalidate"
+    },
+    {
+      "table": "sysauto_script",
+      "id": "70852f19c3e8d358e079b13ed4013167",
+      "name": "AOOP - Service Availability - Calculate degradation",
+      "update_name": "sysauto_script_70852f19c3e8d358e079b13ed4013167",
+      "source_path": "src/calculate-degradation.job.js"
+    },
+    {
+      "table": "sys_script_fix",
+      "id": "0348a795c32cd358e079b13ed40131ab",
+      "name": "AOOP - Degradation - Reprocess scope",
+      "update_name": "sys_script_fix_0348a795c32cd358e079b13ed40131ab",
+      "source_path": "src/reprocess-scope.fix.js"
+    },
+    {
+      "table": "sys_properties",
+      "id": "0885ab19c3e8d358e079b13ed40131ed",
+      "name": "aoop_service_availability_degradation_max_runtime_seconds",
+      "update_name": "sys_properties_0885ab19c3e8d358e079b13ed40131ed"
+    },
+    {
+      "table": "sys_properties",
+      "id": "7375ab19c3e8d358e079b13ed40131e5",
+      "name": "aoop_service_availability_degradation_batch_size",
+      "update_name": "sys_properties_7375ab19c3e8d358e079b13ed40131e5"
+    },
+    {
+      "table": "sys_properties",
+      "id": "8085eb19c3e8d358e079b13ed4013134",
+      "name": "aoop_service_availability_degradation_cursor",
+      "update_name": "sys_properties_8085eb19c3e8d358e079b13ed4013134"
+    },
+    {
+      "table": "sys_properties",
+      "id": "d775ab19c3e8d358e079b13ed4013189",
+      "name": "aoop_service_availability_calculate_degradation",
+      "update_name": "sys_properties_d775ab19c3e8d358e079b13ed4013189"
+    },
+    {
+      "table": "sys_properties",
+      "id": "e775ab19c3e8d358e079b13ed401319e",
+      "name": "aoop_service_availability_degradation_usecommitment",
+      "update_name": "sys_properties_e775ab19c3e8d358e079b13ed401319e"
+    },
+    {
+      "table": "sys_dictionary",
+      "id": "01838359c3ec9358e079b13ed401317d",
+      "name": "u_total_degradation",
+      "update_name": "sys_dictionary_service_availability_u_total_degradation"
+    },
+    {
+      "table": "sys_dictionary",
+      "id": "19f4cb59c3ec9358e079b13ed40131ff",
+      "name": "u_absolute_degradation",
+      "update_name": "sys_dictionary_service_availability_u_absolute_degradation"
+    },
+    {
+      "table": "sys_dictionary",
+      "id": "72752f59c3a8d358e079b13ed4013167",
+      "name": "u_degradation_calculated",
+      "update_name": "sys_dictionary_service_availability_u_degradation_calculated"
+    },
+    {
+      "table": "sys_dictionary",
+      "id": "e7b5c35dc320d358e079b13ed4013138",
+      "name": "u_absolute_degradation_count",
+      "update_name": "sys_dictionary_service_availability_u_absolute_degradation_count"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "03756b19c3e8d358e079b13ed40131ae",
+      "name": "u_degradation_calculated [en]",
+      "update_name": "sys_documentation_service_availability_u_degradation_calculated_en",
+      "element": "u_degradation_calculated",
+      "language": "en"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "1b3583d9c320d358e079b13ed40131aa",
+      "name": "u_absolute_degradation [en]",
+      "update_name": "sys_documentation_service_availability_u_absolute_degradation_en",
+      "element": "u_absolute_degradation",
+      "language": "en"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "4c560fddc320d358e079b13ed40131da",
+      "name": "u_absolute_degradation_count [en]",
+      "update_name": "sys_documentation_service_availability_u_absolute_degradation_count_en",
+      "element": "u_absolute_degradation_count",
+      "language": "en"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "6244cb95c320d358e079b13ed4013193",
+      "name": "u_total_degradation [pb]",
+      "update_name": "sys_documentation_service_availability_u_total_degradation_pb",
+      "element": "u_total_degradation",
+      "language": "pb"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "a475031dc320d358e079b13ed40131b3",
+      "name": "u_absolute_degradation [pb]",
+      "update_name": "sys_documentation_service_availability_u_absolute_degradation_pb",
+      "element": "u_absolute_degradation",
+      "language": "pb"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "cdc38715c320d358e079b13ed40131d1",
+      "name": "u_total_degradation [en]",
+      "update_name": "sys_documentation_service_availability_u_total_degradation_en",
+      "element": "u_total_degradation",
+      "language": "en"
+    },
+    {
+      "table": "sys_documentation",
+      "id": "d896cb95c320d358e079b13ed40131f1",
+      "name": "u_absolute_degradation_count [pb]",
+      "update_name": "sys_documentation_service_availability_u_absolute_degradation_count_pb",
+      "element": "u_absolute_degradation_count",
+      "language": "pb"
+    }
+  ]
+}
+
