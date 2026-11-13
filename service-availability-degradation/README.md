@@ -39,6 +39,16 @@ Leia [INSTALLATION.md](docs/INSTALLATION.md) para os detalhes. Preview/commit em
 
 ## Comportamento principal
 
+**Somente registros do tipo Degradation (`degradation`), encerrados e associados à Oferta/CI, tornam uma disponibilidade elegível para cálculo.** O job usa início e fim da degradação para selecionar disponibilidades sobrepostas com ponteiro `false`.
+
+| Tipo em `cmdb_ci_outage.type` | Seleciona disponibilidades para cálculo? | Participação no cálculo complementar |
+|---|---|---|
+| **Degradation** — `degradation` | **Sim**, com início e fim preenchidos e sobreposição de duração positiva | Compõe o tempo degradado; períodos sobrepostos são unificados |
+| **Planned** — `planned` | **Não** | Quando encerrado, desconta apenas o tempo sobreposto às degradações selecionadas |
+| **Outage** — `outage` | **Não** | Não entra no cálculo, não é somado e não é descontado da degradação |
+
+Uma disponibilidade com apenas Planned ou Outage não é calculada por esta solução. **Mudanças em Planned podem invalidar resultados existentes**, pois alteram o desconto, mas o recálculo continua exigindo uma Degradation elegível. A property de uso do compromisso altera a janela de medição, não os tipos de evento considerados.
+
 A seleção parte de Outages encerrados do tipo `degradation`. Para cada CI/Oferta afetado, procura disponibilidades sobrepostas e pendentes. Um registro `false` sem degradação não é calculado.
 
 Cada disponibilidade é calculada considerando **todos** os eventos de degradação e planejados pertinentes ao intervalo. O resultado é a união das degradações menos a união dos planejados, recortada ao intervalo. Quando habilitado o compromisso, o motor mede apenas o tempo elegível da agenda, com timezone e manutenção.
@@ -62,11 +72,9 @@ O percentual representa **degradação**, não disponibilidade. Os indicadores n
 | `u_absolute_degradation_count` | Integer | Períodos efetivos com duração positiva |
 | `u_degradation_calculated` | Boolean, default false | Resultado calculado e válido |
 
-Os três primeiros já haviam sido criados na origem e estão incluídos no pacote. `u_degradation_revision` foi removido do código e do esquema; não é necessário nesta versão. A gravação usa `sys_mod_count`, que é nativo.
-
 ## Mudanças e invalidação
 
-BRs próprias capturam mudanças nos Outages e nos CIs afetados. Eventos e Script Actions localizam os intervalos atingidos, limpam os três resultados e marcam `false`. A BR de entradas da disponibilidade faz essa limpeza diretamente no registro, em `before`.
+BRs próprias capturam mudanças nas degradações, nos planejados e nos seus CIs afetados. Eventos e Script Actions localizam os intervalos atingidos, limpam os três resultados e marcam `false`. A BR de entradas da disponibilidade faz essa limpeza diretamente no registro, em `before`.
 
 Trocar `aoop_service_availability_degradation_usecommitment` entre `true` e `false` invalida assincronamente os resultados calculados e reinicia o cursor. Salvar o mesmo valor não invalida. O cálculo fica para o job ou para uma execução manual controlada.
 

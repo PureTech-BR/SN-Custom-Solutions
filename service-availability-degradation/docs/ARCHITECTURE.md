@@ -1,12 +1,26 @@
 # Arquitetura e regras de cálculo
 
+## Escopo por tipo de evento
+
+Nesta documentação, “registro de Outage” designa um registro da tabela `cmdb_ci_outage`. **Outage**, na tabela abaixo, é especificamente o tipo `outage` (indisponibilidade).
+
+**Somente registros do tipo Degradation (`degradation`), encerrados e associados à Oferta/CI, tornam uma disponibilidade elegível para cálculo.** O job usa início e fim da degradação para selecionar disponibilidades sobrepostas com ponteiro `false`.
+
+| Tipo em `cmdb_ci_outage.type` | Seleciona disponibilidades para cálculo? | Participação no cálculo complementar |
+|---|---|---|
+| **Degradation** — `degradation` | **Sim**, com início e fim preenchidos e sobreposição de duração positiva | Compõe o tempo degradado; períodos sobrepostos são unificados |
+| **Planned** — `planned` | **Não** | Quando encerrado, desconta apenas o tempo sobreposto às degradações selecionadas |
+| **Outage** — `outage` | **Não** | Não entra no cálculo, não é somado e não é descontado da degradação |
+
+Uma disponibilidade com apenas Planned ou Outage não é calculada por esta solução. **Mudanças em Planned podem invalidar resultados existentes**, pois alteram o desconto, mas o recálculo continua exigindo uma Degradation elegível. A property de uso do compromisso altera a janela de medição, não os tipos de evento considerados.
+
 ## Responsabilidades
 
 `AOOP_ServiceAvailabilityDegradation` concentra seleção, captura de mudanças, união/subtração dos intervalos, agenda, invalidação e persistência. Os scripts OOTB não são alterados; a solução escreve apenas os quatro campos customizados e o cursor de operação.
 
 ```mermaid
 flowchart TD
-    A["Mudança de Outage ou CI afetado"] --> B["BR captura CI e intervalo"]
+    A["Mudança de Degradation, Planned ou CI afetado"] --> B["BR captura CI e intervalo"]
     B --> C["Evento de invalidação"]
     C --> D["Script Action e motor"]
     D --> E["Limpa resultados e marca false"]
@@ -27,7 +41,7 @@ O relacionamento OOTB **Outages During Interval** é referência para os caminho
 - Vínculo de CIs afetados: `cmdb_outage_ci_mtom.outage/ci_item`.
 - Ambos podem corresponder a `service_availability.service_offering` ou `cmdb_ci`.
 
-A consulta complementar exige início/fim preenchidos e sobreposição de duração positiva: `outage.begin < availability.end` e `outage.end > availability.start`. O mesmo Outage encontrado pelos dois caminhos entra uma única vez.
+Na seleção de candidatos, o filtro é `type=degradation`. Ao calcular cada candidato, a busca de eventos usa somente `type IN degradation,planned`; `type=outage` fica excluído. A consulta complementar exige início/fim preenchidos e sobreposição de duração positiva: `outage.begin < availability.end` e `outage.end > availability.start`. O mesmo Outage encontrado pelos dois caminhos entra uma única vez.
 
 A data de criação do Outage não define a apuração. São usados início/fim do evento. Um evento pode alcançar dia, semana, mês, ano, últimos 7 dias, últimos 30 dias e últimos 12 meses, desde que esses registros já existam e intersectem o evento. O motor nativo continua gerando os períodos.
 
@@ -55,6 +69,11 @@ Usa `GlideSchedule.duration()` e, para manutenção, `addOtherSchedule0(..., fal
 
 A invalidação limpa duração, percentual e contagem e marca o ponteiro `false`. Não calcula.
 
+- Mudanças em **Degradation** alteram o tempo degradado e invalidam os intervalos afetados.
+- Mudanças em **Planned** alteram o desconto e também invalidam os intervalos afetados.
+- Eventos que permanecem exclusivamente no tipo **Outage** não participam dessa invalidação por evento.
+- Na troca de tipo, os estados anterior e atual são avaliados: mudar de Degradation para Outage, por exemplo, limpa o efeito anterior da degradação.
+
 A captura guarda intervalos e CIs anteriores/atuais para atingir tanto o que passou a ser afetado quanto o que deixou de ser afetado. Exclusões são capturadas em `before`. Os eventos de Outage usam a property habilitadora como referência persistente, evitando dependência de registros já excluídos.
 
 Se a última degradação desaparecer, os valores anteriores são limpos. Sem outra degradação encerrada, o registro permanece `false`, fora do cálculo. Zeros são resultados válidos de uma degradação inteiramente excluída por planejados ou agenda. Um Duration vazio pode aparecer como “0 Seconds” na interface; o ponteiro distingue validade.
@@ -78,7 +97,7 @@ Em interrupção antes de salvar o cursor, a retomada pode repetir seleção; os
 
 ## Concorrência
 
-A atualização final filtra por `sys_id`, ponteiro `false` e `sys_mod_count` lido inicialmente. Uma atualização que incremente esse contador impede a gravação antiga. Não há campo próprio de revisão. O contador não cobre operações que suprimam seus campos de sistema.
+A atualização final filtra por `sys_id`, ponteiro `false` e `sys_mod_count` lido inicialmente. Uma atualização que incremente esse contador impede a gravação antiga. O contador não cobre operações que suprimam seus campos de sistema.
 
 ## Custo de seleção
 

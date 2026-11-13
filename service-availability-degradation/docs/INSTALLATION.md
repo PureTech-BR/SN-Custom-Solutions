@@ -25,15 +25,15 @@ O pacote contém o habilitador `true` e o job ativo às 06h00 de São Paulo. Pla
 ## Validação inicial
 
 1. Selecione uma Oferta com compromisso e disponibilidade existente.
-2. Confirme uma degradação encerrada associada diretamente ou pelos CIs afetados.
+2. Confirme um registro do tipo **Degradation** (`degradation`) com início e fim preenchidos, associado diretamente ou pelos CIs afetados. Apenas Planned ou Outage não torna a disponibilidade elegível.
 3. Execute o job de forma controlada ou aguarde o horário diário.
 4. Confira duração, percentual, contagem e ponteiro.
 5. Execute novamente: o registro `true` deve ser ignorado.
-6. Altere um evento de teste e aguarde a invalidação assíncrona.
+6. Altere uma Degradation de teste e aguarde a invalidação assíncrona. Valide também um Planned sobreposto: ele deve alterar o desconto, sem tornar elegível uma disponibilidade sem Degradation.
 7. Valide alteração da property de modo em ambos os sentidos.
 8. Confira os logs e a manutenção dos indicadores nativos.
 
-Os testes da origem estão em [VALIDATION.md](VALIDATION.md). Não foi executado preview/commit em outra instância; essa homologação deve acontecer no destino.
+Confira a [matriz de tipos](ARCHITECTURE.md#escopo-por-tipo-de-evento) e o [roteiro de aceitação por tipo](VALIDATION.md#aceitação-por-tipo-de-evento). Os testes da origem estão em [VALIDATION.md](VALIDATION.md). Não foi executado preview/commit em outra instância; essa homologação deve acontecer no destino.
 
 ## Definições incluídas
 
@@ -51,6 +51,4 @@ O Fix Script administrativo tem parâmetros vazios e `DRY_RUN=true`; sem preench
 Use outro Update Set para mudanças futuras. Não reabra o pacote concluído para acumular alterações não relacionadas.
 
 Para desativar o processamento, desative o job e coloque o habilitador em `false`. A invalidação por mudança de modo continua protegendo os resultados mesmo com o cálculo desabilitado. Para uma retirada completa, revise as dependências e faça backup dos campos customizados antes de removê-los.
-
-O campo antigo `u_degradation_revision` não é criado nem referenciado pelos scripts desta versão. Se existir em um destino com versão preliminar, sua remoção é uma atividade de migração separada; o pacote inicial não contém uma exclusão desse campo.
 

@@ -12,20 +12,37 @@ Validação funcional em PDI com sessão administrativa:
 | Vínculo direto e por CI afetado para o mesmo Outage | Considerado uma vez |
 | False sem degradação | Não calculado |
 | Segunda rodada com true | Sem recálculo |
-| Alteração de Outage | Evento limpa e invalida intervalos afetados |
+| Alteração de Degradation | Evento limpa e invalida intervalos afetados |
 | Mudança para outro dia | Intervalos antigo e novo tratados |
-| Exclusão de Outage e remoção do último vínculo | Limpeza sem novo cálculo quando não há degradação |
+| Exclusão de Degradation e remoção do último vínculo | Limpeza sem novo cálculo quando não há degradação |
 | Alteração de planejado | Invalidação e novo desconto |
 | Agenda UTC 09–17 | 4h de 8h = 50% no cenário testado |
 | Agenda sem timezone fixo | Aplicação do timezone do compromisso |
 | Manutenção 10–11 | Exclusão da duração elegível e da base da agenda |
 | Criação por AvailabilityRecord nativo | Ponteiro false nas novas disponibilidades |
 | Gravação com sys_mod_count anterior | Recusada |
-| Retirada de u_degradation_revision | Cálculo/invalidação continuam funcionando sem o campo |
 | Troca de modo false → true → false | Limpeza assíncrona, reinício do cursor e recálculo |
 | Salvamento da property sem troca de modo | Sem evento de invalidação |
 
 A referência persistente dos eventos foi testada após a exclusão da origem. O nome final do evento de configuração respeita o limite de 40 caracteres. Estes são testes observados; não há suíte ATF de integração incluída.
+
+## Aceitação por tipo de evento
+
+Roteiro para homologação no destino; os comportamentos esperados abaixo descrevem o escopo da solução e não representam novos testes de integração executados.
+
+| Cenário | Resultado esperado |
+|---|---|
+| Disponibilidade pendente com Degradation encerrada e sobreposta | Calcula o tempo degradado e marca `true` |
+| Disponibilidade pendente com Degradation sem fim | Não é selecionada enquanto a degradação permanecer aberta |
+| Disponibilidade pendente com apenas Planned | Não calcula; Planned não determina elegibilidade |
+| Disponibilidade pendente com apenas Outage | Não calcula; o tipo `outage` é excluído |
+| Degradation de 1h com Planned encerrado sobreposto em 15min | Contabiliza 45min de degradação, antes da aplicação da agenda |
+| Degradation de 1h com Outage sobreposto em 30min | O tipo Outage não altera o cálculo complementar dessa degradação |
+| Alteração/exclusão de Planned que descontava uma Degradation | Limpa e invalida os resultados; o job recalcula se ainda houver Degradation elegível |
+| Remoção da última Degradation, restando apenas Planned ou Outage | Limpa o resultado e mantém `false`, sem novo cálculo |
+| Mudança de tipo Degradation → Outage | Retira o efeito anterior da degradação dos resultados afetados |
+
+A aplicação do compromisso pode reduzir o tempo contabilizado nos cenários com Degradation, mas não altera o filtro por tipo.
 
 ## Benchmark de 100 Outages
 
@@ -63,7 +80,6 @@ Nesse teste, a base continha 7.429 registros. A comparação de contagem e assin
 - Quantidade e unicidade dos 29 Customer Updates.
 - Correspondência com o inventário.
 - Tipos dos quatro campos.
-- Ausência do campo de revisão nos payloads executáveis e de esquema.
 - Ausência de tabelas de dados de negócio no pacote.
 - Correspondência dos scripts extraídos com os payloads.
 - Limites de 500 lotes/600.000 ms e horário do job.

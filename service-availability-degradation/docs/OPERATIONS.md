@@ -1,10 +1,22 @@
 # Operação e manutenção
 
+## Eventos considerados na operação
+
+**Somente registros do tipo Degradation (`degradation`), encerrados e associados à Oferta/CI, tornam uma disponibilidade elegível para cálculo.** O job usa início e fim da degradação para selecionar disponibilidades sobrepostas com ponteiro `false`.
+
+| Tipo em `cmdb_ci_outage.type` | Seleciona disponibilidades para cálculo? | Participação no cálculo complementar |
+|---|---|---|
+| **Degradation** — `degradation` | **Sim**, com início e fim preenchidos e sobreposição de duração positiva | Compõe o tempo degradado; períodos sobrepostos são unificados |
+| **Planned** — `planned` | **Não** | Quando encerrado, desconta apenas o tempo sobreposto às degradações selecionadas |
+| **Outage** — `outage` | **Não** | Não entra no cálculo, não é somado e não é descontado da degradação |
+
+Uma disponibilidade com apenas Planned ou Outage não é calculada por esta solução. **Mudanças em Planned podem invalidar resultados existentes**, pois alteram o desconto, mas o recálculo continua exigindo uma Degradation elegível. A property de uso do compromisso altera a janela de medição, não os tipos de evento considerados.
+
 ## Properties incluídas
 
 | Property | Valor do pacote | Uso |
 |---|---|---|
-| `aoop_service_availability_calculate_degradation` | `true` | Habilita cálculo e captura/invalidação por Outages e entradas |
+| `aoop_service_availability_calculate_degradation` | `true` | Habilita cálculo por Degradation e invalidação por Degradation/Planned e entradas |
 | `aoop_service_availability_degradation_usecommitment` | `false` | Alterna intervalo integral e agenda do compromisso |
 | `aoop_service_availability_degradation_batch_size` | `100` | Tentativas por lote |
 | `aoop_service_availability_degradation_max_runtime_seconds` | `30` | Orçamento de tempo por lote |
@@ -39,7 +51,7 @@ Use o Fix Script `AOOP - Degradation - Reprocess scope`:
 - `DRY_RUN=true`: apenas conta os registros afetados.
 - Após conferir, `DRY_RUN=false`: limpa resultados e marca pendente.
 
-O Fix Script não calcula. O job selecionará somente disponibilidades alcançadas por degradações encerradas.
+O Fix Script não calcula. O job selecionará somente disponibilidades alcançadas por **Degradation encerrada**. Invalidar um registro que tem apenas Planned ou Outage não fará o job calculá-lo.
 
 Alterações de agenda, timezone, manutenção ou associação de compromisso exigem esse reprocessamento quando não modificam diretamente as entradas do registro de disponibilidade. Não há BR de configuração de agenda nesta versão.
 
