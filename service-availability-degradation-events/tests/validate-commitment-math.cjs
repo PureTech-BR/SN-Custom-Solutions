@@ -1,0 +1,16 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+let mode='true';
+const context={Class:{create:()=>function(){this.initialize();}},gs:{getProperty:()=>mode}};
+vm.createContext(context);
+vm.runInContext(fs.readFileSync(path.join(__dirname,'../src/AOOP_DegradationEventEngine.js'),'utf8'),context);
+const engine=new context.AOOP_DegradationEventEngine();
+assert.equal(engine.useCommitment,true);mode='false';assert.equal(engine.useCommitment,true);assert.equal(new context.AOOP_DegradationEventEngine().useCommitment,false);
+engine._scheduledDuration=(schedule,b,e)=>!schedule?e-b:schedule.reduce((sum,x)=>sum+Math.max(0,Math.min(e,x[1])-Math.max(b,x[0])),0);
+const H=3600000;
+const rows=[{type:'degradation',begin:11*H,end:14*H},{type:'planned',begin:12.5*H,end:13*H}];
+let r=engine.measure(rows,0,24*H,null);assert.equal(r.duration,2.5*H);assert.equal(r.base,24*H);
+r=engine.measure(rows,0,24*H,[[12*H,20*H]]);assert.equal(r.duration,1.5*H);assert.equal(r.base,8*H);assert.equal(r.percent,18.75);
+r=engine.measure(rows,0,24*H,[[12*H,13.5*H],[14*H,20*H]]);assert.equal(r.duration,H);assert.equal(r.base,7.5*H);assert.equal(r.count,2);assert.equal(r.percent,100/7.5);
+r=engine.measure(rows,24*H,48*H,[[12*H,20*H]]);assert.equal(r.base,0);assert.equal(r.percent,null);assert.equal(r.duration,0);
+console.log(JSON.stringify({mode_snapshot:'passed',absolute_and_commitment:'passed',maintenance:'passed',zero_base:'passed'}));

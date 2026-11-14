@@ -1,0 +1,35 @@
+[
+  {
+    "sys_id": "19f4cb59c3ec9358e079b13ed40131ff",
+    "name": "service_availability",
+    "element": "u_absolute_degradation",
+    "column_label": "Total degradation %",
+    "internal_type": "decimal",
+    "max_length": "15",
+    "default_value": "",
+    "attributes": "",
+    "read_only_option": "display_read_only"
+  },
+  {
+    "sys_id": "e7b5c35dc320d358e079b13ed4013138",
+    "name": "service_availability",
+    "element": "u_absolute_degradation_count",
+    "column_label": "Total degradation periods",
+    "internal_type": "integer",
+    "max_length": "3",
+    "default_value": "",
+    "attributes": "",
+    "read_only_option": "display_read_only"
+  },
+  {
+    "sys_id": "01838359c3ec9358e079b13ed401317d",
+    "name": "service_availability",
+    "element": "u_total_degradation",
+    "column_label": "Total degradation",
+    "internal_type": "glide_duration",
+    "max_length": "40",
+    "default_value": "",
+    "attributes": "",
+    "read_only_option": "display_read_only"
+  }
+]
