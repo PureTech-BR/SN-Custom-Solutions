@@ -1,0 +1,34 @@
+[
+  {
+    "sys_id": "d3e66c2dc3a41758e079b13ed40131a6",
+    "name": "service_availability",
+    "element": "u_absolute_degradation",
+    "value": "javascript:String(gs.action.getGlideURI()).indexOf('service_availability_list.do')>=0&&new AOOP_DegradationColorConfig()._colorForRecord(current)=='green'",
+    "style": "background-color:#29a93e;",
+    "alt": "Degradação calculada — green"
+  },
+  {
+    "sys_id": "93e62025c3e05758e079b13ed4013102",
+    "name": "service_availability",
+    "element": "u_absolute_degradation",
+    "value": "javascript:String(gs.action.getGlideURI()).indexOf('service_availability_list.do')>=0&&new AOOP_DegradationColorConfig()._colorForRecord(current)=='yellow'",
+    "style": "background-color:#ffb929;",
+    "alt": "Degradação calculada — yellow"
+  },
+  {
+    "sys_id": "13e62025c3e05758e079b13ed4013109",
+    "name": "service_availability",
+    "element": "u_absolute_degradation",
+    "value": "javascript:String(gs.action.getGlideURI()).indexOf('service_availability_list.do')>=0&&new AOOP_DegradationColorConfig()._colorForRecord(current)=='orange'",
+    "style": "background-color:#ff8c00;",
+    "alt": "Degradação calculada — orange"
+  },
+  {
+    "sys_id": "13e62025c3e05758e079b13ed401310f",
+    "name": "service_availability",
+    "element": "u_absolute_degradation",
+    "value": "javascript:String(gs.action.getGlideURI()).indexOf('service_availability_list.do')>=0&&new AOOP_DegradationColorConfig()._colorForRecord(current)=='red'",
+    "style": "background-color:#e53935;",
+    "alt": "Degradação calculada — red"
+  }
+]
