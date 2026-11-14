@@ -27,19 +27,18 @@ O modo é capturado uma vez por instância do motor. A disponibilidade precisa t
 
 ## Pacote
 
-O XML único contém **44 Customer Updates**: 26 itens da solução atual e 18 registros para desativar a arquitetura anterior. Inclui três campos e seus seis rótulos, três properties e a extensão visual. Os componentes OOTB não fazem parte do pacote.
+O XML único contém **26 Customer Updates**, somente com os recursos utilizados por esta solução independente. Inclui três campos e seus seis rótulos, três properties e a extensão visual. Os componentes OOTB não fazem parte do pacote.
 
-A pasta [service-availability-degradation](../service-availability-degradation) preserva a versão anterior. Este diretório é independente e documenta a V2.1.0.
+A instalação é independente: não requer outra solução de degradação e não transporta componentes de migração ou reversão.
 
 | Guia | Conteúdo |
 |---|---|
 | [Arquitetura](docs/ARCHITECTURE.md) | Gatilhos, eventos, integração nativa, cálculo, deduplicação e concorrência |
-| [Componentes](docs/COMPONENTS.md) | Inventário dos 44 Customer Updates, ativos e legados |
+| [Componentes](docs/COMPONENTS.md) | Inventário dos 26 Customer Updates da solução atual |
 | [Instalação](docs/INSTALLATION.md) | XML, Preview/Commit, configuração e carga inicial |
 | [Operação](docs/OPERATIONS.md) | Properties, reprocessamento, cores e diagnóstico |
 | [Modelo de dados](docs/DATA-MODEL.md) | Três campos, zero versus vazio e faixas |
 | [Validação](docs/VALIDATION.md) | Casos realmente executados e limites da homologação |
-| [Reversão](docs/ROLLBACK.md) | Retorno controlado à V1 quando ela já existia |
 
 Os fontes em `src/` foram extraídos dos payloads do XML exportado. `components.json`, `fields.json`, `properties.json` e `SHA256SUMS` permitem conferir o pacote. O XML foi montado no formato padrão `unload` a partir dos registros gerados por `UpdateSetExport.exportUpdateSet`, preservando integralmente os payloads nativos.
 

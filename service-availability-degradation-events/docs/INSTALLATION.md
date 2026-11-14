@@ -12,12 +12,12 @@
 2. Abrir **System Update Sets > Retrieved Update Sets > Import Update Set from XML**.
 3. Importar o XML e conferir o nome **AOOP - Service Availability Degradation v2.1.0 - Events**.
 4. Executar **Preview Update Set** e revisar conflitos, dependências e referências de acordo com a instância de destino.
-5. Conferir 44 Customer Updates: solução atual e desativações da V1. Nenhum payload altera o motor nativo.
+5. Conferir 26 Customer Updates, somente da solução atual. Nenhum payload altera o motor nativo.
 6. Executar **Commit Update Set** somente após resolver os apontamentos.
 
-O pacote pode ser usado para migração da V1. Em uma instalação sem V1, também transporta registros legados inativos; esses registros não devem ser ativados. O campo legado `u_degradation_calculated` e as properties de lote/cursor não são dependências da V2 nem estão sendo instalados.
+O pacote é destinado à instalação independente. Não exige a solução anterior e não inclui componentes inativos, Scheduled Job, migração ou reversão. O campo `u_degradation_calculated` e as properties de lote/cursor não são dependências e não são instalados.
 
-O XML preserva metadados de origem, inclusive referências de componentes legados inativos. Revisar esses apontamentos durante o Preview, sem ativar o job antigo.
+O XML preserva os sys_ids das definições técnicas. As únicas tabelas de dados referenciadas pelo cálculo são nativas; nenhum dado operacional é transportado.
 
 ## Conferência após o Commit
 
@@ -26,7 +26,6 @@ O XML preserva metadados de origem, inclusive referências de componentes legado
 | Três BRs V2 | Ativas, before, ordem 900 |
 | Motor e configuração de cores V2 | Ativos |
 | Script Actions V2 | Ativas: evento customizado ordem 100 e evento nativo ordem 200 |
-| Job e gatilhos V1 | Inativos; quatro estilos antigos com condição `javascript:false` |
 | Campos | Somente os três atributos de resultado da V2 |
 | Property geral | Definir explicitamente o valor desejado; exportada como true |
 | Property de modo | Definir antes da carga inicial; exportada como false |

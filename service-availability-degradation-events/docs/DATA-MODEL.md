@@ -17,7 +17,7 @@ O nome técnico `u_absolute_degradation` foi mantido por compatibilidade. Quando
 | Cálculo com degradação | Valores apurados | Percentual e cor da faixa |
 | Agenda sem horário elegível no intervalo | Zero | Vazio; sem indicador, divisão não definida |
 
-Percentual vazio não distingue sozinho ausência de processamento, falha e base zero; consultar contexto e logs. O booleano `u_degradation_calculated` não é lido nem escrito por componentes V2 e não está no XML. Se já existir da V1, permanece sem função na V2 para permitir reversão.
+Percentual vazio não distingue sozinho ausência de processamento, falha e base zero; consultar contexto e logs. O booleano `u_degradation_calculated` não faz parte dos campos, fontes ou XML desta solução.
 
 Os campos nativos de disponibilidade, downtime, compromisso atendido e métricas OOTB não são alterados pelo motor complementar. A gravação atualiza os três resultados e os metadados nativos de controle `sys_mod_count`, `sys_updated_on` e `sys_updated_by`.
 

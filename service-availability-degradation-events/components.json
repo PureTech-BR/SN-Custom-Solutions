@@ -3,25 +3,16 @@
   "scope": "global",
   "update_set": {
     "id": "03d614f9c3249b58e079b13ed40131c3",
-    "remote_id": "4ba760b5c32c9b58e079b13ed4013191",
+    "remote_id": "1f0e20f1c3ac9b58e079b13ed4013171",
     "name": "AOOP - Service Availability Degradation v2.1.0 - Events",
-    "components": 44,
+    "components": 26,
     "state": "complete"
   },
   "export": {
     "method": "UpdateSetExport.exportUpdateSet; records serialized in standard unload XML; payloads preserved verbatim",
-    "exported_at_utc": "2026-11-14 19:20:02"
+    "exported_at_utc": "2026-11-14 19:47:12"
   },
   "components": [
-    {
-      "update_name": "sysauto_script_70852f19c3e8d358e079b13ed4013167",
-      "table": "sysauto_script",
-      "id": "70852f19c3e8d358e079b13ed4013167",
-      "name": "AOOP - Service Availability - Calculate degradation",
-      "target": "AOOP - Service Availability - Calculate degradation",
-      "active": "false",
-      "condition": ""
-    },
     {
       "update_name": "sysevent_register_b7d6507dc3649b58e079b13ed401312c",
       "table": "sysevent_register",
@@ -30,28 +21,6 @@
       "target": "aoop.degradation.recalculate",
       "active": null,
       "event_name": "aoop.degradation.recalculate"
-    },
-    {
-      "update_name": "sysevent_script_action_645388a5c3a41758e079b13ed40131e8",
-      "table": "sysevent_script_action",
-      "id": "645388a5c3a41758e079b13ed40131e8",
-      "name": "AOOP - Degradation - Mode invalidation",
-      "target": "AOOP - Degradation - Mode invalidation",
-      "active": "false",
-      "order": "100",
-      "event_name": "aoop.degradation.mode_changed",
-      "condition_script": ""
-    },
-    {
-      "update_name": "sysevent_script_action_a4852f19c3e8d358e079b13ed401312a",
-      "table": "sysevent_script_action",
-      "id": "a4852f19c3e8d358e079b13ed401312a",
-      "name": "AOOP - Degradation - Invalidate affected",
-      "target": "AOOP - Degradation - Invalidate affected",
-      "active": "false",
-      "order": "100",
-      "event_name": "aoop.availability.degradation.invalidate",
-      "condition_script": ""
     },
     {
       "update_name": "sysevent_script_action_bbd6507dc3649b58e079b13ed401315f",
@@ -189,51 +158,6 @@
       "active": null
     },
     {
-      "update_name": "sys_script_28852f19c3e8d358e079b13ed4013131",
-      "table": "sys_script",
-      "id": "28852f19c3e8d358e079b13ed4013131",
-      "name": "AOOP - Degradation - Outage change",
-      "target": "AOOP - Degradation - Outage change",
-      "active": "false",
-      "collection": "cmdb_ci_outage",
-      "when": "after",
-      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
-      "order": "200",
-      "action_insert": "true",
-      "action_update": "true",
-      "action_delete": "false"
-    },
-    {
-      "update_name": "sys_script_60852f19c3e8d358e079b13ed401313a",
-      "table": "sys_script",
-      "id": "60852f19c3e8d358e079b13ed401313a",
-      "name": "AOOP - Degradation - Outage deletion",
-      "target": "AOOP - Degradation - Outage deletion",
-      "active": "false",
-      "collection": "cmdb_ci_outage",
-      "when": "before",
-      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
-      "order": "200",
-      "action_insert": "false",
-      "action_update": "false",
-      "action_delete": "true"
-    },
-    {
-      "update_name": "sys_script_645388a5c3a41758e079b13ed40131ee",
-      "table": "sys_script",
-      "id": "645388a5c3a41758e079b13ed40131ee",
-      "name": "AOOP - Degradation - Mode change",
-      "target": "AOOP - Degradation - Mode change",
-      "active": "false",
-      "collection": "sys_properties",
-      "when": "after",
-      "condition": "current.name == 'aoop_service_availability_degradation_usecommitment' && current.value.changes()",
-      "order": "200",
-      "action_insert": "false",
-      "action_update": "true",
-      "action_delete": "false"
-    },
-    {
       "update_name": "sys_script_67d6107dc3649b58e079b13ed4013135",
       "table": "sys_script",
       "id": "67d6107dc3649b58e079b13ed4013135",
@@ -266,21 +190,6 @@
       "source_path": "src/business-rules/affected-ci.js"
     },
     {
-      "update_name": "sys_script_74852f19c3e8d358e079b13ed401314a",
-      "table": "sys_script",
-      "id": "74852f19c3e8d358e079b13ed401314a",
-      "name": "AOOP - Degradation - Affected CI deletio",
-      "target": "AOOP - Degradation - Affected CI deletio",
-      "active": "false",
-      "collection": "cmdb_outage_ci_mtom",
-      "when": "before",
-      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
-      "order": "200",
-      "action_insert": "false",
-      "action_update": "false",
-      "action_delete": "true"
-    },
-    {
       "update_name": "sys_script_7bd6507dc3649b58e079b13ed401311d",
       "table": "sys_script",
       "id": "7bd6507dc3649b58e079b13ed401311d",
@@ -297,61 +206,6 @@
       "source_path": "src/business-rules/availability.js"
     },
     {
-      "update_name": "sys_script_bba960edc3e05758e079b13ed40131c9",
-      "table": "sys_script",
-      "id": "bba960edc3e05758e079b13ed40131c9",
-      "name": "AOOP - Degradation - Color configuration",
-      "target": "AOOP - Degradation - Color configuration",
-      "active": "false",
-      "collection": "sys_properties",
-      "when": "before",
-      "condition": "",
-      "order": "100",
-      "action_insert": "true",
-      "action_update": "true",
-      "action_delete": "false"
-    },
-    {
-      "update_name": "sys_script_bc852f19c3e8d358e079b13ed401315e",
-      "table": "sys_script",
-      "id": "bc852f19c3e8d358e079b13ed401315e",
-      "name": "AOOP - Degradation - Availability inputs",
-      "target": "AOOP - Degradation - Availability inputs",
-      "active": "false",
-      "collection": "service_availability",
-      "when": "before",
-      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
-      "order": "200",
-      "action_insert": "true",
-      "action_update": "true",
-      "action_delete": "false"
-    },
-    {
-      "update_name": "sys_script_bfa960edc3e05758e079b13ed40131d1",
-      "table": "sys_script",
-      "id": "bfa960edc3e05758e079b13ed40131d1",
-      "name": "AOOP - Degradation - Display colors",
-      "target": "AOOP - Degradation - Display colors",
-      "active": "false",
-      "collection": "service_availability",
-      "when": "before_display",
-      "condition": "",
-      "order": "100",
-      "action_insert": "true",
-      "action_update": "true",
-      "action_delete": "false"
-    },
-    {
-      "update_name": "sys_script_client_a663a069c3605758e079b13ed40131e2",
-      "table": "sys_script_client",
-      "id": "a663a069c3605758e079b13ed40131e2",
-      "name": "AOOP - Degradation - Percentage color",
-      "target": "AOOP - Degradation - Percentage color",
-      "active": "false",
-      "condition": "",
-      "order": "200"
-    },
-    {
       "update_name": "sys_script_client_b3d6507dc3649b58e079b13ed401318e",
       "table": "sys_script_client",
       "id": "b3d6507dc3649b58e079b13ed401318e",
@@ -361,21 +215,6 @@
       "condition": "",
       "order": "200",
       "source_path": "src/ui/percentage-color.client.js"
-    },
-    {
-      "update_name": "sys_script_e0852f19c3e8d358e079b13ed4013142",
-      "table": "sys_script",
-      "id": "e0852f19c3e8d358e079b13ed4013142",
-      "name": "AOOP - Degradation - Affected CI change",
-      "target": "AOOP - Degradation - Affected CI change",
-      "active": "false",
-      "collection": "cmdb_outage_ci_mtom",
-      "when": "after",
-      "condition": "gs.getProperty('aoop_service_availability_calculate_degradation','false') == 'true'",
-      "order": "200",
-      "action_insert": "true",
-      "action_update": "true",
-      "action_delete": "false"
     },
     {
       "update_name": "sys_script_fix_37d6507dc3649b58e079b13ed4013176",
@@ -405,52 +244,9 @@
       "source_path": "src/AOOP_DegradationEventEngine.js"
     },
     {
-      "update_name": "sys_script_include_5fa920edc3e05758e079b13ed40131c1",
-      "table": "sys_script_include",
-      "id": "5fa920edc3e05758e079b13ed40131c1",
-      "name": "AOOP_DegradationColorConfig",
-      "target": "AOOP_DegradationColorConfig",
-      "active": "false"
-    },
-    {
-      "update_name": "sys_script_include_9485eb19c3e8d358e079b13ed40131c5",
-      "table": "sys_script_include",
-      "id": "9485eb19c3e8d358e079b13ed40131c5",
-      "name": "AOOP_ServiceAvailabilityDegradation",
-      "target": "AOOP_ServiceAvailabilityDegradation",
-      "active": "false"
-    },
-    {
-      "update_name": "sys_ui_style_13e62025c3e05758e079b13ed4013109",
-      "table": "sys_ui_style",
-      "id": "13e62025c3e05758e079b13ed4013109",
-      "name": "service_availability",
-      "target": "service_availability",
-      "active": null,
-      "element": "u_absolute_degradation"
-    },
-    {
-      "update_name": "sys_ui_style_13e62025c3e05758e079b13ed401310f",
-      "table": "sys_ui_style",
-      "id": "13e62025c3e05758e079b13ed401310f",
-      "name": "service_availability",
-      "target": "service_availability",
-      "active": null,
-      "element": "u_absolute_degradation"
-    },
-    {
       "update_name": "sys_ui_style_7fd6507dc3649b58e079b13ed40131a7",
       "table": "sys_ui_style",
       "id": "7fd6507dc3649b58e079b13ed40131a7",
-      "name": "service_availability",
-      "target": "service_availability",
-      "active": null,
-      "element": "u_absolute_degradation"
-    },
-    {
-      "update_name": "sys_ui_style_93e62025c3e05758e079b13ed4013102",
-      "table": "sys_ui_style",
-      "id": "93e62025c3e05758e079b13ed4013102",
       "name": "service_availability",
       "target": "service_availability",
       "active": null,
@@ -478,15 +274,6 @@
       "update_name": "sys_ui_style_c8e6507dc3649b58e079b13ed40131b3",
       "table": "sys_ui_style",
       "id": "c8e6507dc3649b58e079b13ed40131b3",
-      "name": "service_availability",
-      "target": "service_availability",
-      "active": null,
-      "element": "u_absolute_degradation"
-    },
-    {
-      "update_name": "sys_ui_style_d3e66c2dc3a41758e079b13ed40131a6",
-      "table": "sys_ui_style",
-      "id": "d3e66c2dc3a41758e079b13ed40131a6",
       "name": "service_availability",
       "target": "service_availability",
       "active": null,

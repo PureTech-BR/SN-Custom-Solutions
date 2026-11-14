@@ -35,7 +35,7 @@ Agenda 09h–17h em America/Sao_Paulo, equivalente a 12h–20h UTC em 02/11/2026
 | Compromisso sem agenda | 24x7 menos manutenção; resultado conferido em preview |
 | Restaurar false | Sem cálculo automático; novo evento nativo restaurou 150 minutos e 10,42% |
 
-A configuração original de modo false foi restaurada. A BR antiga de mudança de modo permaneceu inativa.
+A configuração original de modo false foi restaurada. Não há BR de mudança da property de modo nesta solução.
 
 ## Base existente
 
@@ -50,10 +50,10 @@ python3 tests/validate-package.py
 sha256sum -c SHA256SUMS
 ```
 
-A matemática inclui 106 casos, dos quais 100 aleatórios comparados com uma referência independente. A suíte de compromisso verifica modo capturado, agenda, manutenção e base zero. O validador do pacote confere XML, 44 updates únicos, payloads, campos/properties, estados e correspondência dos fontes.
+A matemática inclui 106 casos, dos quais 100 aleatórios comparados com uma referência independente. A suíte de compromisso verifica modo capturado, agenda, manutenção e base zero. O validador do pacote confere XML, 26 updates únicos, payloads, campos/properties, estados e correspondência dos fontes.
 
 ## Limites da homologação
 
 Não foram executados teste de carga com múltiplos event workers, exclusão abortada tardiamente ou Preview/Commit em outra instância. A concorrência foi exercitada por injeção controlada de conflito no objeto do motor. O recálculo nativo foi acionado pelo mesmo evento do botão, com um compromisso dedicado para restringir o escopo; o botão global não foi usado para reconstruir toda a base durante esses testes.
 
-Nenhum componente OOTB foi modificado. A rotina nativa de exportação produziu o Retrieved Update Set de 44 registros; seus payloads foram preservados no XML publicado.
+Nenhum componente OOTB foi modificado. A rotina nativa de exportação produziu o Retrieved Update Set de 26 registros; seus payloads foram preservados no XML publicado.

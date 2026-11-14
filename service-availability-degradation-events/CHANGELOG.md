@@ -2,12 +2,14 @@
 
 ## 2.1.0 — 14/11/2026
 
+Correção de empacotamento: retirados os 18 registros de desativação legada e a documentação de migração/reversão. Os 26 payloads funcionais são idênticos aos já testados; não houve mudança no cálculo.
+
 - Reincorpora `aoop_service_availability_degradation_usecommitment` no motor por eventos.
 - Aplica agenda, timezone e manutenção no numerador/denominador do modo por compromisso.
 - Captura o modo uma vez por execução.
 - Alterar a property não publica evento nem recalcula. Sincronização pelo fluxo nativo ordem 200 ou Fix Script manual.
 - Trata base zero com percentual vazio; mantém somente três campos de resultado.
-- Update Set único com 44 Customer Updates, incluindo desativações da V1.
+- Update Set independente com 26 Customer Updates, somente os recursos da solução atual.
 
 ## 2.0.0 — 14/11/2026
 
@@ -15,4 +17,4 @@
 - Recálculo dirigido por alterações, exclusões, vínculos e novas disponibilidades.
 - Integração ao evento nativo com Script Action ordem 200.
 - Elimina dependência do booleano de cálculo, cursor e Scheduled Job próprio.
-- Preserva V1 inativa para reversão; indicadores passam a usar percentual preenchido.
+- Indicadores usam o percentual preenchido, sem booleano auxiliar.
