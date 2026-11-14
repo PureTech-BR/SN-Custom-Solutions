@@ -12,13 +12,14 @@ Não há plugin customizado, serviço externo, tabela própria ou dependência d
 
 ## Importação
 
-1. Baixe [o XML](../service-availability-degradation-v1.0.0.xml) e confira [SHA256SUMS](../SHA256SUMS).
+1. Baixe [o XML](../service-availability-degradation-v1.1.0.xml) e confira [SHA256SUMS](../SHA256SUMS).
 2. Importe em **System Update Sets → Retrieved Update Sets → Import Update Set from XML**.
-3. Execute **Preview Update Set**. O pacote tem 29 Customer Updates, detalhados em [components.json](../components.json).
+3. Execute **Preview Update Set**. O pacote tem 36 Customer Updates, detalhados em [components.json](../components.json).
 4. Revise conflitos com definições preexistentes dos quatro campos e componentes de mesmo nome. Não ignore conflitos automaticamente.
 5. Execute **Commit Update Set** em janela controlada.
 6. Verifique que os quatro campos e seus tipos estão disponíveis.
-7. Confira properties, BRs, Event Registry, Script Actions e agendamento.
+7. Confira properties, seis BRs de cálculo, Event Registry, Script Actions e agendamento.
+8. Confira o Client Script, o Script Include de cores e os quatro Field Styles, incluídos no mesmo XML. Adicione Total degradation % às listas desejadas e valide os indicadores conforme [COLOR-INDICATORS.md](COLOR-INDICATORS.md).
 
 O pacote contém o habilitador `true` e o job ativo às 06h00 de São Paulo. Planeje o commit fora desse horário, ou pause o job imediatamente após a instalação enquanto faz a validação local. Em atualização de uma instalação existente, pause o job antes do commit e confira se o pacote o reativou.
 
@@ -38,7 +39,7 @@ Confira a [matriz de tipos](ARCHITECTURE.md#escopo-por-tipo-de-evento) e o [rote
 ## Definições incluídas
 
 O XML contém:
-- 18 componentes de execução/configuração.
+- 25 componentes de execução/configuração, incluindo a extensão visual.
 - 4 registros de dicionário.
 - 7 rótulos de campos em inglês e português, conforme existentes na origem.
 
@@ -48,7 +49,9 @@ O Fix Script administrativo tem parâmetros vazios e `DRY_RUN=true`; sem preench
 
 ## Atualizações e retirada
 
-Use outro Update Set para mudanças futuras. Não reabra o pacote concluído para acumular alterações não relacionadas.
+Esta versão consolida cálculo e indicadores no mesmo Update Set de origem (`ad7c0069c3681758e079b13ed40131e2`). Importe somente o XML v1.1.0 para uma instalação completa; não é necessário aplicar o v1.0.0 antes.
+
+Se uma versão anterior desse mesmo Update Set já foi importada ou aplicada no destino, revise o estado existente e o comportamento de reimportação da plataforma com o administrador antes de importar novamente. Preview/commit desta atualização ainda não foram homologados em outra instância.
 
 Para desativar o processamento, desative o job e coloque o habilitador em `false`. A invalidação por mudança de modo continua protegendo os resultados mesmo com o cálculo desabilitado. Para uma retirada completa, revise as dependências e faça backup dos campos customizados antes de removê-los.
 

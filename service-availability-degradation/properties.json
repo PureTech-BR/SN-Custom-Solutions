@@ -1,38 +1,39 @@
 [
   {
-    "name": "aoop_service_availability_degradation_max_runtime_seconds",
     "id": "0885ab19c3e8d358e079b13ed40131ed",
+    "name": "aoop_service_availability_degradation_max_runtime_seconds",
     "value": "30",
-    "type": "integer",
     "description": "Soft execution time budget; one individual calculation may exceed it."
   },
   {
-    "name": "aoop_service_availability_degradation_batch_size",
     "id": "7375ab19c3e8d358e079b13ed40131e5",
+    "name": "aoop_service_availability_degradation_batch_size",
     "value": "100",
-    "type": "integer",
     "description": "Maximum successful/failed calculations per scheduled execution."
   },
   {
-    "name": "aoop_service_availability_degradation_cursor",
     "id": "8085eb19c3e8d358e079b13ed4013134",
+    "name": "aoop_service_availability_degradation_cursor",
     "value": null,
-    "type": "string",
     "description": "Internal cursor over degradation outages; no custom queue table."
   },
   {
-    "name": "aoop_service_availability_calculate_degradation",
     "id": "d775ab19c3e8d358e079b13ed4013189",
+    "name": "aoop_service_availability_calculate_degradation",
     "value": "true",
-    "type": "boolean",
     "description": "Enable AOOP supplemental degradation calculation and invalidation."
   },
   {
-    "name": "aoop_service_availability_degradation_usecommitment",
     "id": "e775ab19c3e8d358e079b13ed401319e",
+    "name": "aoop_service_availability_degradation_usecommitment",
     "value": "false",
-    "type": "boolean",
     "description": "Use commitment schedule, timezone and maintenance windows. Reprocess affected scope after changing."
+  },
+  {
+    "id": "73a960edc3e05758e079b13ed40131da",
+    "name": "aoop_service_availability_degradation_color_ranges",
+    "value": "[{\"max\":25,\"color\":\"green\"},{\"max\":50,\"color\":\"yellow\"},{\"max\":75,\"color\":\"orange\"},{\"max\":100,\"color\":\"red\"}]",
+    "description": "Faixas dos indicadores de degradação no formulário e lista. JSON: quatro objetos max/color, limites crescentes entre 0 e 100, último limite=100. Cores green/yellow/orange/red. Cada faixa começa acima do limite anterior. Leitura direta sem BR de sincronização. Recarregue a página após editar. Configuração inválida usa as faixas padrão 25/50/75/100. Não altera os cálculos."
   }
 ]
 

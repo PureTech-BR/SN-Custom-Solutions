@@ -4,13 +4,13 @@ Cálculo complementar de degradação para `service_availability`, sem alterar o
 
 | Item | Valor |
 |---|---|
-| Versão | 1.0.0 — 13/11/2026 |
+| Versão | 1.1.0 — 13/11/2026 |
 | Aplicação | Global |
-| Update Set | AOOP - Service Availability Degradation v1.0.0 |
+| Update Set | AOOP - Service Availability Degradation v1.1.0 |
 | Estado na origem | Complete |
 | Identificador local | `ad7c0069c3681758e079b13ed40131e2` |
-| Pacote | [service-availability-degradation-v1.0.0.xml](service-availability-degradation-v1.0.0.xml) |
-| Customer Updates | 29: 18 componentes, 4 campos e 7 rótulos |
+| Pacote | [service-availability-degradation-v1.1.0.xml](service-availability-degradation-v1.1.0.xml) |
+| Customer Updates | 36: 25 componentes, 4 campos e 7 rótulos |
 | Agendamento | Diário, 06h00, America/Sao_Paulo |
 | Lotes | 100 disponibilidades por lote; até 500 lotes ou orçamento de 10 minutos por execução |
 | Modo incluído | Intervalo integral: `usecommitment=false` |
@@ -24,6 +24,7 @@ O XML não transporta CIs, Ofertas, compromissos, Outages, disponibilidades, usu
 - [Inventário completo dos componentes](docs/COMPONENTS.md)
 - [Operação, properties, logs e reprocessamento](docs/OPERATIONS.md)
 - [Validações e desempenho medido](docs/VALIDATION.md)
+- [Indicadores de cores e configuração](docs/COLOR-INDICATORS.md)
 - [Histórico de versões](CHANGELOG.md)
 
 ## Instalação resumida
@@ -77,6 +78,10 @@ O percentual representa **degradação**, não disponibilidade. Os indicadores n
 BRs próprias capturam mudanças nas degradações, nos planejados e nos seus CIs afetados. Eventos e Script Actions localizam os intervalos atingidos, limpam os três resultados e marcam `false`. A BR de entradas da disponibilidade faz essa limpeza diretamente no registro, em `before`.
 
 Trocar `aoop_service_availability_degradation_usecommitment` entre `true` e `false` invalida assincronamente os resultados calculados e reinicia o cursor. Salvar o mesmo valor não invalida. O cálculo fica para o job ou para uma execução manual controlada.
+
+## Indicadores de cores
+
+O pacote único inclui o Client Script, o Script Include de configuração, quatro Field Styles e a propriedade `aoop_service_availability_degradation_color_ranges`. A propriedade controla faixas e cores no formulário e na lista. Somente registros calculados com percentual válido recebem o indicador. Não há preenchimento do campo ou da linha e não há BR adicional para cores. Ao alterar a propriedade, recarregue a página; não é necessário recalcular. Veja [COLOR-INDICATORS.md](docs/COLOR-INDICATORS.md).
 
 ## Fontes e verificação local
 

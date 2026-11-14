@@ -5,4 +5,3 @@
     gs.eventQueue('aoop.degradation.mode_changed',current,
         String(previousMode),String(requestedMode));
 })(current,previous);
-

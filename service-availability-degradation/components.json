@@ -1,14 +1,14 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scope": "global",
   "update_set": {
     "update_set_id": "ad7c0069c3681758e079b13ed40131e2",
-    "remote_update_set_id": "b57c4821c3a81758e079b13ed40131e3",
-    "components": 29,
+    "remote_update_set_id": "9e6da025c3645758e079b13ed401315a",
+    "components": 36,
     "state": "complete",
-    "name": "AOOP - Service Availability Degradation v1.0.0"
+    "name": "AOOP - Service Availability Degradation v1.1.0"
   },
-  "exported_at_utc": "2026-11-13 22:41:59",
+  "exported_at_utc": "2026-11-13 22:04:41",
   "components": [
     {
       "table": "sys_script_include",
@@ -246,6 +246,50 @@
       "update_name": "sys_documentation_service_availability_u_absolute_degradation_count_pb",
       "element": "u_absolute_degradation_count",
       "language": "pb"
+    },
+    {
+      "table": "sys_properties",
+      "id": "73a960edc3e05758e079b13ed40131da",
+      "name": "aoop_service_availability_degradation_color_ranges",
+      "update_name": "sys_properties_73a960edc3e05758e079b13ed40131da"
+    },
+    {
+      "table": "sys_script_include",
+      "id": "5fa920edc3e05758e079b13ed40131c1",
+      "name": "AOOP_DegradationColorConfig",
+      "source_path": "src/ui/AOOP_DegradationColorConfig.js",
+      "update_name": "sys_script_include_5fa920edc3e05758e079b13ed40131c1"
+    },
+    {
+      "table": "sys_script_client",
+      "id": "a663a069c3605758e079b13ed40131e2",
+      "name": "AOOP - Degradation - Percentage color",
+      "source_path": "src/ui/percentage-color.client.js",
+      "update_name": "sys_script_client_a663a069c3605758e079b13ed40131e2"
+    },
+    {
+      "table": "sys_ui_style",
+      "id": "d3e66c2dc3a41758e079b13ed40131a6",
+      "name": "Degradation indicator green",
+      "update_name": "sys_ui_style_d3e66c2dc3a41758e079b13ed40131a6"
+    },
+    {
+      "table": "sys_ui_style",
+      "id": "93e62025c3e05758e079b13ed4013102",
+      "name": "Degradation indicator yellow",
+      "update_name": "sys_ui_style_93e62025c3e05758e079b13ed4013102"
+    },
+    {
+      "table": "sys_ui_style",
+      "id": "13e62025c3e05758e079b13ed4013109",
+      "name": "Degradation indicator orange",
+      "update_name": "sys_ui_style_13e62025c3e05758e079b13ed4013109"
+    },
+    {
+      "table": "sys_ui_style",
+      "id": "13e62025c3e05758e079b13ed401310f",
+      "name": "Degradation indicator red",
+      "update_name": "sys_ui_style_13e62025c3e05758e079b13ed401310f"
     }
   ]
 }

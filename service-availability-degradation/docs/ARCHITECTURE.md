@@ -103,3 +103,7 @@ A atualização final filtra por `sys_id`, ponteiro `false` e `sys_mod_count` li
 
 Mesmo sem pendências, um novo ciclo volta a percorrer as degradações encerradas e consultar disponibilidades correspondentes. O código não itera sobre todas as disponibilidades apenas por estarem `false`, mas isso não garante um plano SQL sem full scan. Intervalos anuais podem carregar muitos eventos do mesmo CI em um único cálculo. O teste de 100 Outages não representa uma homologação para 25.000 eventos.
 
+
+## Apresentação dos percentuais
+
+A camada visual integra o mesmo Update Set e não participa do cálculo ou da invalidação. O Client Script consulta `AOOP_DegradationColorConfig` via GlideAjax; os quatro Field Styles consultam a mesma configuração no servidor durante a renderização da lista. Uma única propriedade controla faixas e cores, sem BR de sincronização, eventos ou varredura dos resultados. Somente registros calculados com percentual preenchido entre 0 e 100 recebem indicador. O formulário mostra ícone ao lado do rótulo e a lista mostra bolinha ao lado do percentual, sem pintar a linha ou campo. Consulte [COLOR-INDICATORS.md](COLOR-INDICATORS.md).

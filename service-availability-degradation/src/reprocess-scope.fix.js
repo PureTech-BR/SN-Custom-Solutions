@@ -22,4 +22,3 @@
         gs.print('[AOOP Degradation] Cleared and pending. Scheduled job will calculate only rows with eligible degradation.');
     }
 })();
-

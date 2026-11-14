@@ -1,5 +1,12 @@
 # Histórico
 
+## 1.1.0 — 2026-11-13
+
+- Consolidação no mesmo Update Set e em um único XML completo, com 36 Customer Updates.
+- Inclusão de propriedade de faixas/cores, Script Include de configuração, Client Script e quatro Field Styles.
+- Indicadores somente em resultados calculados, sem pintar campo ou linha e sem BR adicional para cores.
+- Atualização do inventário, documentação, fontes e validação do pacote.
+
 ## Revisão da documentação — 2026-11-13
 
 - Explicita Degradation como único tipo que determina elegibilidade para cálculo.

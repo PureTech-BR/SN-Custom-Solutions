@@ -98,3 +98,7 @@ A seleção revisita degradações encerradas a cada ciclo completo, mesmo quand
 
 Pendências novas ou falhas anteriores ao cursor só serão encontradas quando o percurso voltar ao início. O fim do percurso encerra o ciclo atual; não há passagem extra automática na mesma execução diária.
 
+
+## Alterar faixas e cores
+
+Edite `aoop_service_availability_degradation_color_ranges` e recarregue formulário/lista. Essa alteração não limpa resultados, não envia evento e não exige execução do job. São quatro faixas numéricas crescentes, terminando em 100, com cores green/yellow/orange/red. Valores inválidos usam o padrão 25/50/75/100. Veja formato, comportamento e exemplos em [COLOR-INDICATORS.md](COLOR-INDICATORS.md).

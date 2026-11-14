@@ -1,2 +1,1 @@
 (function executeRule(current,previous){if(!(current.operation() == 'insert' || current.begin.changes() || current.end.changes() || current.type.changes() || current.cmdb_ci.changes())) return; new AOOP_ServiceAvailabilityDegradation().captureOutage(current,previous);})(current,previous);
-

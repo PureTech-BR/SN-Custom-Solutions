@@ -7,22 +7,22 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / "components.json").read_text())
 fields = json.loads((ROOT / "fields.json").read_text())
-xml_path = ROOT / "service-availability-degradation-v1.0.0.xml"
+xml_path = ROOT / "service-availability-degradation-v1.1.0.xml"
 tree = ET.parse(xml_path).getroot()
 assert tree.tag == "unload"
 remote = tree.findall("sys_remote_update_set")
 updates = tree.findall("sys_update_xml")
 assert len(remote) == 1
-assert len(updates) == 29
+assert len(updates) == 36
 assert remote[0].findtext("remote_sys_id") == manifest["update_set"]["update_set_id"]
 assert remote[0].findtext("state") == "loaded"
 expected = {c["update_name"]: c for c in manifest["components"]}
-assert len(expected) == 29
+assert len(expected) == 36
 assert {u.findtext("name") for u in updates} == set(expected)
 assert all(u.attrib.get("action") == "INSERT_OR_UPDATE" for u in updates)
 allowed = {"sys_script_include", "sys_script", "sysevent_register",
            "sysevent_script_action", "sysauto_script", "sys_script_fix",
-           "sys_properties", "sys_dictionary", "sys_documentation"}
+           "sys_properties", "sys_dictionary", "sys_documentation", "sys_script_client", "sys_ui_style"}
 payloads = {}
 def normalized(s):
     return (s or "").replace("\r\n", "\n").strip()
@@ -96,3 +96,30 @@ print(json.dumps({"xml":"valid","customer_updates":len(updates),
                   "fields":len(fields),"labels":7,"sources_match":True,
                   "native_components_excluded":True,"links":"valid"},ensure_ascii=False))
 
+
+# The complete package includes only the final visual design.
+assert len([c for c in expected.values() if c["table"] == "sys_script"]) == 6
+assert len([c for c in expected.values() if c["table"] == "sys_script_client"]) == 1
+assert len([c for c in expected.values() if c["table"] == "sys_ui_style"]) == 4
+assert len([c for c in expected.values() if c["table"] == "sys_script_include"]) == 2
+assert all(c["id"] not in {"bba960edc3e05758e079b13ed40131c9", "bfa960edc3e05758e079b13ed40131d1"} for c in expected.values())
+config = json.loads(props["aoop_service_availability_degradation_color_ranges"])
+assert config == [{"max":25,"color":"green"},{"max":50,"color":"yellow"},{"max":75,"color":"orange"},{"max":100,"color":"red"}]
+styles = json.loads((ROOT / "src/ui/field-styles.json").read_text())
+for style in styles:
+    node = payloads["sys_ui_style_" + style["sys_id"]]
+    for key in ("name", "element", "value", "style", "alt"):
+        assert normalized(node.findtext(key)) == normalized(style[key]), key
+    assert "service_availability_list.do" in style["value"]
+    assert "_colorForRecord(current)" in style["value"]
+    assert node.findtext("element") == "u_absolute_degradation"
+client = payloads["sys_script_client_a663a069c3605758e079b13ed40131e2"]
+assert client.findtext("active") == "true"
+assert client.findtext("type") == "onLoad"
+assert "getXMLAnswer" in client.findtext("script")
+assert "addDecoration" in client.findtext("script")
+helper = payloads["sys_script_include_5fa920edc3e05758e079b13ed40131c1"]
+assert helper.findtext("client_callable") == "true"
+assert "AbstractAjaxProcessor" in helper.findtext("script")
+assert "g_scratchpad" not in client.findtext("script")
+print("Visual components and final design: valid")

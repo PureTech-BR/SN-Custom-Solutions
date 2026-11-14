@@ -77,7 +77,7 @@ Nesse teste, a base continha 7.429 registros. A comparação de contagem e assin
 ## Verificações locais incluídas
 
 - XML bem formado e estrutura de Update Set.
-- Quantidade e unicidade dos 29 Customer Updates.
+- Quantidade e unicidade dos 36 Customer Updates.
 - Correspondência com o inventário.
 - Tipos dos quatro campos.
 - Ausência de tabelas de dados de negócio no pacote.
@@ -99,3 +99,13 @@ sha256sum -c SHA256SUMS
 
 Não foi realizado preview/commit do pacote em uma instância de destino independente. A validação local não executa GlideRecord, GlideSchedule, eventos ou scheduler. O benchmark não homologa 25.000 Outages, outros volumes, versões ou ambientes. Não foi avaliado o plano de execução SQL nem realizada validação de papéis operacionais.
 
+
+## Pacote consolidado v1.1.0
+
+- Mesmo identificador de Update Set, estado Complete; 36 Customer Updates únicos.
+- Cálculo e quatro atributos preservados; sete componentes visuais adicionados ao XML.
+- Fontes conferidos contra os payloads; quatro Field Styles conferidos contra o manifesto visual.
+- Nenhuma BR de cores incluída: permanecem seis BRs do cálculo.
+- Troca de faixa/cor validada no formulário e lista e configuração padrão restaurada; campo e linha sem preenchimento colorido.
+- Detalhes da validação visual: [COLOR-INDICATORS.md](COLOR-INDICATORS.md).
+- Preview e commit em outra instância continuam pendentes de homologação no destino.

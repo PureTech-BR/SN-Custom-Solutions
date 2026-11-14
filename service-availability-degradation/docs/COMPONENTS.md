@@ -1,6 +1,6 @@
 # Inventário dos componentes
 
-O pacote contém **29 Customer Updates**. Inclui quatro campos de `service_availability` e sete rótulos, transportados separadamente.
+O pacote contém **36 Customer Updates**. Inclui quatro campos de `service_availability` e sete rótulos, transportados separadamente.
 
 | Tipo | Nome | Função | Definição na origem |
 |---|---|---|---|
@@ -49,3 +49,17 @@ As BRs de Outage/CI afetado dependem de operações com execução normal de Bus
 
 Nenhum Customer Update de AvailabilityCalculatorV2, AvailabilitySummarizerV2, AvailabilityRecord, AvailabilityUtils, do botão Recalculate results ou do relacionamento Outages During Interval integra este pacote.
 
+
+## Indicadores de cores incluídos no mesmo pacote
+
+| Tabela | Componente | Finalidade |
+|---|---|---|
+| sys_properties | [aoop_service_availability_degradation_color_ranges](https://dev437951.service-now.com/sys_properties.do?sys_id=73a960edc3e05758e079b13ed40131da) | Faixas e cores compartilhadas pelo formulário e lista. |
+| sys_script_include | [AOOP_DegradationColorConfig](https://dev437951.service-now.com/sys_script_include.do?sys_id=5fa920edc3e05758e079b13ed40131c1) | Lê e valida a configuração; classifica percentuais e entrega as faixas via GlideAjax. |
+| sys_script_client | [AOOP - Degradation - Percentage color](https://dev437951.service-now.com/sys_script_client.do?sys_id=a663a069c3605758e079b13ed40131e2) | Adiciona ícone ao rótulo no formulário Desktop; não pinta o campo. |
+| sys_ui_style | [Degradation indicator green](https://dev437951.service-now.com/sys_ui_style.do?sys_id=d3e66c2dc3a41758e079b13ed40131a6) | Exibe somente a bolinha da cor correspondente na lista clássica. |
+| sys_ui_style | [Degradation indicator yellow](https://dev437951.service-now.com/sys_ui_style.do?sys_id=93e62025c3e05758e079b13ed4013102) | Exibe somente a bolinha da cor correspondente na lista clássica. |
+| sys_ui_style | [Degradation indicator orange](https://dev437951.service-now.com/sys_ui_style.do?sys_id=13e62025c3e05758e079b13ed4013109) | Exibe somente a bolinha da cor correspondente na lista clássica. |
+| sys_ui_style | [Degradation indicator red](https://dev437951.service-now.com/sys_ui_style.do?sys_id=13e62025c3e05758e079b13ed401310f) | Exibe somente a bolinha da cor correspondente na lista clássica. |
+
+Não há BR adicional para cores. Os quatro atributos e os seis gatilhos do cálculo permanecem no mesmo pacote. Detalhes: [COLOR-INDICATORS.md](COLOR-INDICATORS.md).

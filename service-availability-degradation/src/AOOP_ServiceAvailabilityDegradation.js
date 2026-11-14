@@ -291,4 +291,3 @@ AOOP_ServiceAvailabilityDegradation.prototype = {
     },
     type:'AOOP_ServiceAvailabilityDegradation'
 };
-

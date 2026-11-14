@@ -1,6 +1,6 @@
 # Indicadores de cor configuráveis
 
-Extensão visual implementada após o pacote de cálculo v1.0.0. Os fontes desta extensão estão em `src/ui`; o XML v1.0.0 existente ainda contém somente a solução de cálculo.
+Indicadores visuais incluídos no pacote único v1.1.0, junto ao cálculo e aos quatro atributos de service_availability. Os fontes estão em `src/ui`.
 
 ## Configuração
 
@@ -40,7 +40,7 @@ Após salvar a propriedade, recarregue formulário/lista. Não é necessário ex
 | Client Script AOOP - Degradation - Percentage color (a663a069c3605758e079b13ed40131e2) | onLoad Desktop; consulta as faixas via GlideAjax e adiciona decoração com g_form.addDecoration. Não pinta o campo. |
 | Quatro Field Styles (src/ui/field-styles.json) | Um por cor. Cada condição consulta a propriedade por meio do Script Include. No renderer nativo da lista clássica exibem a bolinha ao lado do percentual; não pintam a linha. A condição restringe a aplicação à URL service_availability_list.do para não preencher o fundo no formulário. |
 
-Não há nova BR ativa para cores, nem evento ou job. As duas regras experimentais criadas durante o teste (bba960edc3e05758e079b13ed40131c9 e bfa960edc3e05758e079b13ed40131d1) foram desativadas e não fazem parte desta extensão.
+Não há BR, evento ou job adicional para cores. O pacote transporta somente os componentes do desenho definitivo.
 
 Só há indicador quando u_degradation_calculated=true, o percentual está preenchido e fica entre 0 e 100. A classificação consulta a propriedade em memória de cache da plataforma; não varre service_availability. O formulário realiza uma chamada GlideAjax apenas nos registros elegíveis. Os Field Styles avaliam sua condição nas linhas renderizadas da lista. Os scripts nativos e o processamento de cálculo não foram alterados.
 
@@ -56,4 +56,5 @@ As classes semânticas do formulário seguem o tema da plataforma; os estilos da
 
 ## Transporte
 
-O XML v1.0.0 não foi regenerado com a extensão visual. Para transportar esta extensão, capture a propriedade, o Script Include, o Client Script e os quatro Field Styles em um Update Set próprio. Não inclua as regras experimentais desativadas. A configuração visual foi validada na interface clássica Desktop; outras interfaces precisam de validação específica.
+A propriedade, o Script Include, o Client Script e os quatro Field Styles estão incluídos no [XML completo v1.1.0](../service-availability-degradation-v1.1.0.xml), no mesmo Update Set do cálculo. Não é necessário um segundo pacote. A configuração visual foi validada na interface clássica Desktop; outras interfaces precisam de validação específica.
+

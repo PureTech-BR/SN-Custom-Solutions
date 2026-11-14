@@ -13,4 +13,3 @@
         completed:!result.resume && !errors
     }));
 })();
-
