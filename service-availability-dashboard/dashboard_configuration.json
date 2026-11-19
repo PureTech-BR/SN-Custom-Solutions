@@ -1,0 +1,2228 @@
+[
+  {
+    "id": "30f7194fc328d7d8e079b13ed4013161",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "singleColor",
+        "values": [
+          {
+            "color": "75ab0255b7610110c5aebc16de11a967",
+            "metric": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM="
+          }
+        ]
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_offeringISNOTEMPTY^service_commitmentISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": true,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Média Compromisso (%)",
+      "headingLevel": 2,
+      "description": "Média do Commitment availability % das ofertas nos registros do período selecionado, respeitando as janelas dos compromissos já calculadas pelo ServiceNow.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": true,
+            "rounding": "HALF_UP",
+            "decimalPrecision": 2,
+            "abbreviationEnabled": false,
+            "numberInTooltipsEnabled": false,
+            "thousandSeparatorEnabled": true
+          }
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "cfkl9y2d",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user"
+    }
+  },
+  {
+    "id": "3cf7194fc328d7d8e079b13ed401314a",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_offeringISNOTEMPTY^service_commitmentISNOTEMPTY^absolute_downtime>=javascript:gs.getDurationDate('0 0:0:1')",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Maior Downtime - Período",
+      "headingLevel": 2,
+      "description": "Média do Compromisso dos registros de disponibilidade das ofertas no período selecionado. Acompanha todos os filtros do dashboard.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM=",
+          "aggregateFunction": "MAX",
+          "axisId": "primary",
+          "aggregateField": "scheduled_downtime",
+          "durationFormat": {
+            "customFormat": false
+          }
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "cfkl9y2d",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user"
+    }
+  },
+  {
+    "id": "71ae25a7c3585b94e079b13ed401310c",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s8qck82am677v2e0c",
+      "filterName": "Tipo de apuração",
+      "filterCustomId": "",
+      "filterComponentType": "singleselect",
+      "datasource": {
+        "type": "table",
+        "payload": {
+          "field": "type",
+          "fieldType": "choice",
+          "table": "service_availability",
+          "primaryKey": "sys_id"
+        }
+      },
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "field": "type",
+            "table": "service_availability",
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_type",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [
+        {
+          "id": "monthly",
+          "label": "Monthly",
+          "available": true,
+          "unknown": false,
+          "empty": false
+        }
+      ],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": []
+    }
+  },
+  {
+    "id": "7466352bc31c5b94e079b13ed4013105",
+    "component": "85855283b7e03010097cb81cde11a91d",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "chartVariation": "stacked",
+      "yAxisPosition": "bottom",
+      "yAxisShowGrid": true,
+      "xAxisWrapLabels": false,
+      "xAxisMaxLabelSize": 100,
+      "showClosestSeriesOnHover": true,
+      "xAxisTruncationType": "end",
+      "yAxisStyle": "clean",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "showDataLabels": false,
+      "dataLabelPosition": "middle",
+      "showStackedValues": "none",
+      "showOverlappingLabels": false,
+      "showPercentageOfTotalInTooltip": true,
+      "yAxisHidden": false,
+      "xAxisHidden": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Média do % de Disponibilidade - Compromisso",
+      "headingLevel": 2,
+      "description": "Média dos percentuais de disponibilidade no compromisso nas apurações selecionadas. Não representa disponibilidade consolidada do serviço.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "label": "Disponibilidade média no compromisso (%)"
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+              "groupByField": "service_offering",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "disableRanges": false
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "asc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": "previous",
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "75ae25a7c3585b94e079b13ed4013110",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s8ul6o3rkvrca4llk",
+      "filterName": "Oferta",
+      "filterCustomId": "",
+      "filterComponentType": "singleselect",
+      "datasource": {
+        "type": "table",
+        "payload": {
+          "table": "service_offering",
+          "primaryKey": "sys_id"
+        },
+        "encodedQuery": "^RLQUERYservice_offering_commitment.service_offering,>=1,m2m^ENDRLQUERY"
+      },
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "field": "service_offering",
+            "table": "service_availability",
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_service_offering",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": [],
+      "cascadingConfig": {
+        "filtersFollowing": [
+          "1k6s926vrq73lp5flids"
+        ]
+      }
+    }
+  },
+  {
+    "id": "75ae25a7c3585b94e079b13ed4013114",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s926vrq73lp5flids",
+      "filterName": "Serviço",
+      "filterCustomId": "",
+      "filterComponentType": "singleselect",
+      "datasource": {
+        "type": "table",
+        "payload": {
+          "field": "service_offering.parent.name",
+          "table": "service_availability",
+          "primaryKey": "sys_id"
+        }
+      },
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "field": "service_offering.parent.name",
+            "table": "service_availability",
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "isInHierarchy": true,
+            "field": "parent.name",
+            "starting_at": "",
+            "table": "service_offering",
+            "operator": {
+              "hierarchy_id": "",
+              "starting_at": "",
+              "type": "hierarchy"
+            },
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_service_offering.parent.name",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": []
+    }
+  },
+  {
+    "id": "7866792bc31c5b94e079b13ed40131c9",
+    "component": "18ac962264404bcc0039359d184b15f3",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "showDataLabels": false,
+      "disableTooltip": false,
+      "showClosestSeriesOnHover": true,
+      "showXGrid": false,
+      "showDateRangeByDefault": false,
+      "showYGrid": true,
+      "hideYAxis0": false,
+      "yAxis0Position": "left",
+      "hideYAxis1": false,
+      "yAxis1Position": "right",
+      "hideYAxis2": false,
+      "yAxis2Position": "right",
+      "hideYAxis3": false,
+      "yAxis3Position": "right",
+      "hideYAxis4": false,
+      "yAxis4Position": "right",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "yAxisStyle": "clean",
+      "lineStrokeWidth": "2",
+      "chartVariation": "stacked",
+      "showPercentageOfTotalInTooltip": true,
+      "extensionType": "line",
+      "showContinuousLine": true,
+      "showMarkers": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Média de % Disponibilidade - Por Oferta",
+      "headingLevel": 2,
+      "description": "Média do % de Disponibilidade Total da Oferta de Serviço.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": true,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "absolute_availability",
+          "label": "% Total de Disponibilidade - Média",
+          "numberFormat": {
+            "customFormat": false
+          }
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+              "groupByField": "service_offering",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "disableRanges": false
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "trendBy": {
+        "trendByCalendar": "standard",
+        "trendByFrequency": "month",
+        "trendByFields": [
+          {
+            "field": "start",
+            "metric": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk="
+          }
+        ]
+      },
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "scoreType": "latest",
+      "useCurrentDateForEnd": false,
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "showMetricLabel": false,
+      "showSparkline": false,
+      "showGapPercentage": false,
+      "showChange": false,
+      "enableRealTimeUpdate": false,
+      "showChangePercentage": false
+    }
+  },
+  {
+    "id": "b066b92bc31c5b94e079b13ed4013110",
+    "component": "18ac962264404bcc0039359d184b15f3",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "showDataLabels": false,
+      "disableTooltip": false,
+      "showClosestSeriesOnHover": true,
+      "showXGrid": false,
+      "showDateRangeByDefault": false,
+      "showYGrid": true,
+      "hideYAxis0": false,
+      "yAxis0Position": "left",
+      "hideYAxis1": false,
+      "yAxis1Position": "right",
+      "hideYAxis2": false,
+      "yAxis2Position": "right",
+      "hideYAxis3": false,
+      "yAxis3Position": "right",
+      "hideYAxis4": false,
+      "yAxis4Position": "right",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "yAxisStyle": "clean",
+      "lineStrokeWidth": "2",
+      "chartVariation": "stacked",
+      "showPercentageOfTotalInTooltip": true,
+      "extensionType": "line",
+      "showContinuousLine": true,
+      "showMarkers": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Evolução da disponibilidade por oferta - Baseado no Compromisso",
+      "headingLevel": 2,
+      "description": "Disponibilidade no compromisso ao longo do tempo, por oferta, usando a data de início da apuração. Selecione Monthly para a visão mensal.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": true,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "label": "Disponibilidade média no compromisso (%)"
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+              "groupByField": "service_offering",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "disableRanges": false
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "asc",
+      "trendBy": {
+        "trendByCalendar": "standard",
+        "trendByFrequency": "month",
+        "trendByFields": [
+          {
+            "field": "start",
+            "metric": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk="
+          }
+        ]
+      },
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "scoreType": "latest",
+      "useCurrentDateForEnd": false,
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "period": "M",
+      "showMetricLabel": false,
+      "showSparkline": false,
+      "showGapPercentage": false,
+      "showChange": false,
+      "showChangeFrom": "previous",
+      "enableRealTimeUpdate": false,
+      "showChangePercentage": false
+    }
+  },
+  {
+    "id": "b466792bc31c5b94e079b13ed40131c5",
+    "component": "85855283b7e03010097cb81cde11a91d",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "chartVariation": "stacked",
+      "yAxisPosition": "bottom",
+      "yAxisShowGrid": true,
+      "xAxisWrapLabels": false,
+      "xAxisMaxLabelSize": 100,
+      "showClosestSeriesOnHover": true,
+      "xAxisTruncationType": "end",
+      "yAxisStyle": "clean",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "showDataLabels": false,
+      "dataLabelPosition": "middle",
+      "showStackedValues": "none",
+      "showOverlappingLabels": false,
+      "showPercentageOfTotalInTooltip": true,
+      "yAxisHidden": false,
+      "xAxisHidden": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Soma de Indisponibilidade - Compromisso",
+      "headingLevel": 2,
+      "description": "Soma do downtime dentro da janela do compromisso nas apurações selecionadas. Selecione apenas um tipo de apuração.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "SUM",
+          "axisId": "primary",
+          "aggregateField": "scheduled_downtime",
+          "label": "Downtime no compromisso",
+          "durationFormat": {
+            "customFormat": false
+          }
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+              "groupByField": "service_offering",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "disableRanges": false
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": "previous",
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "bc66b92bc31c5b94e079b13ed4013156",
+    "component": "7ff373544303121093711347efb8f23c",
+    "props": {
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "label": "Disponibilidade média no compromisso (%)"
+        }
+      ],
+      "showHeader": true,
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headingLevel": 2,
+      "description": "Apurações com Met commitment = false, por oferta e compromisso. A lista respeita os filtros do dashboard.",
+      "limit": 20,
+      "columnLimit": 0,
+      "maxCharLimit": 40,
+      "showPersonalization": true,
+      "hideDotwalk": false,
+      "showColumnReorder": true,
+      "showColumnGrouping": true,
+      "showColumnResizing": true,
+      "showColumnFiltering": true,
+      "showColumnSorting": true,
+      "allowAdditionalGroupByPerMetric": true,
+      "sortByOrder": "asc",
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "filterConfigurations": "@state.parFilters",
+      "columns": "service_offering,service_commitment,start,end,type,scheduled_downtime,scheduled_availability,absolute_downtime,absolute_availability,met_commitment,allowed_downtime",
+      "table": "service_availability",
+      "showLinks": true,
+      "wrapCellContent": "useLineBreaksUserPref",
+      "showViewAll": true,
+      "showInlineEditing": true,
+      "allowListPagination": true,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "headerTitle": "Resultados com compromisso violado",
+      "showBorder": true,
+      "showExportOption": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY^met_commitment=false",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "bareBorder": false,
+      "showAdditionalGroupBySelector": false
+    }
+  },
+  {
+    "id": "bcf7194fc328d7d8e079b13ed401315c",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_offeringISNOTEMPTY^service_commitmentISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": true,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Média Disponibilidade (%)",
+      "headingLevel": 2,
+      "description": "Média do Total availability % das ofertas nos registros do período selecionado. Acompanha os filtros de serviço, oferta, compromisso, fuso e tipo de apuração.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "absolute_availability",
+          "numberFormat": {
+            "customFormat": true,
+            "rounding": "HALF_UP",
+            "decimalPrecision": 2,
+            "abbreviationEnabled": false,
+            "numberInTooltipsEnabled": false,
+            "thousandSeparatorEnabled": true
+          }
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "cfkl9y2d",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "e12bede7c3185b94e079b13ed401314f",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "met_commitment=false^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTcxMDkxNzg=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Compromissos violados",
+      "headingLevel": 2,
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTcxMDkxNzg=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UY3hNRGt4TnpnPTE3OTQwOTcxMTI0NTQ=",
+          "aggregateFunction": "COUNT",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "axisId": "primary"
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "k095k0da",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "e14dca53c3a49fd8e079b13ed40131b6",
+    "component": "18ac962264404bcc0039359d184b15f3",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "showDataLabels": false,
+      "disableTooltip": false,
+      "showClosestSeriesOnHover": false,
+      "showXGrid": false,
+      "showDateRangeByDefault": false,
+      "showYGrid": true,
+      "hideYAxis0": false,
+      "yAxis0Position": "left",
+      "hideYAxis1": false,
+      "yAxis1Position": "right",
+      "hideYAxis2": false,
+      "yAxis2Position": "right",
+      "hideYAxis3": false,
+      "yAxis3Position": "right",
+      "hideYAxis4": false,
+      "yAxis4Position": "right",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "yAxisStyle": "default",
+      "lineStrokeWidth": "2",
+      "chartVariation": "stacked",
+      "showPercentageOfTotalInTooltip": true,
+      "extensionType": "line",
+      "showContinuousLine": true,
+      "showMarkers": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_offeringISNOTEMPTY^service_commitmentISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": true,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Média Compromisso (%) - Pelo Serviço",
+      "headingLevel": 2,
+      "description": "Média do Commitment availability % das ofertas nos registros do período selecionado, respeitando as janelas dos compromissos já calculadas pelo ServiceNow.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": true,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": true,
+            "rounding": "HALF_UP",
+            "decimalPrecision": 2,
+            "abbreviationEnabled": false,
+            "numberInTooltipsEnabled": false,
+            "thousandSeparatorEnabled": true
+          }
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTUwMzE1NDk3OTc=",
+              "groupByField": "service_offering.parent",
+              "metric": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM=",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "hideZeroValues": false,
+          "disableRanges": false
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "trendBy": {
+        "trendByCalendar": "standard",
+        "trendByFrequency": "month",
+        "trendByFields": [
+          {
+            "field": "start",
+            "metric": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RVd016RTFORGszT1RjPTE3OTUwMzE1NTMyOTM="
+          }
+        ]
+      },
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "cfkl9y2d",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": true,
+      "scoreType": "latest",
+      "useCurrentDateForEnd": false,
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user"
+    }
+  },
+  {
+    "id": "e7d40a5bc3a09fd8e079b13ed4013141",
+    "component": "1f6e0643eca7a637e36bd7833549ec9e",
+    "props": {
+      "variant": "title-secondary",
+      "label": "Visão Detalhada por Oferta de Serviço",
+      "wontWrap": false,
+      "hasNoMargin": true,
+      "level": "1",
+      "align": "start",
+      "bareBorder": false,
+      "showBorder": false,
+      "showHeader": false
+    }
+  },
+  {
+    "id": "f1ae25a7c3585b94e079b13ed4013131",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s959ceuvh8qkdq49o",
+      "filterName": "Compromisso",
+      "filterCustomId": "",
+      "filterComponentType": "singleselect",
+      "datasource": {
+        "type": "table",
+        "payload": {
+          "table": "service_commitment",
+          "primaryKey": "sys_id"
+        }
+      },
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "field": "service_commitment",
+            "table": "service_availability",
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_service_commitment",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": []
+    }
+  },
+  {
+    "id": "f1ae25a7c3585b94e079b13ed4013135",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s97tedmk5obi877m8",
+      "filterName": "Fuso horário",
+      "filterCustomId": "",
+      "filterComponentType": "singleselect",
+      "datasource": {
+        "type": "table",
+        "payload": {
+          "field": "time_zone",
+          "table": "service_availability",
+          "primaryKey": "sys_id"
+        }
+      },
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "field": "time_zone",
+            "table": "service_availability",
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_time_zone",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": []
+    }
+  },
+  {
+    "id": "f1ae25a7c3585b94e079b13ed4013139",
+    "component": "226449101138d0dff1abe0e1566c8b2a",
+    "props": {
+      "filterId": "1k6s9hpgoerhtlp67jqs",
+      "filterName": "Período de apuração",
+      "filterCustomId": "",
+      "filterComponentType": "date",
+      "datasource": {},
+      "targets": [
+        {
+          "type": "table",
+          "payload": {
+            "isInHierarchy": true,
+            "field": "start",
+            "starting_at": "",
+            "table": "service_availability",
+            "operator": {
+              "hierarchy_id": "",
+              "starting_at": "",
+              "type": "hierarchy"
+            },
+            "primaryKey": "sys_id"
+          }
+        },
+        {
+          "type": "table",
+          "payload": {
+            "field": "av_start",
+            "table": "u_availability_related_outage",
+            "primaryKey": "sys_id"
+          }
+        }
+      ],
+      "defaultSelectedItems": [],
+      "defaultSelectedDateRange": {
+        "range": ""
+      },
+      "dateFilterView": "calendar-reldates",
+      "sort": "ASC",
+      "filterElementType": "pill",
+      "isShowSelectedValueInPill": true,
+      "filterElementLayout": "vertical",
+      "enableClearFilter": true,
+      "primaryActionLabel": "Apply",
+      "maxElements": 500,
+      "filterConfigurations": "@state.parFilters",
+      "cascadeScope": "68b869e7c3d45b94e079b13ed401316a",
+      "isDashboard": true,
+      "isGroup": false,
+      "value": []
+    }
+  },
+  {
+    "id": "f466b92bc31c5b94e079b13ed4013114",
+    "component": "7ff373544303121093711347efb8f23c",
+    "props": {
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "AVG",
+          "axisId": "primary",
+          "aggregateField": "scheduled_availability",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "label": "Disponibilidade média no compromisso (%)"
+        }
+      ],
+      "showHeader": true,
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": true,
+      "headingLevel": 2,
+      "description": "Resultados nativos por oferta, compromisso e período, com percentuais e tempos de indisponibilidade.",
+      "limit": 20,
+      "columnLimit": 0,
+      "maxCharLimit": 40,
+      "showPersonalization": true,
+      "hideDotwalk": false,
+      "showColumnReorder": true,
+      "showColumnGrouping": true,
+      "showColumnResizing": true,
+      "showColumnFiltering": true,
+      "showColumnSorting": true,
+      "allowAdditionalGroupByPerMetric": true,
+      "sortByOrder": "asc",
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "filterConfigurations": "@state.parFilters",
+      "columns": "service_offering,service_commitment,start,end,type,absolute_downtime,absolute_availability,scheduled_availability,scheduled_downtime,met_commitment",
+      "table": "service_availability",
+      "showLinks": true,
+      "wrapCellContent": "useLineBreaksUserPref",
+      "showViewAll": true,
+      "showInlineEditing": true,
+      "allowListPagination": true,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "headerTitle": "Histórico detalhado de disponibilidade",
+      "showBorder": true,
+      "showExportOption": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "bareBorder": false,
+      "showAdditionalGroupBySelector": false
+    }
+  },
+  {
+    "id": "f689a9efc3d45b94e079b13ed4013164",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "met_commitment=true^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTcxMDkxNzg=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Compromissos atendidos",
+      "headingLevel": 2,
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTcxMDkxNzg=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UY3hNRGt4TnpnPTE3OTQwOTcxMTI0NTQ=",
+          "aggregateFunction": "COUNT",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "axisId": "primary"
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "k095k0da",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "f8d061c7c32cd7d8e079b13ed40131b9",
+    "component": "d24d53f60350de7a652caf3188a46ed2",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "scoreSize": "auto",
+      "scoreAlignment": "start",
+      "headingPosition": "top",
+      "sparklineStyle": "area",
+      "iconStyle": "background",
+      "showScoreDate": false,
+      "useRelativeScoreTime": false,
+      "showScoreUpdateTime": false,
+      "showZero": true,
+      "wrapElements": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": true,
+          "allowRealTime": true,
+          "label": "Disponibilidade — Outages relacionados",
+          "sourceType": "table",
+          "tableOrViewName": "u_availability_related_outage",
+          "filterQuery": "av_service_offeringISNOTEMPTY^av_service_commitmentISNOTEMPTY^out_sys_idISNOTEMPTY^out_type=outage^out_beginISNOTEMPTY^out_endISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVjbWRiX291dGFnZV9jaV9tdG9tMTc5NTAzNDY1NjI5Nw==",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Outages Relacionados",
+      "headingLevel": 2,
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVjbWRiX291dGFnZV9jaV9tdG9tMTc5NTAzNDY1NjI5Nw==",
+          "id": "ZEdGaWJHVmpiV1JpWDI5MWRHRm5aVjlqYVY5dGRHOXRNVGM1TlRBek5EWTFOakk1Tnc9PTE3OTUwMzQ2NTY2OTI=",
+          "aggregateFunction": "COUNT(DISTINCT",
+          "numberFormat": {
+            "customFormat": false
+          },
+          "axisId": "primary",
+          "aggregateField": "out_sys_id"
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "k095k0da",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": false,
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "description": "Quantidade de OUTAGES distintos relacionados às ofertas e às janelas de apuração selecionadas. Fonte: u_availability_related_outage (vínculos via MTOM). Um outage é contado uma única vez no recorte, mesmo que afete várias ofertas ou períodos.",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "fc66b92bc31c5b94e079b13ed401310b",
+    "component": "85855283b7e03010097cb81cde11a91d",
+    "props": {
+      "configVersion": "23.0.0-ci-SNAPSHOT",
+      "chartVariation": "grouped",
+      "yAxisPosition": "bottom",
+      "yAxisShowGrid": true,
+      "xAxisWrapLabels": false,
+      "xAxisMaxLabelSize": 100,
+      "showClosestSeriesOnHover": true,
+      "xAxisTruncationType": "end",
+      "yAxisStyle": "clean",
+      "showLegend": true,
+      "showLegendValue": false,
+      "legendPosition": "bottom",
+      "legendHorizontalAlignment": "center",
+      "legendExpandToFit": false,
+      "showDataLabels": false,
+      "dataLabelPosition": "middle",
+      "showStackedValues": "none",
+      "showOverlappingLabels": false,
+      "showPercentageOfTotalInTooltip": true,
+      "yAxisHidden": false,
+      "xAxisHidden": false,
+      "colorConfig": {
+        "type": "default"
+      },
+      "newReporting": false,
+      "enableAddZerosAtApi": true,
+      "dataSources": [
+        {
+          "isDatabaseView": false,
+          "allowRealTime": true,
+          "label": "Service Availability",
+          "sourceType": "table",
+          "tableOrViewName": "service_availability",
+          "filterQuery": "service_commitmentISNOTEMPTY^service_offeringISNOTEMPTY",
+          "preferredVisualizations": [
+            "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "id": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "dataCategories": [
+            "trend",
+            "group",
+            "simple"
+          ]
+        }
+      ],
+      "showHeader": true,
+      "showTotalAggregate": false,
+      "showSubAggregate": false,
+      "showFirstGroupAggregate": false,
+      "showSecondGroupAggregate": false,
+      "hideMatrixAggregate": false,
+      "lineClamp": 1,
+      "headerTitleAlignment": "start",
+      "wrapTitle": false,
+      "showLoadingIndicator": false,
+      "showHeaderSeparator": false,
+      "headerTitle": "Downtime Total x Downtime do Compromisso",
+      "headingLevel": 2,
+      "description": "Comparação das somas de downtime total e dentro do compromisso por oferta, respeitando os filtros selecionados.",
+      "showBorder": true,
+      "bareBorder": false,
+      "showDataPassthrough": false,
+      "showAdditionalGroupBySelector": false,
+      "allowAdditionalGroupByPerMetric": false,
+      "metrics": [
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk=",
+          "aggregateFunction": "SUM",
+          "axisId": "primary",
+          "aggregateField": "scheduled_downtime",
+          "label": "Downtime no compromisso",
+          "durationFormat": {
+            "customFormat": false
+          }
+        },
+        {
+          "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+          "aggregateFunction": "SUM",
+          "aggregateField": "absolute_downtime",
+          "durationFormat": {
+            "customFormat": false
+          },
+          "label": "Downtime total",
+          "id": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPVNVTURvd250aW1lIHRvdGFsMTc5NDEwMDA2NzYzOQ==",
+          "axisId": "primary"
+        }
+      ],
+      "groupBy": [
+        {
+          "groupBy": [
+            {
+              "dataSource": "dGFibGVzZXJ2aWNlX2F2YWlsYWJpbGl0eTE3OTQwOTk1MjcwMjE=",
+              "groupByField": "service_offering",
+              "isRange": false,
+              "isChoice": false,
+              "isPaBucket": false
+            }
+          ],
+          "maxNumberOfGroups": "ALL",
+          "numberOfGroupsBasedOn": "NO_OF_GROUP_BASED_ON_PER_METRIC",
+          "showOthers": false,
+          "disableRanges": false
+        }
+      ],
+      "filterPerMetric": [
+        {
+          "value": true,
+          "metricId": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPTE3OTQwOTk1MzAyOTk="
+        },
+        {
+          "value": true,
+          "metricId": "ZEdGaWJHVnpaWEoyYVdObFgyRjJZV2xzWVdKcGJHbDBlVEUzT1RRd09UazFNamN3TWpFPVNVTURvd250aW1lIHRvdGFsMTc5NDEwMDA2NzYzOQ=="
+        }
+      ],
+      "sortBy": "value",
+      "sortByOrder": "desc",
+      "showChange": false,
+      "showChangePercentage": false,
+      "showTarget": false,
+      "showForecast": false,
+      "showForecastRange": false,
+      "showTrend": false,
+      "showConfidenceBand": false,
+      "showGapPercentage": false,
+      "showSparkline": false,
+      "showMetricLabel": false,
+      "showThreshold": false,
+      "showComment": false,
+      "followFilters": true,
+      "showFilterIcon": true,
+      "enableRealTimeUpdate": false,
+      "enableDrilldown": true,
+      "enableClickAndStay": false,
+      "showDataTable": false,
+      "enableCustomEmptyState": false,
+      "componentId": "a654ocl3",
+      "emptyStateIllustration": "no-data",
+      "emptyStateHeading": "No data available.",
+      "emptyStateHeadingLevel": 3,
+      "emptyStateContent": "There are no scores available for the selected criteria. Contact your admin for more info.",
+      "emptyStateAlignment": "vertical-centered",
+      "hideDevSettings": false,
+      "filterConfigurations": "@state.parFilters",
+      "showMaximumRange": false,
+      "allowChangeDateRange": false,
+      "showDateRangeByDefault": false,
+      "applyDateRange": false,
+      "numberOfPeriods": 3,
+      "showAbsolutePeriod": false,
+      "autoAggregatePeriods": false,
+      "showChangeFrom": "previous",
+      "useCurrentDateForEnd": false,
+      "period": "M",
+      "useDataCache": false,
+      "cacheExpirationTime": 0,
+      "showCacheTime": true,
+      "dateFormat": "default",
+      "showRefresh": true,
+      "showExportOptions": true,
+      "showFilterAsSeparateSeries": false,
+      "userInfo": "@context.session.user",
+      "scoreType": "latest"
+    }
+  },
+  {
+    "id": "fe4402d7c3a09fd8e079b13ed40131ac",
+    "component": "1f6e0643eca7a637e36bd7833549ec9e",
+    "props": {
+      "variant": "title-secondary",
+      "label": "Visão Geral - Por Serviço",
+      "wontWrap": false,
+      "hasNoMargin": true,
+      "level": "1",
+      "align": "start",
+      "bareBorder": false,
+      "showBorder": false,
+      "showHeader": false
+    }
+  }
+]

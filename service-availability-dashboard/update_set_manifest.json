@@ -1,0 +1,91 @@
+{
+  "captured_on": "2026-11-19",
+  "source_instance": "dev437951.service-now.com",
+  "dashboard": {
+    "sys_id": "a0b869a7c3d45b94e079b13ed4013122",
+    "name": "NTT - Disponibilidade de Serviços e Ofertas"
+  },
+  "update_set": {
+    "sys_id": "4c839edbc3e49fd8e079b13ed401314f",
+    "name": "NTT - Dashboard Disponibilidade de Serviços e Ofertas - 2026-11-19",
+    "scope": "Global",
+    "state": "complete",
+    "customer_updates": 33,
+    "xml_export_status": "blocked_by_chrome_ERR_BLOCKED_BY_CLIENT",
+    "xml_in_repository": false
+  },
+  "counts": {
+    "par_dashboard": 1,
+    "par_dashboard_canvas": 2,
+    "par_dashboard_tab": 1,
+    "par_dashboard_visibility": 1,
+    "par_dashboard_widget": 22,
+    "sys_metadata_link": 2,
+    "sys_db_view": 1,
+    "sys_db_view_table": 3
+  },
+  "records": {
+    "par_dashboard": [
+      "a0b869a7c3d45b94e079b13ed4013122"
+    ],
+    "par_dashboard_canvas": [
+      "24b8a9e7c3d45b94e079b13ed401311e",
+      "a0b869e7c3d45b94e079b13ed4013165"
+    ],
+    "par_dashboard_tab": [
+      "68b869e7c3d45b94e079b13ed401316a"
+    ],
+    "par_dashboard_visibility": [
+      "b4b8a9e7c3d45b94e079b13ed4013122"
+    ],
+    "par_dashboard_widget": [
+      "30f7194fc328d7d8e079b13ed4013161",
+      "3cf7194fc328d7d8e079b13ed401314a",
+      "71ae25a7c3585b94e079b13ed401310c",
+      "7466352bc31c5b94e079b13ed4013105",
+      "75ae25a7c3585b94e079b13ed4013110",
+      "75ae25a7c3585b94e079b13ed4013114",
+      "7866792bc31c5b94e079b13ed40131c9",
+      "b066b92bc31c5b94e079b13ed4013110",
+      "b466792bc31c5b94e079b13ed40131c5",
+      "bc66b92bc31c5b94e079b13ed4013156",
+      "bcf7194fc328d7d8e079b13ed401315c",
+      "e12bede7c3185b94e079b13ed401314f",
+      "e14dca53c3a49fd8e079b13ed40131b6",
+      "e7d40a5bc3a09fd8e079b13ed4013141",
+      "f1ae25a7c3585b94e079b13ed4013131",
+      "f1ae25a7c3585b94e079b13ed4013135",
+      "f1ae25a7c3585b94e079b13ed4013139",
+      "f466b92bc31c5b94e079b13ed4013114",
+      "f689a9efc3d45b94e079b13ed4013164",
+      "f8d061c7c32cd7d8e079b13ed40131b9",
+      "fc66b92bc31c5b94e079b13ed401310b",
+      "fe4402d7c3a09fd8e079b13ed40131ac"
+    ],
+    "sys_metadata_link": [
+      "b693561fc3e49fd8e079b13ed401316c",
+      "c793561fc3e49fd8e079b13ed4013178"
+    ],
+    "sys_db_view": [
+      "f07ca50fc3201bd8e079b13ed401312f"
+    ],
+    "sys_db_view_table": [
+      "94cca94fc3201bd8e079b13ed4013166",
+      "390d2d8fc3201bd8e079b13ed4013148",
+      "d72d610bc3acd7d8e079b13ed4013147"
+    ]
+  },
+  "validation": {
+    "configuration_inspected": true,
+    "filters": 6,
+    "visualizations": 14,
+    "all_visualizations_follow_filters": true,
+    "target_instance_import_tested": false
+  },
+  "git_publication": {
+    "status": "authorized",
+    "repository": "PureTech-BR/SN-Custom-Solutions",
+    "directory": "service-availability-dashboard",
+    "authorization": "Explicit user confirmation in this conversation on 2026-11-19"
+  }
+}
